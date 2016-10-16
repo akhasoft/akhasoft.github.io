@@ -1,0 +1,370 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>BaseCacheAdapter.ApiMCacheAdapter (Yakhont-full 0.9.17 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="BaseCacheAdapter.ApiMCacheAdapter (Yakhont-full 0.9.17 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html" title="class in akha.yakhont.adapter"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ArrayConverter.html" title="interface in akha.yakhont.adapter"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" target="_top">Frames</a></li>
+<li><a href="BaseCacheAdapter.ApiMCacheAdapter.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_classes_inherited_from_class_akha.yakhont.adapter.BaseCacheAdapter">Nested</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">akha.yakhont.adapter</div>
+<h2 title="Class BaseCacheAdapter.ApiMCacheAdapter" class="title">Class BaseCacheAdapter.ApiMCacheAdapter&lt;T,R,E,D&gt;</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html" title="class in akha.yakhont.adapter">akha.yakhont.adapter.BaseCacheAdapter</a>&lt;T,R,E,D&gt;</li>
+<li>
+<ul class="inheritance">
+<li>akha.yakhont.adapter.BaseCacheAdapter.ApiMCacheAdapter&lt;T,R,E,D&gt;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - The type of <code>BaseResponse</code> values</dd><dd><code>R</code> - The type of network response</dd><dd><code>E</code> - The type of error (if any)</dd><dd><code>D</code> - The type of data in this adapter</dd></dl>
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="http://developer.android.com/reference/android/widget/Adapter.html?is-external=true" title="class or interface in android.widget">Adapter</a>, <a href="http://developer.android.com/reference/android/widget/Filterable.html?is-external=true" title="class or interface in android.widget">Filterable</a>, <a href="http://developer.android.com/reference/android/widget/ListAdapter.html?is-external=true" title="class or interface in android.widget">ListAdapter</a>, <a href="http://developer.android.com/reference/android/widget/SpinnerAdapter.html?is-external=true" title="class or interface in android.widget">SpinnerAdapter</a>, <a href="http://developer.android.com/reference/android/widget/ThemedSpinnerAdapter.html?is-external=true" title="class or interface in android.widget">ThemedSpinnerAdapter</a></dd>
+</dl>
+<dl>
+<dt>Enclosing class:</dt>
+<dd><a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html" title="class in akha.yakhont.adapter">BaseCacheAdapter</a>&lt;<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html" title="type parameter in BaseCacheAdapter">T</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html" title="type parameter in BaseCacheAdapter">R</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html" title="type parameter in BaseCacheAdapter">E</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html" title="type parameter in BaseCacheAdapter">D</a>&gt;</dd>
+</dl>
+<hr>
+<br>
+<pre>public static class <span class="strong">BaseCacheAdapter.ApiMCacheAdapter&lt;T,R,E,D&gt;</span>
+extends <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html" title="class in akha.yakhont.adapter">BaseCacheAdapter</a>&lt;T,R,E,D&gt;
+implements <a href="http://developer.android.com/reference/android/widget/ThemedSpinnerAdapter.html?is-external=true" title="class or interface in android.widget">ThemedSpinnerAdapter</a></pre>
+<div class="block">The adapter intended to use on modern devices (API version &gt;= <a href="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html?is-external=true#M" title="class or interface in android.os"><code>M</code></a>).</div>
+<dl><DT>&nbsp;</DT><DD><map name="umlmap22"><area shape="rect" coords="6,426,116,445" href="http://www.yworks.com/" alt=""><area shape="rect" coords="15,148,409,175" href="#" alt=""><area shape="rect" coords="10,194,291,211" href="#getDropDownViewTheme()" alt=""><area shape="rect" coords="10,211,210,227" href="#setDropDownViewTheme(android.content.res.Resources.Theme)" alt=""><area shape="rect" coords="2,121,131,139" href="package-summary.html" alt=""><area shape="rect" coords="111,39,314,63" href="../../../akha/yakhont/adapter/BaseCacheAdapter.html" alt=""><area shape="rect" coords="100,12,229,30" href="../../../akha/yakhont/adapter/package-summary.html" alt=""><area shape="rect" coords="399,34,555,58" href="http://developer.android.com/reference/android/widget/ThemedSpinnerAdapter.html" alt=""><area shape="rect" coords="355,2,448,20" href="http://developer.android.com/reference/android/widget/package-summary.html" alt=""><area shape="rect" coords="485,191,757,215" href="../../../akha/yakhont/adapter/BaseCacheAdapter.BaseArrayAdapter.html" alt=""><area shape="rect" coords="549,152,846,176" href="../../../akha/yakhont/adapter/BaseCacheAdapter.ArrayConverter.html" alt=""><area shape="rect" coords="473,121,602,139" href="../../../akha/yakhont/adapter/package-summary.html" alt=""><area shape="rect" coords="482,280,539,304" href="http://developer.android.com/reference/android/content/Context.html" alt=""><area shape="rect" coords="473,253,570,272" href="http://developer.android.com/reference/android/content/package-summary.html" alt=""><area shape="rect" coords="483,369,604,393" href="http://developer.android.com/reference/android/content/res/Resources.Theme.html" alt=""><area shape="rect" coords="473,342,591,361" href="http://developer.android.com/reference/android/content/res/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="BaseCacheAdapter.ApiMCacheAdapter.png" WIDTH="931" HEIGHT="453" USEMAP="#umlmap22" BORDER="0"></CENTER></DD>
+<!-- yWorks UML Doclet   http://www.yworks.com/   b0ac8294d3f86ae0003f3a3a002ea3cf577df824efc6f2... --></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_akha.yakhont.adapter.BaseCacheAdapter">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from class&nbsp;akha.yakhont.adapter.<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html" title="class in akha.yakhont.adapter">BaseCacheAdapter</a></h3>
+<code><a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" title="class in akha.yakhont.adapter">BaseCacheAdapter.ApiMCacheAdapter</a>&lt;<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" title="type parameter in BaseCacheAdapter.ApiMCacheAdapter">T</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" title="type parameter in BaseCacheAdapter.ApiMCacheAdapter">R</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" title="type parameter in BaseCacheAdapter.ApiMCacheAdapter">E</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" title="type parameter in BaseCacheAdapter.ApiMCacheAdapter">D</a>&gt;, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ArrayConverter.html" title="interface in akha.yakhont.adapter">BaseCacheAdapter.ArrayConverter</a>&lt;<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ArrayConverter.html" title="type parameter in BaseCacheAdapter.ArrayConverter">T</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ArrayConverter.html" title="type parameter in BaseCacheAdapter.ArrayConverter">R</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ArrayConverter.html" title="type parameter in BaseCacheAdapter.ArrayConverter">E</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ArrayConverter.html" title="type parameter in BaseCacheAdapter.ArrayConverter">D</a>&gt;, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.BaseArrayAdapter.html" title="class in akha.yakhont.adapter">BaseCacheAdapter.BaseArrayAdapter</a>&lt;<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.BaseArrayAdapter.html" title="type parameter in BaseCacheAdapter.BaseArrayAdapter">T</a>&gt;, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.BaseCacheAdapterFactory.html" title="class in akha.yakhont.adapter">BaseCacheAdapter.BaseCacheAdapterFactory</a>&lt;<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.BaseCacheAdapterFactory.html" title="type parameter in BaseCacheAdapter.BaseCacheAdapterFactory">T</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.BaseCacheAdapterFactory.html" title="type parameter in BaseCacheAdapter.BaseCacheAdapterFactory">R</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.BaseCacheAdapterFactory.html" title="type parameter in BaseCacheAdapter.BaseCacheAdapterFactory">E</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.BaseCacheAdapterFactory.html" title="type parameter in BaseCacheAdapter.BaseCacheAdapterFactory">D</a>&gt;, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.BaseCursorAdapter.html" title="interface in akha.yakhont.adapter">BaseCacheAdapter.BaseCursorAdapter</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.CacheAdapter.html" title="interface in akha.yakhont.adapter">BaseCacheAdapter.CacheAdapter</a>&lt;<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.CacheAdapter.html" title="type parameter in BaseCacheAdapter.CacheAdapter">R</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.CacheAdapter.html" title="type parameter in BaseCacheAdapter.CacheAdapter">E</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.CacheAdapter.html" title="type parameter in BaseCacheAdapter.CacheAdapter">D</a>&gt;, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.Mergeable.html" title="interface in akha.yakhont.adapter">BaseCacheAdapter.Mergeable</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.SupportCacheAdapter.html" title="class in akha.yakhont.adapter">BaseCacheAdapter.SupportCacheAdapter</a>&lt;<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.SupportCacheAdapter.html" title="type parameter in BaseCacheAdapter.SupportCacheAdapter">T</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.SupportCacheAdapter.html" title="type parameter in BaseCacheAdapter.SupportCacheAdapter">R</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.SupportCacheAdapter.html" title="type parameter in BaseCacheAdapter.SupportCacheAdapter">E</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.SupportCacheAdapter.html" title="type parameter in BaseCacheAdapter.SupportCacheAdapter">D</a>&gt;, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ViewBinder.html" title="interface in akha.yakhont.adapter">BaseCacheAdapter.ViewBinder</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_android.widget.Adapter">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;android.widget.<a href="http://developer.android.com/reference/android/widget/Adapter.html?is-external=true" title="class or interface in android.widget">Adapter</a></h3>
+<code><a href="http://developer.android.com/reference/android/widget/Adapter.html?is-external=true#IGNORE_ITEM_VIEW_TYPE" title="class or interface in android.widget">IGNORE_ITEM_VIEW_TYPE</a>, <a href="http://developer.android.com/reference/android/widget/Adapter.html?is-external=true#NO_SELECTION" title="class or interface in android.widget">NO_SELECTION</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html#BaseCacheAdapter.ApiMCacheAdapter(android.content.Context,%20int,%20java.lang.String[],%20int[],%20akha.yakhont.adapter.BaseCacheAdapter.BaseArrayAdapter,%20akha.yakhont.adapter.BaseCacheAdapter.ArrayConverter)">BaseCacheAdapter.ApiMCacheAdapter</a></strong>(<a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
+                                 int&nbsp;layoutId,
+                                 <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;from,
+                                 int[]&nbsp;to,
+                                 <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.BaseArrayAdapter.html" title="class in akha.yakhont.adapter">BaseCacheAdapter.BaseArrayAdapter</a>&lt;<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" title="type parameter in BaseCacheAdapter.ApiMCacheAdapter">T</a>&gt;&nbsp;arrayAdapter,
+                                 <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ArrayConverter.html" title="interface in akha.yakhont.adapter">BaseCacheAdapter.ArrayConverter</a>&lt;<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" title="type parameter in BaseCacheAdapter.ApiMCacheAdapter">T</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" title="type parameter in BaseCacheAdapter.ApiMCacheAdapter">R</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" title="type parameter in BaseCacheAdapter.ApiMCacheAdapter">E</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" title="type parameter in BaseCacheAdapter.ApiMCacheAdapter">D</a>&gt;&nbsp;converter)</code>
+<div class="block">Initialises a newly created <code>ApiMCacheAdapter</code> object.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://developer.android.com/reference/android/content/res/Resources.Theme.html?is-external=true" title="class or interface in android.content.res">Resources.Theme</a></code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html#getDropDownViewTheme()">getDropDownViewTheme</a></strong>()</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html#setDropDownViewTheme(android.content.res.Resources.Theme)">setDropDownViewTheme</a></strong>(<a href="http://developer.android.com/reference/android/content/res/Resources.Theme.html?is-external=true" title="class or interface in android.content.res">Resources.Theme</a>&nbsp;theme)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_akha.yakhont.adapter.BaseCacheAdapter">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;akha.yakhont.adapter.<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html" title="class in akha.yakhont.adapter">BaseCacheAdapter</a></h3>
+<code><a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#areAllItemsEnabled()">areAllItemsEnabled</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#getArrayAdapter()">getArrayAdapter</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#getCount()">getCount</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#getCursorAdapter()">getCursorAdapter</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#getDropDownView(int,%20android.view.View,%20android.view.ViewGroup)">getDropDownView</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#getFilter()">getFilter</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#getItem(int)">getItem</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#getItemId(int)">getItemId</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#getItemViewType(int)">getItemViewType</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#getView(int,%20android.view.View,%20android.view.ViewGroup)">getView</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#getViewTypeCount()">getViewTypeCount</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#hasStableIds()">hasStableIds</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#isCursorAdapter()">isCursorAdapter</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#isEmpty()">isEmpty</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#isEnabled(int)">isEnabled</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#registerDataSetObserver(android.database.DataSetObserver)">registerDataSetObserver</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#resetArray()">resetArray</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#setAdapterViewBinder(akha.yakhont.adapter.BaseCacheAdapter.ViewBinder)">setAdapterViewBinder</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#setCurrentAdapter(boolean)">setCurrentAdapter</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#unregisterDataSetObserver(android.database.DataSetObserver)">unregisterDataSetObserver</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#update(akha.yakhont.loader.BaseResponse)">update</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#update(akha.yakhont.loader.BaseResponse,%20boolean)">update</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#updateArray(java.util.Collection,%20boolean)">updateArray</a>, <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html#updateCursor(android.database.Cursor)">updateCursor</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_android.widget.SpinnerAdapter">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;android.widget.<a href="http://developer.android.com/reference/android/widget/SpinnerAdapter.html?is-external=true" title="class or interface in android.widget">SpinnerAdapter</a></h3>
+<code><a href="http://developer.android.com/reference/android/widget/SpinnerAdapter.html?is-external=true#getDropDownView(int,%20android.view.View,%20android.view.ViewGroup)" title="class or interface in android.widget">getDropDownView</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_android.widget.Adapter">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;android.widget.<a href="http://developer.android.com/reference/android/widget/Adapter.html?is-external=true" title="class or interface in android.widget">Adapter</a></h3>
+<code><a href="http://developer.android.com/reference/android/widget/Adapter.html?is-external=true#getCount()" title="class or interface in android.widget">getCount</a>, <a href="http://developer.android.com/reference/android/widget/Adapter.html?is-external=true#getItem(int)" title="class or interface in android.widget">getItem</a>, <a href="http://developer.android.com/reference/android/widget/Adapter.html?is-external=true#getItemId(int)" title="class or interface in android.widget">getItemId</a>, <a href="http://developer.android.com/reference/android/widget/Adapter.html?is-external=true#getItemViewType(int)" title="class or interface in android.widget">getItemViewType</a>, <a href="http://developer.android.com/reference/android/widget/Adapter.html?is-external=true#getView(int,%20android.view.View,%20android.view.ViewGroup)" title="class or interface in android.widget">getView</a>, <a href="http://developer.android.com/reference/android/widget/Adapter.html?is-external=true#getViewTypeCount()" title="class or interface in android.widget">getViewTypeCount</a>, <a href="http://developer.android.com/reference/android/widget/Adapter.html?is-external=true#hasStableIds()" title="class or interface in android.widget">hasStableIds</a>, <a href="http://developer.android.com/reference/android/widget/Adapter.html?is-external=true#isEmpty()" title="class or interface in android.widget">isEmpty</a>, <a href="http://developer.android.com/reference/android/widget/Adapter.html?is-external=true#registerDataSetObserver(android.database.DataSetObserver)" title="class or interface in android.widget">registerDataSetObserver</a>, <a href="http://developer.android.com/reference/android/widget/Adapter.html?is-external=true#unregisterDataSetObserver(android.database.DataSetObserver)" title="class or interface in android.widget">unregisterDataSetObserver</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="BaseCacheAdapter.ApiMCacheAdapter(android.content.Context, int, java.lang.String[], int[], akha.yakhont.adapter.BaseCacheAdapter.BaseArrayAdapter, akha.yakhont.adapter.BaseCacheAdapter.ArrayConverter)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>BaseCacheAdapter.ApiMCacheAdapter</h4>
+<pre>public&nbsp;BaseCacheAdapter.ApiMCacheAdapter(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                 <a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
+                                 <a href="http://developer.android.com/reference/android/support/annotation/LayoutRes.html?is-external=true" title="class or interface in android.support.annotation">@LayoutRes</a>
+                                 int&nbsp;layoutId,
+                                 <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                 <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;from,
+                                 <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                 int[]&nbsp;to,
+                                 <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                 <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.BaseArrayAdapter.html" title="class in akha.yakhont.adapter">BaseCacheAdapter.BaseArrayAdapter</a>&lt;<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" title="type parameter in BaseCacheAdapter.ApiMCacheAdapter">T</a>&gt;&nbsp;arrayAdapter,
+                                 <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                 <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ArrayConverter.html" title="interface in akha.yakhont.adapter">BaseCacheAdapter.ArrayConverter</a>&lt;<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" title="type parameter in BaseCacheAdapter.ApiMCacheAdapter">T</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" title="type parameter in BaseCacheAdapter.ApiMCacheAdapter">R</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" title="type parameter in BaseCacheAdapter.ApiMCacheAdapter">E</a>,<a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" title="type parameter in BaseCacheAdapter.ApiMCacheAdapter">D</a>&gt;&nbsp;converter)</pre>
+<div class="block">Initialises a newly created <code>ApiMCacheAdapter</code> object.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - The Context</dd><dd><code>layoutId</code> - The resource identifier of a layout file that defines the views</dd><dd><code>from</code> - The list of names representing the data to bind to the UI</dd><dd><code>to</code> - The views that should display data in the "from" parameter</dd><dd><code>arrayAdapter</code> - The BaseArrayAdapter</dd><dd><code>converter</code> - The ArrayConverter</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getDropDownViewTheme()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDropDownViewTheme</h4>
+<pre>public&nbsp;<a href="http://developer.android.com/reference/android/content/res/Resources.Theme.html?is-external=true" title="class or interface in android.content.res">Resources.Theme</a>&nbsp;getDropDownViewTheme()</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="http://developer.android.com/reference/android/widget/ThemedSpinnerAdapter.html?is-external=true#getDropDownViewTheme()" title="class or interface in android.widget">getDropDownViewTheme</a></code>&nbsp;in interface&nbsp;<code><a href="http://developer.android.com/reference/android/widget/ThemedSpinnerAdapter.html?is-external=true" title="class or interface in android.widget">ThemedSpinnerAdapter</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setDropDownViewTheme(android.content.res.Resources.Theme)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setDropDownViewTheme</h4>
+<pre>public&nbsp;void&nbsp;setDropDownViewTheme(<a href="http://developer.android.com/reference/android/content/res/Resources.Theme.html?is-external=true" title="class or interface in android.content.res">Resources.Theme</a>&nbsp;theme)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="http://developer.android.com/reference/android/widget/ThemedSpinnerAdapter.html?is-external=true#setDropDownViewTheme(android.content.res.Resources.Theme)" title="class or interface in android.widget">setDropDownViewTheme</a></code>&nbsp;in interface&nbsp;<code><a href="http://developer.android.com/reference/android/widget/ThemedSpinnerAdapter.html?is-external=true" title="class or interface in android.widget">ThemedSpinnerAdapter</a></code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../akha/yakhont/adapter/BaseCacheAdapter.html" title="class in akha.yakhont.adapter"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ArrayConverter.html" title="interface in akha.yakhont.adapter"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?akha/yakhont/adapter/BaseCacheAdapter.ApiMCacheAdapter.html" target="_top">Frames</a></li>
+<li><a href="BaseCacheAdapter.ApiMCacheAdapter.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_classes_inherited_from_class_akha.yakhont.adapter.BaseCacheAdapter">Nested</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><font size="-1">&nbsp;<br>Copyright &copy; 2016 akha, a.k.a. Alexander Kharitonov<br><br>Licensed under the Apache License, Version 2.0 (the "License");<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br><br>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an "AS IS" BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</font></small></p>
+</body>
+</html>
