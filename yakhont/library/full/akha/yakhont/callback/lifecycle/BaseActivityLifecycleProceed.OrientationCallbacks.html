@@ -1,0 +1,325 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>BaseActivityLifecycleProceed.OrientationCallbacks (Yakhont-full 0.9.18 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="BaseActivityLifecycleProceed.OrientationCallbacks (Yakhont-full 0.9.18 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.HideKeyboardCallbacks.html" title="class in akha.yakhont.callback.lifecycle"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../akha/yakhont/callback/lifecycle/BaseFragmentLifecycleProceed.html" title="class in akha.yakhont.callback.lifecycle"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.OrientationCallbacks.html" target="_top">Frames</a></li>
+<li><a href="BaseActivityLifecycleProceed.OrientationCallbacks.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_classes_inherited_from_class_akha.yakhont.callback.BaseCallbacks">Nested</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">akha.yakhont.callback.lifecycle</div>
+<h2 title="Class BaseActivityLifecycleProceed.OrientationCallbacks" class="title">Class BaseActivityLifecycleProceed.OrientationCallbacks</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">akha.yakhont.callback.BaseCallbacks</a>&lt;T&gt;</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html" title="class in akha.yakhont.callback">akha.yakhont.callback.BaseCallbacks.BaseCacheCallbacks</a>&lt;<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&gt;</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle">akha.yakhont.callback.lifecycle.BaseActivityLifecycleProceed.BaseActivityCallbacks</a></li>
+<li>
+<ul class="inheritance">
+<li>akha.yakhont.callback.lifecycle.BaseActivityLifecycleProceed.OrientationCallbacks</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>Enclosing class:</dt>
+<dd><a href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.html" title="class in akha.yakhont.callback.lifecycle">BaseActivityLifecycleProceed</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public static class <span class="strong">BaseActivityLifecycleProceed.OrientationCallbacks</span>
+extends <a href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle">BaseActivityLifecycleProceed.BaseActivityCallbacks</a></pre>
+<div class="block">Sets the screen orientation.</div>
+<dl><DT>&nbsp;</DT><DD><map name="umlmap147"><area shape="rect" coords="6,283,116,302" href="http://www.yworks.com/" alt=""><area shape="rect" coords="15,138,413,165" href="#" alt=""><area shape="rect" coords="10,166,313,183" href="#BaseActivityLifecycleProceed.OrientationCallbacks()" alt=""><area shape="rect" coords="10,184,162,201" href="#onActivityCreated(android.app.Activity, android.os.Bundle)" alt=""><area shape="rect" coords="2,111,180,129" href="package-summary.html" alt=""><area shape="rect" coords="46,29,383,53" href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" alt=""><area shape="rect" coords="33,2,211,20" href="../../../../akha/yakhont/callback/lifecycle/package-summary.html" alt=""><area shape="rect" coords="486,138,540,161" href="http://developer.android.com/reference/android/app/Activity.html" alt=""><area shape="rect" coords="477,111,555,129" href="http://developer.android.com/reference/android/app/package-summary.html" alt=""><area shape="rect" coords="486,226,539,250" href="http://developer.android.com/reference/android/os/Bundle.html" alt=""><area shape="rect" coords="477,199,548,218" href="http://developer.android.com/reference/android/os/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="BaseActivityLifecycleProceed.OrientationCallbacks.png" WIDTH="574" HEIGHT="310" USEMAP="#umlmap147" BORDER="0"></CENTER></DD>
+<!-- yWorks UML Doclet   http://www.yworks.com/   b0ac8294d3f86ae0003f3a3a002ea3cf577df824efc6f2... --></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_akha.yakhont.callback.BaseCallbacks">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from class&nbsp;akha.yakhont.callback.<a href="../../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks</a></h3>
+<code><a href="../../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks.BaseCacheCallbacks</a>&lt;<a href="../../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html" title="type parameter in BaseCallbacks.BaseCacheCallbacks">T</a>&gt;, <a href="../../../../akha/yakhont/callback/BaseCallbacks.BaseLifecycleProceed.html" title="class in akha.yakhont.callback">BaseCallbacks.BaseLifecycleProceed</a>, <a href="../../../../akha/yakhont/callback/BaseCallbacks.BaseProceed.html" title="class in akha.yakhont.callback">BaseCallbacks.BaseProceed</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.OrientationCallbacks.html#BaseActivityLifecycleProceed.OrientationCallbacks()">BaseActivityLifecycleProceed.OrientationCallbacks</a></strong>()</code>
+<div class="block">Initialises a newly created <code>OrientationCallbacks</code> object.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.OrientationCallbacks.html#onActivityCreated(android.app.Activity,%20android.os.Bundle)">onActivityCreated</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+                 <a href="http://developer.android.com/reference/android/os/Bundle.html?is-external=true" title="class or interface in android.os">Bundle</a>&nbsp;savedInstanceState)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_akha.yakhont.callback.lifecycle.BaseActivityLifecycleProceed.BaseActivityCallbacks">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;akha.yakhont.callback.lifecycle.<a href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle">BaseActivityLifecycleProceed.BaseActivityCallbacks</a></h3>
+<code><a href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html#onActivityDestroyed(android.app.Activity)">onActivityDestroyed</a>, <a href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html#onActivityPaused(android.app.Activity)">onActivityPaused</a>, <a href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html#onActivityResumed(android.app.Activity)">onActivityResumed</a>, <a href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html#onActivitySaveInstanceState(android.app.Activity,%20android.os.Bundle)">onActivitySaveInstanceState</a>, <a href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html#onActivityStarted(android.app.Activity)">onActivityStarted</a>, <a href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html#onActivityStopped(android.app.Activity)">onActivityStopped</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_akha.yakhont.callback.BaseCallbacks.BaseCacheCallbacks">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;akha.yakhont.callback.<a href="../../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks.BaseCacheCallbacks</a></h3>
+<code><a href="../../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html#getProceeded()">getProceeded</a>, <a href="../../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html#proceed(T)">proceed</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_akha.yakhont.callback.BaseCallbacks">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;akha.yakhont.callback.<a href="../../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks</a></h3>
+<code><a href="../../../../akha/yakhont/callback/BaseCallbacks.html#onRegister()">onRegister</a>, <a href="../../../../akha/yakhont/callback/BaseCallbacks.html#onUnregister()">onUnregister</a>, <a href="../../../../akha/yakhont/callback/BaseCallbacks.html#proceed(T,%20java.lang.Class)">proceed</a>, <a href="../../../../akha/yakhont/callback/BaseCallbacks.html#proceed(T,%20java.lang.Class,%20boolean,%20java.util.Map)">proceed</a>, <a href="../../../../akha/yakhont/callback/BaseCallbacks.html#proceed(T,%20java.util.Map)">proceed</a>, <a href="../../../../akha/yakhont/callback/BaseCallbacks.html#setForceProceed(boolean)">setForceProceed</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="BaseActivityLifecycleProceed.OrientationCallbacks()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>BaseActivityLifecycleProceed.OrientationCallbacks</h4>
+<pre>public&nbsp;BaseActivityLifecycleProceed.OrientationCallbacks()</pre>
+<div class="block">Initialises a newly created <code>OrientationCallbacks</code> object.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="onActivityCreated(android.app.Activity, android.os.Bundle)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>onActivityCreated</h4>
+<pre>public&nbsp;void&nbsp;onActivityCreated(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                     <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+                     <a href="http://developer.android.com/reference/android/os/Bundle.html?is-external=true" title="class or interface in android.os">Bundle</a>&nbsp;savedInstanceState)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html#onActivityCreated(android.app.Activity,%20android.os.Bundle)">onActivityCreated</a></code>&nbsp;in class&nbsp;<code><a href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle">BaseActivityLifecycleProceed.BaseActivityCallbacks</a></code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.HideKeyboardCallbacks.html" title="class in akha.yakhont.callback.lifecycle"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../akha/yakhont/callback/lifecycle/BaseFragmentLifecycleProceed.html" title="class in akha.yakhont.callback.lifecycle"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.OrientationCallbacks.html" target="_top">Frames</a></li>
+<li><a href="BaseActivityLifecycleProceed.OrientationCallbacks.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_classes_inherited_from_class_akha.yakhont.callback.BaseCallbacks">Nested</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><font size="-1">&nbsp;<br>Copyright &copy; 2015-2017 akha, a.k.a. Alexander Kharitonov<br><br>Licensed under the Apache License, Version 2.0 (the "License");<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br><br>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an "AS IS" BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</font></small></p>
+</body>
+</html>

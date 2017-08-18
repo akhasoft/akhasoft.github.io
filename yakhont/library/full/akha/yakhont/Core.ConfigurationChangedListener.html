@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Core.ConfigurationChangedListener (Yakhont-full 0.9.18 API)</title>
+<link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Core.ConfigurationChangedListener (Yakhont-full 0.9.18 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../akha/yakhont/Core.ConfigurableLoader.html" title="interface in akha.yakhont"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../akha/yakhont/Core.Orientation.html" title="enum in akha.yakhont"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?akha/yakhont/Core.ConfigurationChangedListener.html" target="_top">Frames</a></li>
+<li><a href="Core.ConfigurationChangedListener.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">akha.yakhont</div>
+<h2 title="Interface Core.ConfigurationChangedListener" class="title">Interface Core.ConfigurationChangedListener</h2>
+</div>
+<div class="contentContainer">
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Known Implementing Classes:</dt>
+<dd><a href="../../akha/yakhont/CorePermissions.html" title="class in akha.yakhont">CorePermissions</a>, <a href="../../akha/yakhont/location/LocationCallbacks.html" title="class in akha.yakhont.location">LocationCallbacks</a>, <a href="../../akha/yakhont/fragment/WorkerFragment.html" title="class in akha.yakhont.fragment">WorkerFragment</a>, <a href="../../akha/yakhont/support/fragment/WorkerFragment.html" title="class in akha.yakhont.support.fragment">WorkerFragment</a></dd>
+</dl>
+<dl>
+<dt>Enclosing class:</dt>
+<dd><a href="../../akha/yakhont/Core.html" title="class in akha.yakhont">Core</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public static interface <span class="strong">Core.ConfigurationChangedListener</span></pre>
+<div class="block">The callback API which allows registered components to be notified about device configuration changes.
+ Please refer to <a href="../../akha/yakhont/Core.html#register(akha.yakhont.Core.ConfigurationChangedListener)"><code>Core.register(ConfigurationChangedListener)</code></a> and <a href="../../akha/yakhont/Core.html#unregister(akha.yakhont.Core.ConfigurationChangedListener)"><code>Core.unregister(ConfigurationChangedListener)</code></a>.</div>
+<dl><DT>&nbsp;</DT><DD><map name="umlmap114"><area shape="rect" coords="6,113,116,132" href="http://www.yworks.com/" alt=""><area shape="rect" coords="14,46,297,69" href="#" alt=""><area shape="rect" coords="10,71,208,88" href="#onChangedConfiguration(android.content.res.Configuration)" alt=""><area shape="rect" coords="2,2,86,20" href="package-summary.html" alt=""><area shape="rect" coords="368,29,462,52" href="http://developer.android.com/reference/android/content/res/Configuration.html" alt=""><area shape="rect" coords="359,2,477,20" href="http://developer.android.com/reference/android/content/res/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="Core.ConfigurationChangedListener.png" WIDTH="497" HEIGHT="140" USEMAP="#umlmap114" BORDER="0"></CENTER></DD>
+<!-- yWorks UML Doclet   http://www.yworks.com/   b0ac8294d3f86ae0003f3a3a002ea3cf577df824efc6f2... --></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.ConfigurationChangedListener.html#onChangedConfiguration(android.content.res.Configuration)">onChangedConfiguration</a></strong>(<a href="http://developer.android.com/reference/android/content/res/Configuration.html?is-external=true" title="class or interface in android.content.res">Configuration</a>&nbsp;newConfig)</code>
+<div class="block">Called by the system when the device configuration changes.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="onChangedConfiguration(android.content.res.Configuration)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>onChangedConfiguration</h4>
+<pre>void&nbsp;onChangedConfiguration(<a href="http://developer.android.com/reference/android/content/res/Configuration.html?is-external=true" title="class or interface in android.content.res">Configuration</a>&nbsp;newConfig)</pre>
+<div class="block">Called by the system when the device configuration changes.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>newConfig</code> - The new device configuration</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../akha/yakhont/Core.ConfigurableLoader.html" title="interface in akha.yakhont"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../akha/yakhont/Core.Orientation.html" title="enum in akha.yakhont"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?akha/yakhont/Core.ConfigurationChangedListener.html" target="_top">Frames</a></li>
+<li><a href="Core.ConfigurationChangedListener.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><font size="-1">&nbsp;<br>Copyright &copy; 2015-2017 akha, a.k.a. Alexander Kharitonov<br><br>Licensed under the Apache License, Version 2.0 (the "License");<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br><br>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an "AS IS" BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</font></small></p>
+</body>
+</html>
