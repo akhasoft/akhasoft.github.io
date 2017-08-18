@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -149,11 +149,16 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../akha/yakhont/weaver/Weaver.html#log-boolean-java.lang.String-">log</a></span>(boolean&nbsp;silent,
+   <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../akha/yakhont/weaver/Weaver.html#log-java.lang.String-">log</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</code>
 <div class="block">Prints debug message to the console.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../akha/yakhont/weaver/Weaver.html#newMethod-javassist.CtMethod-java.lang.String-javassist.CtClass-">newMethod</a></span>(<a href="http://jboss-javassist.github.io/javassist/html/javassist/CtMethod.html?is-external=true" title="class or interface in javassist">CtMethod</a>&nbsp;methodSrc,
          <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;data,
@@ -161,14 +166,14 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <div class="block">Creates a new overriding method in the destination class.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../akha/yakhont/weaver/Weaver.html#parseConfig-java.lang.String-java.util.Map-">parseConfig</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;line,
-           <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;&gt;&nbsp;map)</code>
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;&gt;&nbsp;map)</code>
 <div class="block">Parses the configuration file.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../akha/yakhont/weaver/Weaver.html#run-boolean-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String:A-boolean-">run</a></span>(boolean&nbsp;debug,
    <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;applicationId,
@@ -234,6 +239,16 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 </dl>
 </li>
 </ul>
+<a name="log-boolean-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>log</h4>
+<pre>protected&nbsp;void&nbsp;log(boolean&nbsp;silent,
+                   <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</pre>
+</li>
+</ul>
 <a name="run-boolean-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String:A-boolean-">
 <!--   -->
 </a>
@@ -261,9 +276,9 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dd><code>configFiles</code> - The names (and locations) of configuration files (if any), or null (means default one)</dd>
 <dd><code>addConfig</code> - Indicates whether the configuration file provided should be added to the default one</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://jboss-javassist.github.io/javassist/html/javassist/NotFoundException.html?is-external=true" title="class or interface in javassist">NotFoundException</a></code></dd>
-<dd><code><a href="http://jboss-javassist.github.io/javassist/html/javassist/CannotCompileException.html?is-external=true" title="class or interface in javassist">CannotCompileException</a></code></dd>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://jboss-javassist.github.io/javassist/html/javassist/NotFoundException.html?is-external=true" title="class or interface in javassist">NotFoundException</a></code> - please refer to the exception description</dd>
+<dd><code><a href="http://jboss-javassist.github.io/javassist/html/javassist/CannotCompileException.html?is-external=true" title="class or interface in javassist">CannotCompileException</a></code> - please refer to the exception description</dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - please refer to the exception description</dd>
 </dl>
 </li>
 </ul>
@@ -274,7 +289,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>parseConfig</h4>
 <pre>protected&nbsp;void&nbsp;parseConfig(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;line,
-                           <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;&gt;&nbsp;map)
+                           <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;&gt;&nbsp;map)
                     throws <a href="http://jboss-javassist.github.io/javassist/html/javassist/CannotCompileException.html?is-external=true" title="class or interface in javassist">CannotCompileException</a></pre>
 <div class="block">Parses the configuration file.</div>
 <dl>
@@ -282,7 +297,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dd><code>line</code> - The line to parse</dd>
 <dd><code>map</code> - The internal representation of the configuration info (after successful parsing)</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://jboss-javassist.github.io/javassist/html/javassist/CannotCompileException.html?is-external=true" title="class or interface in javassist">CannotCompileException</a></code></dd>
+<dd><code><a href="http://jboss-javassist.github.io/javassist/html/javassist/CannotCompileException.html?is-external=true" title="class or interface in javassist">CannotCompileException</a></code> - please refer to the exception description</dd>
 </dl>
 </li>
 </ul>
@@ -306,8 +321,8 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The <code>String</code> containing the Java code of the created method</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://jboss-javassist.github.io/javassist/html/javassist/NotFoundException.html?is-external=true" title="class or interface in javassist">NotFoundException</a></code></dd>
-<dd><code><a href="http://jboss-javassist.github.io/javassist/html/javassist/CannotCompileException.html?is-external=true" title="class or interface in javassist">CannotCompileException</a></code></dd>
+<dd><code><a href="http://jboss-javassist.github.io/javassist/html/javassist/NotFoundException.html?is-external=true" title="class or interface in javassist">NotFoundException</a></code> - please refer to the exception description</dd>
+<dd><code><a href="http://jboss-javassist.github.io/javassist/html/javassist/CannotCompileException.html?is-external=true" title="class or interface in javassist">CannotCompileException</a></code> - please refer to the exception description</dd>
 </dl>
 </li>
 </ul>
