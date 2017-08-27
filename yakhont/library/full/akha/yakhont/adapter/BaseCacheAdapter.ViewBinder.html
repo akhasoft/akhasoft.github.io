@@ -60,13 +60,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -92,7 +92,7 @@
 <br>
 <pre>public static interface <span class="strong">BaseCacheAdapter.ViewBinder</span></pre>
 <div class="block">This class can be used by external clients of <code>BaseCacheAdapter</code> to bind values to views.</div>
-<dl><DT>&nbsp;</DT><DD><map name="umlmap46"><area shape="rect" coords="6,113,116,132" href="http://www.yworks.com/" alt=""><area shape="rect" coords="13,46,256,69" href="#" alt=""><area shape="rect" coords="10,71,166,88" href="#setViewValue(android.view.View, java.lang.Object, java.lang.String)" alt=""><area shape="rect" coords="2,2,131,20" href="package-summary.html" alt=""><area shape="rect" coords="326,29,366,52" href="http://developer.android.com/reference/android/view/View.html" alt=""><area shape="rect" coords="318,2,399,20" href="http://developer.android.com/reference/android/view/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="BaseCacheAdapter.ViewBinder.png" WIDTH="417" HEIGHT="140" USEMAP="#umlmap46" BORDER="0"></CENTER></DD>
+<dl><DT>&nbsp;</DT><DD><map name="umlmap46"><area shape="rect" coords="6,130,116,149" href="http://www.yworks.com/" alt=""><area shape="rect" coords="13,46,256,69" href="#" alt=""><area shape="rect" coords="10,70,164,87" href="#VIEW_BOUND" alt=""><area shape="rect" coords="10,89,166,105" href="#setViewValue(android.view.View, java.lang.Object, java.lang.String)" alt=""><area shape="rect" coords="2,2,131,20" href="package-summary.html" alt=""><area shape="rect" coords="326,29,366,52" href="http://developer.android.com/reference/android/view/View.html" alt=""><area shape="rect" coords="318,2,399,20" href="http://developer.android.com/reference/android/view/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="BaseCacheAdapter.ViewBinder.png" WIDTH="417" HEIGHT="157" USEMAP="#umlmap46" BORDER="0"></CENTER></DD>
 <!-- yWorks UML Doclet   http://www.yworks.com/   b0ac8294d3f86ae0003f3a3a002ea3cf577df824efc6f2... --></dl>
 </li>
 </ul>
@@ -100,6 +100,27 @@
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ViewBinder.html#VIEW_BOUND">VIEW_BOUND</a></strong></code>
+<div class="block">To use as a <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ViewBinder.html#setViewValue(android.view.View,%20java.lang.Object,%20java.lang.String)"><code>setViewValue(android.view.View, java.lang.Object, java.lang.String)</code></a> return type (the value is true).</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_summary">
@@ -129,6 +150,25 @@
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="VIEW_BOUND">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>VIEW_BOUND</h4>
+<pre>static final&nbsp;boolean VIEW_BOUND</pre>
+<div class="block">To use as a <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ViewBinder.html#setViewValue(android.view.View,%20java.lang.Object,%20java.lang.String)"><code>setViewValue(android.view.View, java.lang.Object, java.lang.String)</code></a> return type (the value is true).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#akha.yakhont.adapter.BaseCacheAdapter.ViewBinder.VIEW_BOUND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_detail">
@@ -145,8 +185,8 @@
                    <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;data,
                    <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;textRepresentation)</pre>
 <div class="block">Binds the value to the specified view.
- When binding is handled by this <code>ViewBinder</code>, this method must return <code>true</code>.
- If this method returns <code>false</code>, <code>BaseCacheAdapter</code> will attempts to handle the binding on its own.</div>
+ When binding is handled by this <code>ViewBinder</code>, this method must return <a href="../../../akha/yakhont/adapter/BaseCacheAdapter.ViewBinder.html#VIEW_BOUND"><code>VIEW_BOUND</code></a>;
+ otherwise, <code>BaseCacheAdapter</code> will attempts to handle the binding on its own.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>view</code> - The view to bind the data to</dd><dd><code>data</code> - The data to bind to the view</dd><dd><code>textRepresentation</code> - The String representation of the supplied data: it is either the result of data.toString() or an empty String but it is never null</dd>
 <dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the value was bound to the view, <code>false</code> otherwise</dd></dl>
 </li>
@@ -202,13 +242,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
