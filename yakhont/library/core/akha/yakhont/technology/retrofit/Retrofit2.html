@@ -104,7 +104,7 @@
 extends <a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="class in akha.yakhont.technology.retrofit">BaseRetrofit</a>&lt;T,<a href="http://square.github.io/retrofit/2.x/retrofit/retrofit2/Retrofit.Builder.html?is-external=true" title="class or interface in retrofit2">Retrofit.Builder</a>&gt;</pre>
 <div class="block">The component to work with
  <a href="http://square.github.io/retrofit/2.x/retrofit/">Retrofit</a> 2.x APIs.</div>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.CoreLoad.html" title="class or interface in akha.yakhont.loader.wrapper"><code>BaseResponseLoaderWrapper.CoreLoad</code></a></dd><DT>&nbsp;</DT><DD><map name="umlmap69"><area shape="rect" coords="6,276,116,295" href="http://www.yworks.com/" alt=""><area shape="rect" coords="69,138,170,165" href="#" alt=""><area shape="rect" coords="10,184,223,201" href="#getDefaultBuilder(java.lang.String)" alt=""><area shape="rect" coords="10,201,158,217" href="#getService()" alt=""><area shape="rect" coords="10,217,85,234" href="#init(java.lang.Class, java.lang.String, int, int, java.util.Map)" alt=""><area shape="rect" coords="10,234,85,251" href="#init(java.lang.Class, retrofit2.Retrofit.Builder, int, int)" alt=""><area shape="rect" coords="2,111,185,129" href="package-summary.html" alt=""><area shape="rect" coords="13,29,226,53" href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" alt=""><area shape="rect" coords="2,2,185,20" href="../../../../akha/yakhont/technology/retrofit/package-summary.html" alt=""><area shape="rect" coords="296,138,400,161" href="http://square.github.io/retrofit/2.x/retrofit/retrofit2/Retrofit.Builder.html" alt=""><area shape="rect" coords="287,111,340,129" href="http://square.github.io/retrofit/2.x/retrofit/retrofit2/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="Retrofit2.png" WIDTH="419" HEIGHT="303" USEMAP="#umlmap69" BORDER="0"></CENTER></DD>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.CoreLoad.html" title="class or interface in akha.yakhont.loader.wrapper"><code>BaseResponseLoaderWrapper.CoreLoad</code></a></dd><DT>&nbsp;</DT><DD><map name="umlmap69"><area shape="rect" coords="6,351,116,370" href="http://www.yworks.com/" alt=""><area shape="rect" coords="120,138,221,165" href="#" alt=""><area shape="rect" coords="10,184,223,201" href="#getDefaultBuilder(java.lang.String)" alt=""><area shape="rect" coords="10,201,322,217" href="#getDefaultOkHttpClientBuilder()" alt=""><area shape="rect" coords="10,217,322,234" href="#getDefaultOkHttpClientBuilder(int, int, java.util.Map, java.util.Map)" alt=""><area shape="rect" coords="10,234,158,251" href="#getService()" alt=""><area shape="rect" coords="10,251,85,267" href="#init(java.lang.Class, java.lang.String, int, int, java.util.Map)" alt=""><area shape="rect" coords="10,267,85,284" href="#init(java.lang.Class, java.lang.String, int, int, java.util.Map, java.util.Map)" alt=""><area shape="rect" coords="10,284,85,301" href="#init(java.lang.Class, retrofit2.Retrofit.Builder, int, int)" alt=""><area shape="rect" coords="10,301,159,317" href="#createCookie(java.lang.String, java.lang.String, okhttp3.HttpUrl)" alt=""><area shape="rect" coords="2,111,185,129" href="package-summary.html" alt=""><area shape="rect" coords="64,29,277,53" href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" alt=""><area shape="rect" coords="52,2,235,20" href="../../../../akha/yakhont/technology/retrofit/package-summary.html" alt=""><area shape="rect" coords="398,294,502,318" href="http://square.github.io/retrofit/2.x/retrofit/retrofit2/Retrofit.Builder.html" alt=""><area shape="rect" coords="389,267,442,286" href="http://square.github.io/retrofit/2.x/retrofit/retrofit2/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="Retrofit2.png" WIDTH="555" HEIGHT="378" USEMAP="#umlmap69" BORDER="0"></CENTER></DD>
 <!-- yWorks UML Doclet   http://www.yworks.com/   b0ac8294d3f86ae0003f3a3a002ea3cf577df824efc6f2... --></dl>
 </li>
 </ul>
@@ -171,18 +171,41 @@ extends <a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html"
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected okhttp3.Cookie</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html#createCookie(java.lang.String,%20java.lang.String,%20okhttp3.HttpUrl)">createCookie</a></strong>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+            <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value,
+            okhttp3.HttpUrl&nbsp;url)</code>
+<div class="block">Creates a cookie.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://square.github.io/retrofit/2.x/retrofit/retrofit2/Retrofit.Builder.html?is-external=true" title="class or interface in retrofit2">Retrofit.Builder</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html#getDefaultBuilder(java.lang.String)">getDefaultBuilder</a></strong>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;retrofitBase)</code>
 <div class="block">Please refer to the base method description.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>okhttp3.OkHttpClient.Builder</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html#getDefaultOkHttpClientBuilder()">getDefaultOkHttpClientBuilder</a></strong>()</code>
+<div class="block">Returns the default <code>OkHttpClient</code> builder.</div>
+</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>okhttp3.OkHttpClient.Builder</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html#getDefaultOkHttpClientBuilder(int,%20int,%20java.util.Map,%20java.util.Map)">getDefaultOkHttpClientBuilder</a></strong>(int&nbsp;connectTimeout,
+                             int&nbsp;readTimeout,
+                             <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;headers,
+                             <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;cookies)</code>
+<div class="block">Returns the default <code>OkHttpClient</code> builder.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html" title="type parameter in Retrofit2">T</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html#getService()">getService</a></strong>()</code>
 <div class="block">Returns the service interface.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html#init(java.lang.Class,%20retrofit2.Retrofit.Builder,%20int,%20int)">init</a></strong>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html" title="type parameter in Retrofit2">T</a>&gt;&nbsp;service,
     <a href="http://square.github.io/retrofit/2.x/retrofit/retrofit2/Retrofit.Builder.html?is-external=true" title="class or interface in retrofit2">Retrofit.Builder</a>&nbsp;builder,
@@ -191,7 +214,7 @@ extends <a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html"
 <div class="block">Please refer to the base method description.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html#init(java.lang.Class,%20java.lang.String,%20int,%20int,%20java.util.Map)">init</a></strong>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html" title="type parameter in Retrofit2">T</a>&gt;&nbsp;service,
     <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;retrofitBase,
@@ -199,6 +222,17 @@ extends <a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html"
     int&nbsp;readTimeout,
     <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;headers)</code>
 <div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html#init(java.lang.Class,%20java.lang.String,%20int,%20int,%20java.util.Map,%20java.util.Map)">init</a></strong>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html" title="type parameter in Retrofit2">T</a>&gt;&nbsp;service,
+    <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;retrofitBase,
+    int&nbsp;connectTimeout,
+    int&nbsp;readTimeout,
+    <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;headers,
+    <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;cookies)</code>
+<div class="block">Initialises Retrofit client.</div>
 </td>
 </tr>
 </table>
@@ -280,6 +314,26 @@ extends <a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html"
 <dt><span class="strong">Parameters:</span></dt><dd><code>service</code> - The service interface</dd><dd><code>retrofitBase</code> - The Retrofit API endpoint URL</dd><dd><code>connectTimeout</code> - The connection timeout (in seconds)</dd><dd><code>readTimeout</code> - The read timeout (in seconds)</dd><dd><code>headers</code> - The optional HTTP headers (or null)</dd></dl>
 </li>
 </ul>
+<a name="init(java.lang.Class, java.lang.String, int, int, java.util.Map, java.util.Map)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre>public&nbsp;void&nbsp;init(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+        <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html" title="type parameter in Retrofit2">T</a>&gt;&nbsp;service,
+        <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+        <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;retrofitBase,
+        int&nbsp;connectTimeout,
+        int&nbsp;readTimeout,
+        <a href="http://developer.android.com/reference/android/support/annotation/Nullable.html?is-external=true" title="class or interface in android.support.annotation">@Nullable</a>
+        <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;headers,
+        <a href="http://developer.android.com/reference/android/support/annotation/Nullable.html?is-external=true" title="class or interface in android.support.annotation">@Nullable</a>
+        <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;cookies)</pre>
+<div class="block">Initialises Retrofit client.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>service</code> - The service interface</dd><dd><code>retrofitBase</code> - The Retrofit API endpoint URL</dd><dd><code>connectTimeout</code> - The connection timeout (in seconds)</dd><dd><code>readTimeout</code> - The read timeout (in seconds)</dd><dd><code>headers</code> - The optional HTTP headers (or null)</dd><dd><code>cookies</code> - The optional cookies (or null)</dd></dl>
+</li>
+</ul>
 <a name="init(java.lang.Class, retrofit2.Retrofit.Builder, int, int)">
 <!--   -->
 </a>
@@ -302,7 +356,7 @@ extends <a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html"
 <a name="getDefaultBuilder(java.lang.String)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getDefaultBuilder</h4>
 <pre>public&nbsp;<a href="http://square.github.io/retrofit/2.x/retrofit/retrofit2/Retrofit.Builder.html?is-external=true" title="class or interface in retrofit2">Retrofit.Builder</a>&nbsp;getDefaultBuilder(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
@@ -313,6 +367,48 @@ extends <a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html"
 <dd><code><a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html#getDefaultBuilder(java.lang.String)">getDefaultBuilder</a></code>&nbsp;in class&nbsp;<code><a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="class in akha.yakhont.technology.retrofit">BaseRetrofit</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html" title="type parameter in Retrofit2">T</a>,<a href="http://square.github.io/retrofit/2.x/retrofit/retrofit2/Retrofit.Builder.html?is-external=true" title="class or interface in retrofit2">Retrofit.Builder</a>&gt;</code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>retrofitBase</code> - The service API endpoint URL</dd>
 <dt><span class="strong">Returns:</span></dt><dd>The Retrofit builder</dd></dl>
+</li>
+</ul>
+<a name="getDefaultOkHttpClientBuilder()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDefaultOkHttpClientBuilder</h4>
+<pre>public&nbsp;okhttp3.OkHttpClient.Builder&nbsp;getDefaultOkHttpClientBuilder()</pre>
+<div class="block">Returns the default <code>OkHttpClient</code> builder.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The <code>OkHttpClient</code> builder</dd></dl>
+</li>
+</ul>
+<a name="getDefaultOkHttpClientBuilder(int, int, java.util.Map, java.util.Map)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDefaultOkHttpClientBuilder</h4>
+<pre>public&nbsp;okhttp3.OkHttpClient.Builder&nbsp;getDefaultOkHttpClientBuilder(int&nbsp;connectTimeout,
+                                                         int&nbsp;readTimeout,
+                                                         <a href="http://developer.android.com/reference/android/support/annotation/Nullable.html?is-external=true" title="class or interface in android.support.annotation">@Nullable</a>
+                                                         <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;headers,
+                                                         <a href="http://developer.android.com/reference/android/support/annotation/Nullable.html?is-external=true" title="class or interface in android.support.annotation">@Nullable</a>
+                                                         <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;cookies)</pre>
+<div class="block">Returns the default <code>OkHttpClient</code> builder.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>connectTimeout</code> - The connection timeout (in seconds)</dd><dd><code>readTimeout</code> - The read timeout (in seconds)</dd><dd><code>headers</code> - The optional HTTP headers (or null)</dd><dd><code>cookies</code> - The optional cookies (or null)</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The <code>OkHttpClient</code> builder</dd></dl>
+</li>
+</ul>
+<a name="createCookie(java.lang.String, java.lang.String, okhttp3.HttpUrl)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>createCookie</h4>
+<pre>protected&nbsp;okhttp3.Cookie&nbsp;createCookie(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                          <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value,
+                          okhttp3.HttpUrl&nbsp;url)</pre>
+<div class="block">Creates a cookie.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - The name</dd><dd><code>value</code> - The value</dd><dd><code>url</code> - The url</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The cookie</dd></dl>
 </li>
 </ul>
 </li>
