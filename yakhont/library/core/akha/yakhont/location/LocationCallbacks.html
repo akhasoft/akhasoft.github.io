@@ -1,0 +1,873 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LocationCallbacks (Yakhont 0.9.18 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="LocationCallbacks (Yakhont 0.9.18 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../akha/yakhont/location/GoogleLocationClientNew.html" title="class in akha.yakhont.location"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../akha/yakhont/location/LocationCallbacks.LocationClient.html" title="interface in akha.yakhont.location"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?akha/yakhont/location/LocationCallbacks.html" target="_top">Frames</a></li>
+<li><a href="LocationCallbacks.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">akha.yakhont.location</div>
+<h2 title="Class LocationCallbacks" class="title">Class LocationCallbacks</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">akha.yakhont.callback.BaseCallbacks</a>&lt;T&gt;</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html" title="class in akha.yakhont.callback">akha.yakhont.callback.BaseCallbacks.BaseCacheCallbacks</a>&lt;<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&gt;</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle">akha.yakhont.callback.lifecycle.BaseActivityLifecycleProceed.BaseActivityCallbacks</a></li>
+<li>
+<ul class="inheritance">
+<li>akha.yakhont.location.LocationCallbacks</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../akha/yakhont/Core.ConfigurationChangedListener.html" title="interface in akha.yakhont">Core.ConfigurationChangedListener</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">LocationCallbacks</span>
+extends <a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle">BaseActivityLifecycleProceed.BaseActivityCallbacks</a>
+implements <a href="../../../akha/yakhont/Core.ConfigurationChangedListener.html" title="interface in akha.yakhont">Core.ConfigurationChangedListener</a></pre>
+<div class="block">Extends the <a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle"><code>BaseActivityLifecycleProceed.BaseActivityCallbacks</code></a> class to provide location APIs support. For example, in Activity:
+
+ <p><pre style="background-color: silver; border: thin solid black;">
+ import akha.yakhont.callback.annotation.CallbacksInherited;
+ import akha.yakhont.location.LocationCallbacks;
+ import akha.yakhont.location.LocationCallbacks.LocationListener;
+
+ import android.location.Location;
+
+ &#064;CallbacksInherited(LocationCallbacks.class)
+ public class MyActivity extends Activity implements LocationListener {
+
+     &#064;Override
+     public void onLocationChanged(Location location, Date date) {
+         // your code here
+     }
+
+     public Location getLocation() {
+         return LocationCallbacks.getLocationCallbacks(this).getCurrentLocation();
+     }
+ }
+ </pre></div>
+<dl><DT>&nbsp;</DT><DD><map name="umlmap3"><area shape="rect" coords="6,782,116,801" href="http://www.yworks.com/" alt=""><area shape="rect" coords="109,148,259,175" href="#" alt=""><area shape="rect" coords="21,176,151,193" href="#LocationCallbacks()" alt=""><area shape="rect" coords="21,194,210,211" href="#allowAccessToLocation(java.lang.Boolean)" alt=""><area shape="rect" coords="21,211,243,227" href="#clearLocationAccessDecision(android.app.Activity)" alt=""><area shape="rect" coords="21,227,210,244" href="#getCurrentLocation()" alt=""><area shape="rect" coords="21,244,279,261" href="#getLocationCallbacks(android.app.Activity)" alt=""><area shape="rect" coords="21,261,165,277" href="#onActivityResult(android.app.Activity, int, int, android.content.Intent)" alt=""><area shape="rect" coords="21,277,290,294" href="#startActivityForResultExceptionHandler(android.app.Activity, java.lang.RuntimeException)" alt=""><area shape="rect" coords="21,294,127,311" href="#toDms(double, boolean, android.content.Context)" alt=""><area shape="rect" coords="21,311,127,327" href="#toDms(android.location.Location, android.content.Context)" alt=""><area shape="rect" coords="21,327,127,344" href="#toDms(android.location.Location, android.content.Context, java.lang.String, java.lang.String)" alt=""><area shape="rect" coords="21,344,210,361" href="#getCurrentLocation(android.app.Activity)" alt=""><area shape="rect" coords="21,361,193,378" href="#getLastUpdateTime()" alt=""><area shape="rect" coords="21,378,338,394" href="#getLocationClient()" alt=""><area shape="rect" coords="21,394,173,411" href="#onActivityCreated(android.app.Activity, android.os.Bundle)" alt=""><area shape="rect" coords="21,411,185,428" href="#onActivityDestroyed(android.app.Activity)" alt=""><area shape="rect" coords="21,428,172,444" href="#onActivityPaused(android.app.Activity)" alt=""><area shape="rect" coords="21,444,184,461" href="#onActivityResumed(android.app.Activity)" alt=""><area shape="rect" coords="21,461,231,478" href="#onActivitySaveInstanceState(android.app.Activity, android.os.Bundle)" alt=""><area shape="rect" coords="21,478,168,494" href="#onActivityStarted(android.app.Activity)" alt=""><area shape="rect" coords="21,494,175,511" href="#onActivityStopped(android.app.Activity)" alt=""><area shape="rect" coords="21,511,219,528" href="#onChangedConfiguration(android.content.res.Configuration)" alt=""><area shape="rect" coords="21,528,145,545" href="#register(android.app.Activity, akha.yakhont.technology.rx.BaseRx.LocationRx)" alt=""><area shape="rect" coords="21,545,159,561" href="#unregister(android.app.Activity, akha.yakhont.technology.rx.BaseRx.LocationRx)" alt=""><area shape="rect" coords="21,561,257,578" href="#isAccessToLocationAllowed()" alt=""><area shape="rect" coords="21,578,186,595" href="#clearLocationClient()" alt=""><area shape="rect" coords="21,595,141,611" href="#onRegister()" alt=""><area shape="rect" coords="21,611,152,628" href="#onUnregister()" alt=""><area shape="rect" coords="21,628,176,645" href="#setLocationClient()" alt=""><area shape="rect" coords="13,121,143,139" href="package-summary.html" alt=""><area shape="rect" coords="15,39,352,63" href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" alt=""><area shape="rect" coords="2,12,180,30" href="../../../akha/yakhont/callback/lifecycle/package-summary.html" alt=""><area shape="rect" coords="456,34,686,58" href="../../../akha/yakhont/Core.ConfigurationChangedListener.html" alt=""><area shape="rect" coords="395,2,479,20" href="../../../akha/yakhont/package-summary.html" alt=""><area shape="rect" coords="462,152,678,176" href="../../../akha/yakhont/location/LocationCallbacks.LocationClient.html" alt=""><area shape="rect" coords="405,121,535,139" href="../../../akha/yakhont/location/package-summary.html" alt=""><area shape="rect" coords="415,246,547,270" href="../../../akha/yakhont/technology/rx/BaseRx.LocationRx.html" alt=""><area shape="rect" coords="405,219,563,238" href="../../../akha/yakhont/technology/rx/package-summary.html" alt=""><area shape="rect" coords="414,335,468,359" href="http://developer.android.com/reference/android/app/Activity.html" alt=""><area shape="rect" coords="405,308,483,327" href="http://developer.android.com/reference/android/app/package-summary.html" alt=""><area shape="rect" coords="414,458,458,482" href="http://developer.android.com/reference/android/content/Intent.html" alt=""><area shape="rect" coords="414,424,471,448" href="http://developer.android.com/reference/android/content/Context.html" alt=""><area shape="rect" coords="405,397,502,416" href="http://developer.android.com/reference/android/content/package-summary.html" alt=""><area shape="rect" coords="414,547,508,571" href="http://developer.android.com/reference/android/content/res/Configuration.html" alt=""><area shape="rect" coords="405,520,523,539" href="http://developer.android.com/reference/android/content/res/package-summary.html" alt=""><area shape="rect" coords="414,636,477,660" href="http://developer.android.com/reference/android/location/Location.html" alt=""><area shape="rect" coords="405,609,505,628" href="http://developer.android.com/reference/android/location/package-summary.html" alt=""><area shape="rect" coords="414,725,467,749" href="http://developer.android.com/reference/android/os/Bundle.html" alt=""><area shape="rect" coords="405,698,476,717" href="http://developer.android.com/reference/android/os/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="LocationCallbacks.png" WIDTH="755" HEIGHT="809" USEMAP="#umlmap3" BORDER="0"></CENTER></DD>
+<!-- yWorks UML Doclet   http://www.yworks.com/   b0ac8294d3f86ae0003f3a3a002ea3cf577df824efc6f2... --></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.LocationClient.html" title="interface in akha.yakhont.location">LocationCallbacks.LocationClient</a></strong></code>
+<div class="block">The location API.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.LocationListener.html" title="interface in akha.yakhont.location">LocationCallbacks.LocationListener</a></strong></code>
+<div class="block">Activity should implement this interface for receiving notifications when the location has changed.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_akha.yakhont.callback.BaseCallbacks">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from class&nbsp;akha.yakhont.callback.<a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks</a></h3>
+<code><a href="../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks.BaseCacheCallbacks</a>&lt;<a href="../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html" title="type parameter in BaseCallbacks.BaseCacheCallbacks">T</a>&gt;, <a href="../../../akha/yakhont/callback/BaseCallbacks.BaseLifecycleProceed.html" title="class in akha.yakhont.callback">BaseCallbacks.BaseLifecycleProceed</a>, <a href="../../../akha/yakhont/callback/BaseCallbacks.BaseProceed.html" title="class in akha.yakhont.callback">BaseCallbacks.BaseProceed</a>, <a href="../../../akha/yakhont/callback/BaseCallbacks.Validator.html" title="interface in akha.yakhont.callback">BaseCallbacks.Validator</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#LocationCallbacks()">LocationCallbacks</a></strong>()</code>
+<div class="block">Initialises a newly created <code>LocationCallbacks</code> object.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#allowAccessToLocation(java.lang.Boolean)">allowAccessToLocation</a></strong>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;value)</code>
+<div class="block">Sets whether the access to location should be allowed or not.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#clearLocationAccessDecision(android.app.Activity)">clearLocationAccessDecision</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</code>
+<div class="block">Clears the saved result of the location access confirmation dialog.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#clearLocationClient()">clearLocationClient</a></strong>()</code>
+<div class="block">Clears the location client.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://developer.android.com/reference/android/location/Location.html?is-external=true" title="class or interface in android.location">Location</a></code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#getCurrentLocation()">getCurrentLocation</a></strong>()</code>
+<div class="block">Returns the current location.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/android/location/Location.html?is-external=true" title="class or interface in android.location">Location</a></code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#getCurrentLocation(android.app.Activity)">getCurrentLocation</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</code>
+<div class="block">Returns the current location.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a></code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#getLastUpdateTime()">getLastUpdateTime</a></strong>()</code>
+<div class="block">Returns the location's last update time.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../akha/yakhont/location/LocationCallbacks.html" title="class in akha.yakhont.location">LocationCallbacks</a></code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#getLocationCallbacks(android.app.Activity)">getLocationCallbacks</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</code>
+<div class="block">Returns the <code>LocationCallbacks</code> object for the given activity.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../akha/yakhont/location/LocationCallbacks.LocationClient.html" title="interface in akha.yakhont.location">LocationCallbacks.LocationClient</a></code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#getLocationClient()">getLocationClient</a></strong>()</code>
+<div class="block">Returns the location client.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#isAccessToLocationAllowed()">isAccessToLocationAllowed</a></strong>()</code>
+<div class="block">Checks whether the access to location was allowed or not.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#onActivityCreated(android.app.Activity,%20android.os.Bundle)">onActivityCreated</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+                 <a href="http://developer.android.com/reference/android/os/Bundle.html?is-external=true" title="class or interface in android.os">Bundle</a>&nbsp;savedInstanceState)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#onActivityDestroyed(android.app.Activity)">onActivityDestroyed</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#onActivityPaused(android.app.Activity)">onActivityPaused</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#onActivityResult(android.app.Activity,%20int,%20int,%20android.content.Intent)">onActivityResult</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+                int&nbsp;requestCode,
+                int&nbsp;resultCode,
+                <a href="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</a>&nbsp;data)</code>
+<div class="block">Called by the Yakhont Weaver.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#onActivityResumed(android.app.Activity)">onActivityResumed</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#onActivitySaveInstanceState(android.app.Activity,%20android.os.Bundle)">onActivitySaveInstanceState</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+                           <a href="http://developer.android.com/reference/android/os/Bundle.html?is-external=true" title="class or interface in android.os">Bundle</a>&nbsp;outState)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#onActivityStarted(android.app.Activity)">onActivityStarted</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#onActivityStopped(android.app.Activity)">onActivityStopped</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#onChangedConfiguration(android.content.res.Configuration)">onChangedConfiguration</a></strong>(<a href="http://developer.android.com/reference/android/content/res/Configuration.html?is-external=true" title="class or interface in android.content.res">Configuration</a>&nbsp;newConfig)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#onRegister()">onRegister</a></strong>()</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#onUnregister()">onUnregister</a></strong>()</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#register(android.app.Activity,%20akha.yakhont.technology.rx.BaseRx.LocationRx)">register</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+        <a href="../../../akha/yakhont/technology/rx/BaseRx.LocationRx.html" title="class in akha.yakhont.technology.rx">BaseRx.LocationRx</a>&nbsp;locationRx)</code>
+<div class="block">Registers Rx component to be notified about location changes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#setLocationClient()">setLocationClient</a></strong>()</code>
+<div class="block">Sets the location client (via <a href="../../../akha/yakhont/technology/Dagger2.html" title="interface in akha.yakhont.technology"><code>Dagger2</code></a>).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#startActivityForResultExceptionHandler(android.app.Activity,%20java.lang.RuntimeException)">startActivityForResultExceptionHandler</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+                                      <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a>&nbsp;exception)</code>
+<div class="block">Called by the Yakhont Weaver; prevents crashing on emulators without Google APIs.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#toDms(double,%20boolean,%20android.content.Context)">toDms</a></strong>(double&nbsp;coordinate,
+     boolean&nbsp;isLongitude,
+     <a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</code>
+<div class="block">Converts latitude or longitude to the DMS format (e.g.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#toDms(android.location.Location,%20android.content.Context)">toDms</a></strong>(<a href="http://developer.android.com/reference/android/location/Location.html?is-external=true" title="class or interface in android.location">Location</a>&nbsp;location,
+     <a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</code>
+<div class="block">Converts <code>Location</code> to the DMS format (e.g.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#toDms(android.location.Location,%20android.content.Context,%20java.lang.String,%20java.lang.String)">toDms</a></strong>(<a href="http://developer.android.com/reference/android/location/Location.html?is-external=true" title="class or interface in android.location">Location</a>&nbsp;location,
+     <a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
+     <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
+     <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;defValue)</code>
+<div class="block">Converts <code>Location</code> to the DMS format (e.g.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/location/LocationCallbacks.html#unregister(android.app.Activity,%20akha.yakhont.technology.rx.BaseRx.LocationRx)">unregister</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+          <a href="../../../akha/yakhont/technology/rx/BaseRx.LocationRx.html" title="class in akha.yakhont.technology.rx">BaseRx.LocationRx</a>&nbsp;locationRx)</code>
+<div class="block">Removes a Rx component that was previously registered with <a href="../../../akha/yakhont/location/LocationCallbacks.html#register(android.app.Activity,%20akha.yakhont.technology.rx.BaseRx.LocationRx)"><code>register(Activity, akha.yakhont.technology.rx.BaseRx.LocationRx)</code></a>.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_akha.yakhont.callback.BaseCallbacks.BaseCacheCallbacks">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;akha.yakhont.callback.<a href="../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks.BaseCacheCallbacks</a></h3>
+<code><a href="../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html#getProceeded()">getProceeded</a>, <a href="../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html#proceed(T)">proceed</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_akha.yakhont.callback.BaseCallbacks">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;akha.yakhont.callback.<a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks</a></h3>
+<code><a href="../../../akha/yakhont/callback/BaseCallbacks.html#proceed(T,%20java.lang.Class)">proceed</a>, <a href="../../../akha/yakhont/callback/BaseCallbacks.html#proceed(T,%20java.lang.Class,%20boolean,%20java.util.Map)">proceed</a>, <a href="../../../akha/yakhont/callback/BaseCallbacks.html#proceed(T,%20java.util.Map)">proceed</a>, <a href="../../../akha/yakhont/callback/BaseCallbacks.html#setForceProceed(boolean)">setForceProceed</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="LocationCallbacks()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>LocationCallbacks</h4>
+<pre>public&nbsp;LocationCallbacks()</pre>
+<div class="block">Initialises a newly created <code>LocationCallbacks</code> object.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getLocationClient()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLocationClient</h4>
+<pre>public&nbsp;<a href="../../../akha/yakhont/location/LocationCallbacks.LocationClient.html" title="interface in akha.yakhont.location">LocationCallbacks.LocationClient</a>&nbsp;getLocationClient()</pre>
+<div class="block">Returns the location client.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The <code>LocationClient</code></dd></dl>
+</li>
+</ul>
+<a name="clearLocationClient()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>clearLocationClient</h4>
+<pre>protected&nbsp;void&nbsp;clearLocationClient()</pre>
+<div class="block">Clears the location client.</div>
+</li>
+</ul>
+<a name="setLocationClient()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLocationClient</h4>
+<pre>protected&nbsp;void&nbsp;setLocationClient()</pre>
+<div class="block">Sets the location client (via <a href="../../../akha/yakhont/technology/Dagger2.html" title="interface in akha.yakhont.technology"><code>Dagger2</code></a>).</div>
+</li>
+</ul>
+<a name="onRegister()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onRegister</h4>
+<pre>protected&nbsp;void&nbsp;onRegister()</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../akha/yakhont/callback/BaseCallbacks.html#onRegister()">onRegister</a></code>&nbsp;in class&nbsp;<code><a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks</a>&lt;<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="onUnregister()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onUnregister</h4>
+<pre>protected&nbsp;void&nbsp;onUnregister()</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../akha/yakhont/callback/BaseCallbacks.html#onUnregister()">onUnregister</a></code>&nbsp;in class&nbsp;<code><a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks</a>&lt;<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="onChangedConfiguration(android.content.res.Configuration)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onChangedConfiguration</h4>
+<pre>public&nbsp;void&nbsp;onChangedConfiguration(<a href="http://developer.android.com/reference/android/content/res/Configuration.html?is-external=true" title="class or interface in android.content.res">Configuration</a>&nbsp;newConfig)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../akha/yakhont/Core.ConfigurationChangedListener.html#onChangedConfiguration(android.content.res.Configuration)">onChangedConfiguration</a></code>&nbsp;in interface&nbsp;<code><a href="../../../akha/yakhont/Core.ConfigurationChangedListener.html" title="interface in akha.yakhont">Core.ConfigurationChangedListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>newConfig</code> - The new device configuration</dd></dl>
+</li>
+</ul>
+<a name="onActivityCreated(android.app.Activity, android.os.Bundle)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onActivityCreated</h4>
+<pre>public&nbsp;void&nbsp;onActivityCreated(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                     <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+                     <a href="http://developer.android.com/reference/android/os/Bundle.html?is-external=true" title="class or interface in android.os">Bundle</a>&nbsp;savedInstanceState)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html#onActivityCreated(android.app.Activity,%20android.os.Bundle)">onActivityCreated</a></code>&nbsp;in class&nbsp;<code><a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle">BaseActivityLifecycleProceed.BaseActivityCallbacks</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="onActivitySaveInstanceState(android.app.Activity, android.os.Bundle)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onActivitySaveInstanceState</h4>
+<pre>public&nbsp;void&nbsp;onActivitySaveInstanceState(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                               <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+                               <a href="http://developer.android.com/reference/android/os/Bundle.html?is-external=true" title="class or interface in android.os">Bundle</a>&nbsp;outState)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html#onActivitySaveInstanceState(android.app.Activity,%20android.os.Bundle)">onActivitySaveInstanceState</a></code>&nbsp;in class&nbsp;<code><a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle">BaseActivityLifecycleProceed.BaseActivityCallbacks</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="allowAccessToLocation(java.lang.Boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>allowAccessToLocation</h4>
+<pre>public static&nbsp;void&nbsp;allowAccessToLocation(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;value)</pre>
+<div class="block">Sets whether the access to location should be allowed or not. If not set,
+ the location access confirmation dialog will be displayed.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>value</code> - The value to set</dd></dl>
+</li>
+</ul>
+<a name="isAccessToLocationAllowed()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isAccessToLocationAllowed</h4>
+<pre>protected static&nbsp;boolean&nbsp;isAccessToLocationAllowed()</pre>
+<div class="block">Checks whether the access to location was allowed or not.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> if access to location was allowed, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="onActivityStarted(android.app.Activity)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onActivityStarted</h4>
+<pre>public&nbsp;void&nbsp;onActivityStarted(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                     <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html#onActivityStarted(android.app.Activity)">onActivityStarted</a></code>&nbsp;in class&nbsp;<code><a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle">BaseActivityLifecycleProceed.BaseActivityCallbacks</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="onActivityResumed(android.app.Activity)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onActivityResumed</h4>
+<pre>public&nbsp;void&nbsp;onActivityResumed(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                     <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html#onActivityResumed(android.app.Activity)">onActivityResumed</a></code>&nbsp;in class&nbsp;<code><a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle">BaseActivityLifecycleProceed.BaseActivityCallbacks</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="onActivityPaused(android.app.Activity)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onActivityPaused</h4>
+<pre>public&nbsp;void&nbsp;onActivityPaused(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                    <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html#onActivityPaused(android.app.Activity)">onActivityPaused</a></code>&nbsp;in class&nbsp;<code><a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle">BaseActivityLifecycleProceed.BaseActivityCallbacks</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="onActivityStopped(android.app.Activity)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onActivityStopped</h4>
+<pre>public&nbsp;void&nbsp;onActivityStopped(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                     <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html#onActivityStopped(android.app.Activity)">onActivityStopped</a></code>&nbsp;in class&nbsp;<code><a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle">BaseActivityLifecycleProceed.BaseActivityCallbacks</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="onActivityDestroyed(android.app.Activity)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onActivityDestroyed</h4>
+<pre>public&nbsp;void&nbsp;onActivityDestroyed(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                       <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html#onActivityDestroyed(android.app.Activity)">onActivityDestroyed</a></code>&nbsp;in class&nbsp;<code><a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle">BaseActivityLifecycleProceed.BaseActivityCallbacks</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="register(android.app.Activity, akha.yakhont.technology.rx.BaseRx.LocationRx)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>register</h4>
+<pre>public&nbsp;boolean&nbsp;register(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+               <a href="../../../akha/yakhont/technology/rx/BaseRx.LocationRx.html" title="class in akha.yakhont.technology.rx">BaseRx.LocationRx</a>&nbsp;locationRx)</pre>
+<div class="block">Registers Rx component to be notified about location changes.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>locationRx</code> - The component to register</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if registration was successful, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="unregister(android.app.Activity, akha.yakhont.technology.rx.BaseRx.LocationRx)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>unregister</h4>
+<pre>public&nbsp;boolean&nbsp;unregister(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+                 <a href="../../../akha/yakhont/technology/rx/BaseRx.LocationRx.html" title="class in akha.yakhont.technology.rx">BaseRx.LocationRx</a>&nbsp;locationRx)</pre>
+<div class="block">Removes a Rx component that was previously registered with <a href="../../../akha/yakhont/location/LocationCallbacks.html#register(android.app.Activity,%20akha.yakhont.technology.rx.BaseRx.LocationRx)"><code>register(Activity, akha.yakhont.technology.rx.BaseRx.LocationRx)</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>locationRx</code> - The component to remove</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if component removing was successful, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="getCurrentLocation()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCurrentLocation</h4>
+<pre>public&nbsp;<a href="http://developer.android.com/reference/android/location/Location.html?is-external=true" title="class or interface in android.location">Location</a>&nbsp;getCurrentLocation()</pre>
+<div class="block">Returns the current location.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The current location</dd></dl>
+</li>
+</ul>
+<a name="getCurrentLocation(android.app.Activity)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCurrentLocation</h4>
+<pre>public static&nbsp;<a href="http://developer.android.com/reference/android/location/Location.html?is-external=true" title="class or interface in android.location">Location</a>&nbsp;getCurrentLocation(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</pre>
+<div class="block">Returns the current location.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>activity</code> - The activity</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The current location</dd></dl>
+</li>
+</ul>
+<a name="getLastUpdateTime()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLastUpdateTime</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;getLastUpdateTime()</pre>
+<div class="block">Returns the location's last update time.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The last update time</dd></dl>
+</li>
+</ul>
+<a name="clearLocationAccessDecision(android.app.Activity)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>clearLocationAccessDecision</h4>
+<pre>public static&nbsp;void&nbsp;clearLocationAccessDecision(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                               <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</pre>
+<div class="block">Clears the saved result of the location access confirmation dialog.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>activity</code> - The activity</dd></dl>
+</li>
+</ul>
+<a name="getLocationCallbacks(android.app.Activity)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLocationCallbacks</h4>
+<pre>public static&nbsp;<a href="../../../akha/yakhont/location/LocationCallbacks.html" title="class in akha.yakhont.location">LocationCallbacks</a>&nbsp;getLocationCallbacks(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                     <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</pre>
+<div class="block">Returns the <code>LocationCallbacks</code> object for the given activity.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>activity</code> - The activity</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The <code>LocationCallbacks</code> object</dd></dl>
+</li>
+</ul>
+<a name="toDms(double, boolean, android.content.Context)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toDms</h4>
+<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toDms(double&nbsp;coordinate,
+           boolean&nbsp;isLongitude,
+           <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+           <a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</pre>
+<div class="block">Converts latitude or longitude to the DMS format (e.g. 5°31′08″ N).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>coordinate</code> - The latitude or longitude</dd><dd><code>isLongitude</code> - <code>true</code> if coordinate is longitude, <code>false</code> otherwise</dd><dd><code>context</code> - The <code>Context</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>The coordinate in the DMS format</dd></dl>
+</li>
+</ul>
+<a name="toDms(android.location.Location, android.content.Context)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toDms</h4>
+<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toDms(<a href="http://developer.android.com/reference/android/location/Location.html?is-external=true" title="class or interface in android.location">Location</a>&nbsp;location,
+           <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+           <a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</pre>
+<div class="block">Converts <code>Location</code> to the DMS format (e.g. 5°31′08″ N 87°04′18″ W).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The <code>Location</code></dd><dd><code>context</code> - The <code>Context</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>The location in the DMS format</dd></dl>
+</li>
+</ul>
+<a name="toDms(android.location.Location, android.content.Context, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toDms</h4>
+<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toDms(<a href="http://developer.android.com/reference/android/location/Location.html?is-external=true" title="class or interface in android.location">Location</a>&nbsp;location,
+           <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+           <a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;defValue)</pre>
+<div class="block">Converts <code>Location</code> to the DMS format (e.g. 5°31′08″ N 87°04′18″ W).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The <code>Location</code></dd><dd><code>context</code> - The <code>Context</code></dd><dd><code>message</code> - The message to return, e.g. "Location: %s"</dd><dd><code>defValue</code> - The string to return if location is null</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The location in the DMS format</dd></dl>
+</li>
+</ul>
+<a name="onActivityResult(android.app.Activity, int, int, android.content.Intent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onActivityResult</h4>
+<pre>public static&nbsp;void&nbsp;onActivityResult(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                    <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+                    int&nbsp;requestCode,
+                    int&nbsp;resultCode,
+                    <a href="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</a>&nbsp;data)</pre>
+<div class="block">Called by the Yakhont Weaver. See <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true#onActivityResult(int,%20int,%20android.content.Intent)" title="class or interface in android.app"><code>Activity.onActivityResult()</code></a>.</div>
+</li>
+</ul>
+<a name="startActivityForResultExceptionHandler(android.app.Activity, java.lang.RuntimeException)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>startActivityForResultExceptionHandler</h4>
+<pre>public static&nbsp;void&nbsp;startActivityForResultExceptionHandler(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                          <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+                                          <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                          <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a>&nbsp;exception)</pre>
+<div class="block">Called by the Yakhont Weaver; prevents crashing on emulators without Google APIs.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>activity</code> - The <code>Activity</code></dd><dd><code>exception</code> - The <code>Exception</code> to handle</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../akha/yakhont/location/GoogleLocationClientNew.html" title="class in akha.yakhont.location"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../akha/yakhont/location/LocationCallbacks.LocationClient.html" title="interface in akha.yakhont.location"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?akha/yakhont/location/LocationCallbacks.html" target="_top">Frames</a></li>
+<li><a href="LocationCallbacks.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><font size="-1">&nbsp;<br>Copyright &copy; 2015-2017 akha, a.k.a. Alexander Kharitonov<br><br>Licensed under the Apache License, Version 2.0 (the "License");<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br><br>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an "AS IS" BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</font></small></p>
+</body>
+</html>

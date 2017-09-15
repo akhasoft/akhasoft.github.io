@@ -1,0 +1,632 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>BaseResponseLoaderWrapper.BaseResponseLoaderBuilder (Yakhont-support 0.9.18 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="BaseResponseLoaderWrapper.BaseResponseLoaderBuilder (Yakhont-support 0.9.18 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.html" title="class in akha.yakhont.support.loader.wrapper"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderExtendedBuilder.html" title="class in akha.yakhont.support.loader.wrapper"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" target="_top">Frames</a></li>
+<li><a href="BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">akha.yakhont.support.loader.wrapper</div>
+<h2 title="Class BaseResponseLoaderWrapper.BaseResponseLoaderBuilder" class="title">Class BaseResponseLoaderWrapper.BaseResponseLoaderBuilder&lt;C,R,E,D&gt;</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>akha.yakhont.support.loader.wrapper.BaseResponseLoaderWrapper.BaseResponseLoaderBuilder&lt;C,R,E,D&gt;</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>C</code> - The type of callback</dd><dd><code>R</code> - The type of network response</dd><dd><code>E</code> - The type of error (if any)</dd><dd><code>D</code> - The type of data</dd></dl>
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseLoaderWrapper.LoaderBuilder.html" title="interface in akha.yakhont.support.loader.wrapper">BaseLoaderWrapper.LoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/loader/BaseResponse.html" title="class in akha.yakhont.loader">BaseResponse</a>&lt;R,E,D&gt;&gt;</dd>
+</dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderExtendedBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderExtendedBuilder</a></dd>
+</dl>
+<dl>
+<dt>Enclosing class:</dt>
+<dd><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.html" title="type parameter in BaseResponseLoaderWrapper">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.html" title="type parameter in BaseResponseLoaderWrapper">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.html" title="type parameter in BaseResponseLoaderWrapper">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.html" title="type parameter in BaseResponseLoaderWrapper">D</a>&gt;</dd>
+</dl>
+<hr>
+<br>
+<pre>public static class <span class="strong">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder&lt;C,R,E,D&gt;</span>
+extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="../../../../../akha/yakhont/support/loader/wrapper/BaseLoaderWrapper.LoaderBuilder.html" title="interface in akha.yakhont.support.loader.wrapper">BaseLoaderWrapper.LoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/loader/BaseResponse.html" title="class in akha.yakhont.loader">BaseResponse</a>&lt;R,E,D&gt;&gt;</pre>
+<div class="block">Builder class for <a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.html" title="class in akha.yakhont.support.loader.wrapper"><code>BaseResponseLoaderWrapper</code></a> objects. Provides a convenient way to set the various fields of
+ a <a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.html" title="class in akha.yakhont.support.loader.wrapper"><code>BaseResponseLoaderWrapper</code></a>.</div>
+<dl><DT>&nbsp;</DT><DD><map name="umlmap107"><area shape="rect" coords="6,668,116,687" href="http://www.yworks.com/" alt=""><area shape="rect" coords="354,148,917,175" href="#" alt=""><area shape="rect" coords="346,194,657,211" href="#create()" alt=""><area shape="rect" coords="346,211,497,227" href="#getTableName()" alt=""><area shape="rect" coords="346,227,452,244" href="#getType()" alt=""><area shape="rect" coords="346,244,861,261" href="#setConverter(akha.yakhont.loader.BaseResponse.Converter)" alt=""><area shape="rect" coords="346,261,871,277" href="#setDescription(java.lang.String)" alt=""><area shape="rect" coords="346,277,871,294" href="#setDescription(android.content.Context, int)" alt=""><area shape="rect" coords="346,294,895,311" href="#setLoaderCallback(akha.yakhont.loader.BaseResponse.LoaderCallback)" alt=""><area shape="rect" coords="346,311,902,327" href="#setLoaderCallbacks(android.support.v4.app.LoaderManager.LoaderCallbacks)" alt=""><area shape="rect" coords="346,327,886,344" href="#setLoaderFactory(akha.yakhont.support.loader.wrapper.BaseLoaderWrapper.LoaderFactory)" alt=""><area shape="rect" coords="346,344,857,361" href="#setLoaderId(int)" alt=""><area shape="rect" coords="346,361,866,378" href="#setRequester(akha.yakhont.Core.Requester)" alt=""><area shape="rect" coords="346,378,873,394" href="#setTableName(android.content.Context, int)" alt=""><area shape="rect" coords="346,394,873,411" href="#setTableName(java.lang.String)" alt=""><area shape="rect" coords="346,411,834,428" href="#setType(java.lang.reflect.Type)" alt=""><area shape="rect" coords="346,428,873,444" href="#setUriResolver(akha.yakhont.Core.UriResolver)" alt=""><area shape="rect" coords="346,444,619,461" href="#getConverter()" alt=""><area shape="rect" coords="346,461,506,478" href="#getFragment()" alt=""><area shape="rect" coords="346,478,560,494" href="#getUriResolver()" alt=""><area shape="rect" coords="346,494,569,511" href="#isLoaderIdAutoGenerated()" alt=""><area shape="rect" coords="338,121,553,139" href="package-summary.html" alt=""><area shape="rect" coords="611,39,660,63" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" alt=""><area shape="rect" coords="602,12,663,30" href="http://docs.oracle.com/javase/8/docs/api/java/lang/package-summary.html" alt=""><area shape="rect" coords="795,34,1183,58" href="../../../../../akha/yakhont/support/loader/wrapper/BaseLoaderWrapper.LoaderBuilder.html" alt=""><area shape="rect" coords="699,2,914,20" href="../../../../../akha/yakhont/support/loader/wrapper/package-summary.html" alt=""><area shape="rect" coords="142,152,254,176" href="../../../../../akha/yakhont/Core.UriResolver.html" alt=""><area shape="rect" coords="108,121,192,139" href="../../../../../akha/yakhont/package-summary.html" alt=""><area shape="rect" coords="52,251,237,275" href="../../../../../akha/yakhont/loader/BaseResponse.Converter.html" alt=""><area shape="rect" coords="2,219,124,238" href="../../../../../akha/yakhont/loader/package-summary.html" alt=""><area shape="rect" coords="1020,152,1147,176" href="../../../../../akha/yakhont/Core.Requester.html" alt=""><area shape="rect" coords="983,121,1067,139" href="../../../../../akha/yakhont/package-summary.html" alt=""><area shape="rect" coords="1042,251,1264,275" href="../../../../../akha/yakhont/loader/BaseResponse.LoaderCallback.html" alt=""><area shape="rect" coords="983,219,1105,238" href="../../../../../akha/yakhont/loader/package-summary.html" alt=""><area shape="rect" coords="996,389,1271,413" href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.html" alt=""><area shape="rect" coords="1049,350,1300,374" href="../../../../../akha/yakhont/support/loader/wrapper/BaseLoaderWrapper.LoaderFactory.html" alt=""><area shape="rect" coords="983,318,1198,337" href="../../../../../akha/yakhont/support/loader/wrapper/package-summary.html" alt=""><area shape="rect" coords="992,478,1049,502" href="http://developer.android.com/reference/android/content/Context.html" alt=""><area shape="rect" coords="983,451,1080,470" href="http://developer.android.com/reference/android/content/package-summary.html" alt=""><area shape="rect" coords="1046,606,1283,630" href="http://developer.android.com/reference/android/support/v4/app/LoaderManager.LoaderCallbacks.html" alt=""><area shape="rect" coords="992,567,1061,591" href="http://developer.android.com/reference/android/support/v4/app/Fragment.html" alt=""><area shape="rect" coords="983,540,1121,559" href="http://developer.android.com/reference/android/support/v4/app/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.png" WIDTH="1374" HEIGHT="695" USEMAP="#umlmap107" BORDER="0"></CENTER></DD>
+<!-- yWorks UML Doclet   http://www.yworks.com/   b0ac8294d3f86ae0003f3a3a002ea3cf577df824efc6f2... --></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#BaseResponseLoaderWrapper.BaseResponseLoaderBuilder(android.support.v4.app.Fragment)">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a></strong>(<a href="http://developer.android.com/reference/android/support/v4/app/Fragment.html?is-external=true" title="class or interface in android.support.v4.app">Fragment</a>&nbsp;fragment)</code>
+<div class="block">Initialises a newly created <code>BaseResponseLoaderBuilder</code> object.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#create()">create</a></strong>()</code>
+<div class="block">Creates a <a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.html" title="class in akha.yakhont.support.loader.wrapper"><code>BaseResponseLoaderWrapper</code></a> with the arguments supplied to this builder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../../akha/yakhont/loader/BaseResponse.Converter.html" title="interface in akha.yakhont.loader">BaseResponse.Converter</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#getConverter()">getConverter</a></strong>()</code>
+<div class="block">Returns the converter.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="http://developer.android.com/reference/android/support/v4/app/Fragment.html?is-external=true" title="class or interface in android.support.v4.app">Fragment</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#getFragment()">getFragment</a></strong>()</code>
+<div class="block">Returns the fragment.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#getTableName()">getTableName</a></strong>()</code>
+<div class="block">Returns the table name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html?is-external=true" title="class or interface in java.lang.reflect">Type</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#getType()">getType</a></strong>()</code>
+<div class="block">Returns the type of data to load.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../../akha/yakhont/Core.UriResolver.html" title="interface in akha.yakhont">Core.UriResolver</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#getUriResolver()">getUriResolver</a></strong>()</code>
+<div class="block">Returns the URI resolver.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#isLoaderIdAutoGenerated()">isLoaderIdAutoGenerated</a></strong>()</code>
+<div class="block">Indicates whether the loader ID was auto generated or not.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#setConverter(akha.yakhont.loader.BaseResponse.Converter)">setConverter</a></strong>(<a href="../../../../../akha/yakhont/loader/BaseResponse.Converter.html" title="interface in akha.yakhont.loader">BaseResponse.Converter</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;converter)</code>
+<div class="block">Sets the converter.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#setDescription(android.content.Context,%20int)">setDescription</a></strong>(<a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
+              int&nbsp;descriptionId)</code>
+<div class="block">Sets the data description.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#setDescription(java.lang.String)">setDescription</a></strong>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;description)</code>
+<div class="block">Sets the data description.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#setLoaderCallback(akha.yakhont.loader.BaseResponse.LoaderCallback)">setLoaderCallback</a></strong>(<a href="../../../../../akha/yakhont/loader/BaseResponse.LoaderCallback.html" title="interface in akha.yakhont.loader">BaseResponse.LoaderCallback</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;loaderCallback)</code>
+<div class="block">Sets the loader callback.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#setLoaderCallbacks(android.support.v4.app.LoaderManager.LoaderCallbacks)">setLoaderCallbacks</a></strong>(<a href="http://developer.android.com/reference/android/support/v4/app/LoaderManager.LoaderCallbacks.html?is-external=true" title="class or interface in android.support.v4.app">LoaderManager.LoaderCallbacks</a>&lt;<a href="../../../../../akha/yakhont/loader/BaseResponse.html" title="class in akha.yakhont.loader">BaseResponse</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&gt;&nbsp;loaderCallbacks)</code>
+<div class="block">Sets the loader callbacks.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#setLoaderFactory(akha.yakhont.support.loader.wrapper.BaseLoaderWrapper.LoaderFactory)">setLoaderFactory</a></strong>(<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseLoaderWrapper.LoaderFactory.html" title="interface in akha.yakhont.support.loader.wrapper">BaseLoaderWrapper.LoaderFactory</a>&lt;<a href="../../../../../akha/yakhont/loader/BaseResponse.html" title="class in akha.yakhont.loader">BaseResponse</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&gt;&nbsp;loaderFactory)</code>
+<div class="block">Sets the loader factory.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#setLoaderId(int)">setLoaderId</a></strong>(int&nbsp;loaderId)</code>
+<div class="block">Sets the loader ID.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#setRequester(akha.yakhont.Core.Requester)">setRequester</a></strong>(<a href="../../../../../akha/yakhont/Core.Requester.html" title="interface in akha.yakhont">Core.Requester</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>&gt;&nbsp;requester)</code>
+<div class="block">Sets the requester.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#setTableName(android.content.Context,%20int)">setTableName</a></strong>(<a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
+            int&nbsp;tableNameId)</code>
+<div class="block">Sets the table name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#setTableName(java.lang.String)">setTableName</a></strong>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName)</code>
+<div class="block">Sets the table name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#setType(java.lang.reflect.Type)">setType</a></strong>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html?is-external=true" title="class or interface in java.lang.reflect">Type</a>&nbsp;type)</code>
+<div class="block">Sets the data type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#setUriResolver(akha.yakhont.Core.UriResolver)">setUriResolver</a></strong>(<a href="../../../../../akha/yakhont/Core.UriResolver.html" title="interface in akha.yakhont">Core.UriResolver</a>&nbsp;uriResolver)</code>
+<div class="block">Sets the URI resolver.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="BaseResponseLoaderWrapper.BaseResponseLoaderBuilder(android.support.v4.app.Fragment)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</h4>
+<pre>public&nbsp;BaseResponseLoaderWrapper.BaseResponseLoaderBuilder(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                                   <a href="http://developer.android.com/reference/android/support/v4/app/Fragment.html?is-external=true" title="class or interface in android.support.v4.app">Fragment</a>&nbsp;fragment)</pre>
+<div class="block">Initialises a newly created <code>BaseResponseLoaderBuilder</code> object.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>fragment</code> - The fragment</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="setRequester(akha.yakhont.Core.Requester)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setRequester</h4>
+<pre><a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+public&nbsp;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;setRequester(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                                                                <a href="../../../../../akha/yakhont/Core.Requester.html" title="interface in akha.yakhont">Core.Requester</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>&gt;&nbsp;requester)</pre>
+<div class="block">Sets the requester.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>requester</code> - The requester</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseResponseLoaderBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setTableName(android.content.Context, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTableName</h4>
+<pre><a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+public&nbsp;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;setTableName(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                                                                <a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
+                                                                                <a href="http://developer.android.com/reference/android/support/annotation/StringRes.html?is-external=true" title="class or interface in android.support.annotation">@StringRes</a>
+                                                                                int&nbsp;tableNameId)</pre>
+<div class="block">Sets the table name.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - The context</dd><dd><code>tableNameId</code> - The resource ID of the table name in the database</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseResponseLoaderBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setTableName(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTableName</h4>
+<pre><a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+public&nbsp;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;setTableName(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                                                                <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName)</pre>
+<div class="block">Sets the table name.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>tableName</code> - The name of the table in the database (to cache the loaded data)</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseResponseLoaderBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setLoaderId(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLoaderId</h4>
+<pre><a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+public&nbsp;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;setLoaderId(int&nbsp;loaderId)</pre>
+<div class="block">Sets the loader ID.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>loaderId</code> - The loader ID</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseResponseLoaderBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setDescription(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDescription</h4>
+<pre><a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+public&nbsp;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;setDescription(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                                                                  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;description)</pre>
+<div class="block">Sets the data description.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>description</code> - The data description</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseResponseLoaderBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setDescription(android.content.Context, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDescription</h4>
+<pre><a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+public&nbsp;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;setDescription(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                                                                  <a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
+                                                                                  <a href="http://developer.android.com/reference/android/support/annotation/StringRes.html?is-external=true" title="class or interface in android.support.annotation">@StringRes</a>
+                                                                                  int&nbsp;descriptionId)</pre>
+<div class="block">Sets the data description.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - The context</dd><dd><code>descriptionId</code> - The resource ID of the data description</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseResponseLoaderBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setConverter(akha.yakhont.loader.BaseResponse.Converter)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setConverter</h4>
+<pre><a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+public&nbsp;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;setConverter(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                                                                <a href="../../../../../akha/yakhont/loader/BaseResponse.Converter.html" title="interface in akha.yakhont.loader">BaseResponse.Converter</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;converter)</pre>
+<div class="block">Sets the converter.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>converter</code> - The converter</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseResponseLoaderBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setUriResolver(akha.yakhont.Core.UriResolver)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setUriResolver</h4>
+<pre><a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+public&nbsp;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;setUriResolver(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                                                                  <a href="../../../../../akha/yakhont/Core.UriResolver.html" title="interface in akha.yakhont">Core.UriResolver</a>&nbsp;uriResolver)</pre>
+<div class="block">Sets the URI resolver.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>uriResolver</code> - The URI resolver</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseResponseLoaderBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setType(java.lang.reflect.Type)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setType</h4>
+<pre><a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+public&nbsp;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;setType(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                                                           <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html?is-external=true" title="class or interface in java.lang.reflect">Type</a>&nbsp;type)</pre>
+<div class="block">Sets the data type.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>type</code> - The type of data</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseResponseLoaderBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setLoaderFactory(akha.yakhont.support.loader.wrapper.BaseLoaderWrapper.LoaderFactory)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLoaderFactory</h4>
+<pre><a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+public&nbsp;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;setLoaderFactory(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                                                                    <a href="../../../../../akha/yakhont/support/loader/wrapper/BaseLoaderWrapper.LoaderFactory.html" title="interface in akha.yakhont.support.loader.wrapper">BaseLoaderWrapper.LoaderFactory</a>&lt;<a href="../../../../../akha/yakhont/loader/BaseResponse.html" title="class in akha.yakhont.loader">BaseResponse</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&gt;&nbsp;loaderFactory)</pre>
+<div class="block">Sets the loader factory.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>loaderFactory</code> - The loader factory</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseResponseLoaderBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setLoaderCallbacks(android.support.v4.app.LoaderManager.LoaderCallbacks)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLoaderCallbacks</h4>
+<pre><a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+public&nbsp;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;setLoaderCallbacks(<a href="http://developer.android.com/reference/android/support/v4/app/LoaderManager.LoaderCallbacks.html?is-external=true" title="class or interface in android.support.v4.app">LoaderManager.LoaderCallbacks</a>&lt;<a href="../../../../../akha/yakhont/loader/BaseResponse.html" title="class in akha.yakhont.loader">BaseResponse</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&gt;&nbsp;loaderCallbacks)</pre>
+<div class="block">Sets the loader callbacks.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>loaderCallbacks</code> - The loader callbacks</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseResponseLoaderBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setLoaderCallback(akha.yakhont.loader.BaseResponse.LoaderCallback)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLoaderCallback</h4>
+<pre><a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+public&nbsp;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper.BaseResponseLoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;setLoaderCallback(<a href="../../../../../akha/yakhont/loader/BaseResponse.LoaderCallback.html" title="interface in akha.yakhont.loader">BaseResponse.LoaderCallback</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;loaderCallback)</pre>
+<div class="block">Sets the loader callback. Simplified version of the <a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html#setLoaderCallbacks(android.support.v4.app.LoaderManager.LoaderCallbacks)"><code>setLoaderCallbacks(LoaderManager.LoaderCallbacks)</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>loaderCallback</code> - The loader callback (see <a href="http://developer.android.com/reference/android/support/v4/app/LoaderManager.LoaderCallbacks.html?is-external=true#onLoadFinished(android.support.v4.content.Loader,%20D)" title="class or interface in android.support.v4.app"><code>LoaderCallbacks.onLoadFinished()</code></a>)</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseResponseLoaderBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="create()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>create</h4>
+<pre><a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+public final&nbsp;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.html" title="class in akha.yakhont.support.loader.wrapper">BaseResponseLoaderWrapper</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">C</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;create()</pre>
+<div class="block">Creates a <a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.html" title="class in akha.yakhont.support.loader.wrapper"><code>BaseResponseLoaderWrapper</code></a> with the arguments supplied to this builder.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseLoaderWrapper.LoaderBuilder.html#create()">create</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseLoaderWrapper.LoaderBuilder.html" title="interface in akha.yakhont.support.loader.wrapper">BaseLoaderWrapper.LoaderBuilder</a>&lt;<a href="../../../../../akha/yakhont/loader/BaseResponse.html" title="class in akha.yakhont.loader">BaseResponse</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">R</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">E</a>,<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&gt;</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>The newly created <code>BaseResponseLoaderWrapper</code> object</dd></dl>
+</li>
+</ul>
+<a name="getFragment()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFragment</h4>
+<pre>protected&nbsp;<a href="http://developer.android.com/reference/android/support/v4/app/Fragment.html?is-external=true" title="class or interface in android.support.v4.app">Fragment</a>&nbsp;getFragment()</pre>
+<div class="block">Returns the fragment.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The fragment</dd></dl>
+</li>
+</ul>
+<a name="getConverter()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getConverter</h4>
+<pre><a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+protected&nbsp;<a href="../../../../../akha/yakhont/loader/BaseResponse.Converter.html" title="interface in akha.yakhont.loader">BaseResponse.Converter</a>&lt;<a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" title="type parameter in BaseResponseLoaderWrapper.BaseResponseLoaderBuilder">D</a>&gt;&nbsp;getConverter()</pre>
+<div class="block">Returns the converter.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The converter</dd></dl>
+</li>
+</ul>
+<a name="getUriResolver()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUriResolver</h4>
+<pre><a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+protected&nbsp;<a href="../../../../../akha/yakhont/Core.UriResolver.html" title="interface in akha.yakhont">Core.UriResolver</a>&nbsp;getUriResolver()</pre>
+<div class="block">Returns the URI resolver.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The URI resolver</dd></dl>
+</li>
+</ul>
+<a name="isLoaderIdAutoGenerated()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isLoaderIdAutoGenerated</h4>
+<pre>protected&nbsp;boolean&nbsp;isLoaderIdAutoGenerated()</pre>
+<div class="block">Indicates whether the loader ID was auto generated or not.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the loader ID was auto generated, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="getTableName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTableName</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getTableName()</pre>
+<div class="block">Returns the table name.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The table name</dd></dl>
+</li>
+</ul>
+<a name="getType()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getType</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html?is-external=true" title="class or interface in java.lang.reflect">Type</a>&nbsp;getType()</pre>
+<div class="block">Returns the type of data to load.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The data type</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.html" title="class in akha.yakhont.support.loader.wrapper"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderExtendedBuilder.html" title="class in akha.yakhont.support.loader.wrapper"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?akha/yakhont/support/loader/wrapper/BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" target="_top">Frames</a></li>
+<li><a href="BaseResponseLoaderWrapper.BaseResponseLoaderBuilder.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><font size="-1">&nbsp;<br>Copyright &copy; 2015-2017 akha, a.k.a. Alexander Kharitonov<br><br>Licensed under the Apache License, Version 2.0 (the "License");<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br><br>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an "AS IS" BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</font></small></p>
+</body>
+</html>

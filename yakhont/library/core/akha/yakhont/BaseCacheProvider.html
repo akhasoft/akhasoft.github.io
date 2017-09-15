@@ -1,0 +1,772 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>BaseCacheProvider (Yakhont 0.9.18 API)</title>
+<link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="BaseCacheProvider (Yakhont 0.9.18 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li><a href="../../akha/yakhont/BaseCacheProvider.CreateTableScriptBuilder.html" title="class in akha.yakhont"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?akha/yakhont/BaseCacheProvider.html" target="_top">Frames</a></li>
+<li><a href="BaseCacheProvider.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">akha.yakhont</div>
+<h2 title="Class BaseCacheProvider" class="title">Class BaseCacheProvider</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content">android.content.ContentProvider</a></li>
+<li>
+<ul class="inheritance">
+<li>akha.yakhont.BaseCacheProvider</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="http://developer.android.com/reference/android/content/ComponentCallbacks.html?is-external=true" title="class or interface in android.content">ComponentCallbacks</a>, <a href="http://developer.android.com/reference/android/content/ComponentCallbacks2.html?is-external=true" title="class or interface in android.content">ComponentCallbacks2</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">BaseCacheProvider</span>
+extends <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content">ContentProvider</a></pre>
+<div class="block">The <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content"><code>ContentProvider</code></a> which does not use predefined database schema but creates tables
+ (or adds columns, if necessary) "on the fly". The supported data types are TEXT and BLOB.
+ <br>Example of declaration in the manifest file:
+
+ <p><pre style="background-color: silver; border: thin solid black;">
+ &lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+     package="com.mypackage" &gt;
+
+     &lt;application ... &gt;
+     ...
+
+     &lt;provider
+         android:authorities="com.mypackage.provider"
+         android:name="akha.yakhont.BaseCacheProvider"
+         android:enabled="true"
+         android:exported="false" /&gt;
+
+     &lt;/application&gt;
+ &lt;/manifest&gt;
+ </pre>
+
+ If you prefer to design another authority (for example, not based on the name of the package), please implement the
+ <a href="../../akha/yakhont/Core.UriResolver.html" title="interface in akha.yakhont"><code>Core.UriResolver</code></a> interface and register it via the
+ <a href="../../akha/yakhont/Core.Utils.html#setUriResolver(akha.yakhont.Core.UriResolver)"><code>setUriResolver()</code></a> method.</div>
+<dl><DT>&nbsp;</DT><DD><map name="umlmap49"><area shape="rect" coords="6,543,116,562" href="http://www.yworks.com/" alt=""><area shape="rect" coords="179,138,340,165" href="#" alt=""><area shape="rect" coords="10,166,148,183" href="#BaseCacheProvider()" alt=""><area shape="rect" coords="10,184,110,201" href="#copyDb(android.content.Context)" alt=""><area shape="rect" coords="10,201,110,217" href="#copyDb(android.content.Context, java.io.File, java.io.File)" alt=""><area shape="rect" coords="10,217,114,234" href="#bulkInsert(android.net.Uri, android.content.ContentValues[])" alt=""><area shape="rect" coords="10,234,94,251" href="#delete(android.net.Uri, java.lang.String, java.lang.String[])" alt=""><area shape="rect" coords="10,251,146,267" href="#getDbName()" alt=""><area shape="rect" coords="10,267,135,284" href="#getDbVersion()" alt=""><area shape="rect" coords="10,284,122,301" href="#getType(android.net.Uri)" alt=""><area shape="rect" coords="10,301,94,317" href="#insert(android.net.Uri, android.content.ContentValues)" alt=""><area shape="rect" coords="10,317,143,334" href="#onCreate()" alt=""><area shape="rect" coords="10,334,115,351" href="#query(android.net.Uri, java.lang.String[], java.lang.String, java.lang.String[], java.lang.String)" alt=""><area shape="rect" coords="10,351,98,368" href="#update(android.net.Uri, android.content.ContentValues, java.lang.String, java.lang.String[])" alt=""><area shape="rect" coords="10,368,164,384" href="#addColumns(android.database.sqlite.SQLiteDatabase, java.lang.String, java.util.Map)" alt=""><area shape="rect" coords="10,384,134,401" href="#createTable(android.database.sqlite.SQLiteDatabase, java.lang.String, java.util.Map)" alt=""><area shape="rect" coords="10,401,118,418" href="#execSQL(android.database.sqlite.SQLiteDatabase, java.lang.String)" alt=""><area shape="rect" coords="10,418,189,434" href="#executeSQLScript(android.content.Context, android.database.sqlite.SQLiteDatabase, java.lang.String)" alt=""><area shape="rect" coords="10,434,496,451" href="#getColumns(java.lang.String, android.content.ContentValues[])" alt=""><area shape="rect" coords="10,451,128,468" href="#isExist(java.lang.String, java.lang.String)" alt=""><area shape="rect" coords="10,468,120,484" href="#onCreate(android.database.sqlite.SQLiteDatabase)" alt=""><area shape="rect" coords="10,484,131,501" href="#onUpgrade(android.database.sqlite.SQLiteDatabase, int, int)" alt=""><area shape="rect" coords="10,501,152,518" href="#runTransaction(android.database.sqlite.SQLiteDatabase, java.lang.Runnable)" alt=""><area shape="rect" coords="2,111,86,129" href="package-summary.html" alt=""><area shape="rect" coords="204,29,315,53" href="http://developer.android.com/reference/android/content/ContentProvider.html" alt=""><area shape="rect" coords="195,2,292,20" href="http://developer.android.com/reference/android/content/package-summary.html" alt=""><area shape="rect" coords="577,171,634,195" href="http://developer.android.com/reference/android/content/Context.html" alt=""><area shape="rect" coords="578,138,678,161" href="http://developer.android.com/reference/android/content/ContentValues.html" alt=""><area shape="rect" coords="568,111,665,129" href="http://developer.android.com/reference/android/content/package-summary.html" alt=""><area shape="rect" coords="587,265,636,289" href="http://developer.android.com/reference/android/database/Cursor.html" alt=""><area shape="rect" coords="568,233,677,252" href="http://developer.android.com/reference/android/database/package-summary.html" alt=""><area shape="rect" coords="578,359,688,383" href="http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html" alt=""><area shape="rect" coords="568,332,710,351" href="http://developer.android.com/reference/android/database/sqlite/package-summary.html" alt=""><area shape="rect" coords="576,448,602,472" href="http://developer.android.com/reference/android/net/Uri.html" alt=""><area shape="rect" coords="568,421,642,440" href="http://developer.android.com/reference/android/net/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="BaseCacheProvider.png" WIDTH="730" HEIGHT="570" USEMAP="#umlmap49" BORDER="0"></CENTER></DD>
+<!-- yWorks UML Doclet   http://www.yworks.com/   b0ac8294d3f86ae0003f3a3a002ea3cf577df824efc6f2... --></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.CreateTableScriptBuilder.html" title="class in akha.yakhont">BaseCacheProvider.CreateTableScriptBuilder</a></strong></code>
+<div class="block">Simple class to generate typical CREATE TABLE script.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_android.content.ContentProvider">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from class&nbsp;android.content.<a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content">ContentProvider</a></h3>
+<code><a href="http://developer.android.com/reference/android/content/ContentProvider.PipeDataWriter.html?is-external=true" title="class or interface in android.content">ContentProvider.PipeDataWriter</a>&lt;<a href="http://developer.android.com/reference/android/content/ContentProvider.PipeDataWriter.html?is-external=true" title="class or interface in android.content">T</a>&gt;</code></li>
+</ul>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_android.content.ComponentCallbacks2">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;android.content.<a href="http://developer.android.com/reference/android/content/ComponentCallbacks2.html?is-external=true" title="class or interface in android.content">ComponentCallbacks2</a></h3>
+<code><a href="http://developer.android.com/reference/android/content/ComponentCallbacks2.html?is-external=true#TRIM_MEMORY_BACKGROUND" title="class or interface in android.content">TRIM_MEMORY_BACKGROUND</a>, <a href="http://developer.android.com/reference/android/content/ComponentCallbacks2.html?is-external=true#TRIM_MEMORY_COMPLETE" title="class or interface in android.content">TRIM_MEMORY_COMPLETE</a>, <a href="http://developer.android.com/reference/android/content/ComponentCallbacks2.html?is-external=true#TRIM_MEMORY_MODERATE" title="class or interface in android.content">TRIM_MEMORY_MODERATE</a>, <a href="http://developer.android.com/reference/android/content/ComponentCallbacks2.html?is-external=true#TRIM_MEMORY_RUNNING_CRITICAL" title="class or interface in android.content">TRIM_MEMORY_RUNNING_CRITICAL</a>, <a href="http://developer.android.com/reference/android/content/ComponentCallbacks2.html?is-external=true#TRIM_MEMORY_RUNNING_LOW" title="class or interface in android.content">TRIM_MEMORY_RUNNING_LOW</a>, <a href="http://developer.android.com/reference/android/content/ComponentCallbacks2.html?is-external=true#TRIM_MEMORY_RUNNING_MODERATE" title="class or interface in android.content">TRIM_MEMORY_RUNNING_MODERATE</a>, <a href="http://developer.android.com/reference/android/content/ComponentCallbacks2.html?is-external=true#TRIM_MEMORY_UI_HIDDEN" title="class or interface in android.content">TRIM_MEMORY_UI_HIDDEN</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#BaseCacheProvider()">BaseCacheProvider</a></strong>()</code>
+<div class="block">Initialises a newly created <code>BaseCacheProvider</code> object.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#addColumns(android.database.sqlite.SQLiteDatabase,%20java.lang.String,%20java.util.Map)">addColumns</a></strong>(<a href="http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html?is-external=true" title="class or interface in android.database.sqlite">SQLiteDatabase</a>&nbsp;db,
+          <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
+          <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../akha/yakhont/BaseCacheProvider.CreateTableScriptBuilder.DataType.html" title="enum in akha.yakhont">BaseCacheProvider.CreateTableScriptBuilder.DataType</a>&gt;&nbsp;columns)</code>
+<div class="block">Adds column(s) to the existing table.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#bulkInsert(android.net.Uri,%20android.content.ContentValues[])">bulkInsert</a></strong>(<a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+          <a href="http://developer.android.com/reference/android/content/ContentValues.html?is-external=true" title="class or interface in android.content">ContentValues</a>[]&nbsp;bulkValues)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#copyDb(android.content.Context)">copyDb</a></strong>(<a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</code>
+<div class="block">Copies the current database to the default backup directory (in debug builds only, see <a href="../../akha/yakhont/Core.Utils.html#isDebugMode(java.lang.String)"><code>Utils.isDebugMode()</code></a>).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#copyDb(android.content.Context,%20java.io.File,%20java.io.File)">copyDb</a></strong>(<a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
+      <a href="http://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;srcDb,
+      <a href="http://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dstDb)</code>
+<div class="block">Copies the database to the file specified (in debug builds only, see <a href="../../akha/yakhont/Core.Utils.html#isDebugMode(java.lang.String)"><code>Utils.isDebugMode()</code></a>).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#createTable(android.database.sqlite.SQLiteDatabase,%20java.lang.String,%20java.util.Map)">createTable</a></strong>(<a href="http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html?is-external=true" title="class or interface in android.database.sqlite">SQLiteDatabase</a>&nbsp;db,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../akha/yakhont/BaseCacheProvider.CreateTableScriptBuilder.DataType.html" title="enum in akha.yakhont">BaseCacheProvider.CreateTableScriptBuilder.DataType</a>&gt;&nbsp;columns)</code>
+<div class="block">Creates table.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#delete(android.net.Uri,%20java.lang.String,%20java.lang.String[])">delete</a></strong>(<a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+      <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;selection,
+      <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;selectionArgs)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#execSQL(android.database.sqlite.SQLiteDatabase,%20java.lang.String)">execSQL</a></strong>(<a href="http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html?is-external=true" title="class or interface in android.database.sqlite">SQLiteDatabase</a>&nbsp;db,
+       <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sql)</code>
+<div class="block">Executes SQL.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#executeSQLScript(android.content.Context,%20android.database.sqlite.SQLiteDatabase,%20java.lang.String)">executeSQLScript</a></strong>(<a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
+                <a href="http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html?is-external=true" title="class or interface in android.database.sqlite">SQLiteDatabase</a>&nbsp;db,
+                <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;scriptName)</code>
+<div class="block">Executes SQL from the Android's asset.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../akha/yakhont/BaseCacheProvider.CreateTableScriptBuilder.DataType.html" title="enum in akha.yakhont">BaseCacheProvider.CreateTableScriptBuilder.DataType</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#getColumns(java.lang.String,%20android.content.ContentValues[])">getColumns</a></strong>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
+          <a href="http://developer.android.com/reference/android/content/ContentValues.html?is-external=true" title="class or interface in android.content">ContentValues</a>[]&nbsp;bulkValues)</code>
+<div class="block">Creates the list of columns to add.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#getDbName()">getDbName</a></strong>()</code>
+<div class="block">Returns the database name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#getDbVersion()">getDbVersion</a></strong>()</code>
+<div class="block">Returns the database version.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#getType(android.net.Uri)">getType</a></strong>(<a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#insert(android.net.Uri,%20android.content.ContentValues)">insert</a></strong>(<a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+      <a href="http://developer.android.com/reference/android/content/ContentValues.html?is-external=true" title="class or interface in android.content">ContentValues</a>&nbsp;values)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#isExist(java.lang.String,%20java.lang.String)">isExist</a></strong>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
+       <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;columnName)</code>
+<div class="block">Checks whether the given column exists or not.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#onCreate()">onCreate</a></strong>()</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#onCreate(android.database.sqlite.SQLiteDatabase)">onCreate</a></strong>(<a href="http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html?is-external=true" title="class or interface in android.database.sqlite">SQLiteDatabase</a>&nbsp;db)</code>
+<div class="block">Called when database created.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#onUpgrade(android.database.sqlite.SQLiteDatabase,%20int,%20int)">onUpgrade</a></strong>(<a href="http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html?is-external=true" title="class or interface in android.database.sqlite">SQLiteDatabase</a>&nbsp;db,
+         int&nbsp;oldVersion,
+         int&nbsp;newVersion)</code>
+<div class="block">Called when database upgraded.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://developer.android.com/reference/android/database/Cursor.html?is-external=true" title="class or interface in android.database">Cursor</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#query(android.net.Uri,%20java.lang.String[],%20java.lang.String,%20java.lang.String[],%20java.lang.String)">query</a></strong>(<a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+     <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;projection,
+     <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;selection,
+     <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;selectionArgs,
+     <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sortOrder)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#runTransaction(android.database.sqlite.SQLiteDatabase,%20java.lang.Runnable)">runTransaction</a></strong>(<a href="http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html?is-external=true" title="class or interface in android.database.sqlite">SQLiteDatabase</a>&nbsp;db,
+              <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;runnable)</code>
+<div class="block">Executes transaction.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/BaseCacheProvider.html#update(android.net.Uri,%20android.content.ContentValues,%20java.lang.String,%20java.lang.String[])">update</a></strong>(<a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+      <a href="http://developer.android.com/reference/android/content/ContentValues.html?is-external=true" title="class or interface in android.content">ContentValues</a>&nbsp;values,
+      <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;selection,
+      <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;selectionArgs)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_android.content.ContentProvider">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;android.content.<a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content">ContentProvider</a></h3>
+<code><a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#applyBatch(java.util.ArrayList)" title="class or interface in android.content">applyBatch</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#attachInfo(android.content.Context,%20android.content.pm.ProviderInfo)" title="class or interface in android.content">attachInfo</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#call(java.lang.String,%20java.lang.String,%20android.os.Bundle)" title="class or interface in android.content">call</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#canonicalize(android.net.Uri)" title="class or interface in android.content">canonicalize</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#dump(java.io.FileDescriptor,%20java.io.PrintWriter,%20java.lang.String[])" title="class or interface in android.content">dump</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#getCallingPackage()" title="class or interface in android.content">getCallingPackage</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#getContext()" title="class or interface in android.content">getContext</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#getPathPermissions()" title="class or interface in android.content">getPathPermissions</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#getReadPermission()" title="class or interface in android.content">getReadPermission</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#getStreamTypes(android.net.Uri,%20java.lang.String)" title="class or interface in android.content">getStreamTypes</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#getWritePermission()" title="class or interface in android.content">getWritePermission</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#isTemporary()" title="class or interface in android.content">isTemporary</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#onConfigurationChanged(android.content.res.Configuration)" title="class or interface in android.content">onConfigurationChanged</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#onLowMemory()" title="class or interface in android.content">onLowMemory</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#onTrimMemory(int)" title="class or interface in android.content">onTrimMemory</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#openAssetFile(android.net.Uri,%20java.lang.String)" title="class or interface in android.content">openAssetFile</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#openAssetFile(android.net.Uri,%20java.lang.String,%20android.os.CancellationSignal)" title="class or interface in android.content">openAssetFile</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#openFile(android.net.Uri,%20java.lang.String)" title="class or interface in android.content">openFile</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#openFile(android.net.Uri,%20java.lang.String,%20android.os.CancellationSignal)" title="class or interface in android.content">openFile</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#openFileHelper(android.net.Uri,%20java.lang.String)" title="class or interface in android.content">openFileHelper</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#openPipeHelper(android.net.Uri,%20java.lang.String,%20android.os.Bundle,%20T,%20android.content.ContentProvider.PipeDataWriter)" title="class or interface in android.content">openPipeHelper</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#openTypedAssetFile(android.net.Uri,%20java.lang.String,%20android.os.Bundle)" title="class or interface in android.content">openTypedAssetFile</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#openTypedAssetFile(android.net.Uri,%20java.lang.String,%20android.os.Bundle,%20android.os.CancellationSignal)" title="class or interface in android.content">openTypedAssetFile</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#query(android.net.Uri,%20java.lang.String[],%20java.lang.String,%20java.lang.String[],%20java.lang.String,%20android.os.CancellationSignal)" title="class or interface in android.content">query</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#setPathPermissions(android.content.pm.PathPermission[])" title="class or interface in android.content">setPathPermissions</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#setReadPermission(java.lang.String)" title="class or interface in android.content">setReadPermission</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#setWritePermission(java.lang.String)" title="class or interface in android.content">setWritePermission</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#shutdown()" title="class or interface in android.content">shutdown</a>, <a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#uncanonicalize(android.net.Uri)" title="class or interface in android.content">uncanonicalize</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="BaseCacheProvider()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>BaseCacheProvider</h4>
+<pre>public&nbsp;BaseCacheProvider()</pre>
+<div class="block">Initialises a newly created <code>BaseCacheProvider</code> object.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getDbName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDbName</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDbName()</pre>
+<div class="block">Returns the database name.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The DB name</dd></dl>
+</li>
+</ul>
+<a name="getDbVersion()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDbVersion</h4>
+<pre>public&nbsp;int&nbsp;getDbVersion()</pre>
+<div class="block">Returns the database version.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The DB version</dd></dl>
+</li>
+</ul>
+<a name="onCreate()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onCreate</h4>
+<pre>public&nbsp;boolean&nbsp;onCreate()</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#onCreate()" title="class or interface in android.content">onCreate</a></code>&nbsp;in class&nbsp;<code><a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content">ContentProvider</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="insert(android.net.Uri, android.content.ContentValues)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>insert</h4>
+<pre>public&nbsp;<a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;insert(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+         <a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+         <a href="http://developer.android.com/reference/android/content/ContentValues.html?is-external=true" title="class or interface in android.content">ContentValues</a>&nbsp;values)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#insert(android.net.Uri,%20android.content.ContentValues)" title="class or interface in android.content">insert</a></code>&nbsp;in class&nbsp;<code><a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content">ContentProvider</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="addColumns(android.database.sqlite.SQLiteDatabase, java.lang.String, java.util.Map)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addColumns</h4>
+<pre>protected&nbsp;boolean&nbsp;addColumns(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                 <a href="http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html?is-external=true" title="class or interface in android.database.sqlite">SQLiteDatabase</a>&nbsp;db,
+                 <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                 <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
+                 <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                 <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../akha/yakhont/BaseCacheProvider.CreateTableScriptBuilder.DataType.html" title="enum in akha.yakhont">BaseCacheProvider.CreateTableScriptBuilder.DataType</a>&gt;&nbsp;columns)</pre>
+<div class="block">Adds column(s) to the existing table.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>db</code> - The database</dd><dd><code>tableName</code> - The table name (in the database above)</dd><dd><code>columns</code> - The column(s) to add</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Whether the column(s) addition was successful</dd></dl>
+</li>
+</ul>
+<a name="getColumns(java.lang.String, android.content.ContentValues[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getColumns</h4>
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../akha/yakhont/BaseCacheProvider.CreateTableScriptBuilder.DataType.html" title="enum in akha.yakhont">BaseCacheProvider.CreateTableScriptBuilder.DataType</a>&gt;&nbsp;getColumns(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                                                         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
+                                                                         <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                                                                         <a href="http://developer.android.com/reference/android/content/ContentValues.html?is-external=true" title="class or interface in android.content">ContentValues</a>[]&nbsp;bulkValues)</pre>
+<div class="block">Creates the list of columns to add.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>tableName</code> - The table name</dd><dd><code>bulkValues</code> - The data to add to the table</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The list of columns</dd></dl>
+</li>
+</ul>
+<a name="bulkInsert(android.net.Uri, android.content.ContentValues[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>bulkInsert</h4>
+<pre>public&nbsp;int&nbsp;bulkInsert(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+             <a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+             <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+             <a href="http://developer.android.com/reference/android/content/ContentValues.html?is-external=true" title="class or interface in android.content">ContentValues</a>[]&nbsp;bulkValues)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#bulkInsert(android.net.Uri,%20android.content.ContentValues[])" title="class or interface in android.content">bulkInsert</a></code>&nbsp;in class&nbsp;<code><a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content">ContentProvider</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="query(android.net.Uri, java.lang.String[], java.lang.String, java.lang.String[], java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>query</h4>
+<pre>public&nbsp;<a href="http://developer.android.com/reference/android/database/Cursor.html?is-external=true" title="class or interface in android.database">Cursor</a>&nbsp;query(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+           <a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;projection,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;selection,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;selectionArgs,
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sortOrder)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#query(android.net.Uri,%20java.lang.String[],%20java.lang.String,%20java.lang.String[],%20java.lang.String)" title="class or interface in android.content">query</a></code>&nbsp;in class&nbsp;<code><a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content">ContentProvider</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="delete(android.net.Uri, java.lang.String, java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>delete</h4>
+<pre>public&nbsp;int&nbsp;delete(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+         <a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;selection,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;selectionArgs)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#delete(android.net.Uri,%20java.lang.String,%20java.lang.String[])" title="class or interface in android.content">delete</a></code>&nbsp;in class&nbsp;<code><a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content">ContentProvider</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="update(android.net.Uri, android.content.ContentValues, java.lang.String, java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>update</h4>
+<pre>public&nbsp;int&nbsp;update(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+         <a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+         <a href="http://developer.android.com/reference/android/content/ContentValues.html?is-external=true" title="class or interface in android.content">ContentValues</a>&nbsp;values,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;selection,
+         <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;selectionArgs)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#update(android.net.Uri,%20android.content.ContentValues,%20java.lang.String,%20java.lang.String[])" title="class or interface in android.content">update</a></code>&nbsp;in class&nbsp;<code><a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content">ContentProvider</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getType(android.net.Uri)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getType</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getType(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+             <a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true#getType(android.net.Uri)" title="class or interface in android.content">getType</a></code>&nbsp;in class&nbsp;<code><a href="http://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content">ContentProvider</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="isExist(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isExist</h4>
+<pre>protected&nbsp;boolean&nbsp;isExist(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+              <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
+              <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+              <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;columnName)</pre>
+<div class="block">Checks whether the given column exists or not.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>tableName</code> - The table name</dd><dd><code>columnName</code> - The column name</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the column exists, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="createTable(android.database.sqlite.SQLiteDatabase, java.lang.String, java.util.Map)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createTable</h4>
+<pre>protected&nbsp;void&nbsp;createTable(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+               <a href="http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html?is-external=true" title="class or interface in android.database.sqlite">SQLiteDatabase</a>&nbsp;db,
+               <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+               <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
+               <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+               <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../akha/yakhont/BaseCacheProvider.CreateTableScriptBuilder.DataType.html" title="enum in akha.yakhont">BaseCacheProvider.CreateTableScriptBuilder.DataType</a>&gt;&nbsp;columns)</pre>
+<div class="block">Creates table.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>db</code> - The database</dd><dd><code>tableName</code> - The table name</dd><dd><code>columns</code> - The list of columns</dd></dl>
+</li>
+</ul>
+<a name="runTransaction(android.database.sqlite.SQLiteDatabase, java.lang.Runnable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>runTransaction</h4>
+<pre>protected&nbsp;void&nbsp;runTransaction(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                  <a href="http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html?is-external=true" title="class or interface in android.database.sqlite">SQLiteDatabase</a>&nbsp;db,
+                  <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                  <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;runnable)</pre>
+<div class="block">Executes transaction.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>db</code> - The database</dd><dd><code>runnable</code> - The transaction to execute</dd></dl>
+</li>
+</ul>
+<a name="execSQL(android.database.sqlite.SQLiteDatabase, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>execSQL</h4>
+<pre>protected&nbsp;void&nbsp;execSQL(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+           <a href="http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html?is-external=true" title="class or interface in android.database.sqlite">SQLiteDatabase</a>&nbsp;db,
+           <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+           <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sql)</pre>
+<div class="block">Executes SQL.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>db</code> - The database</dd><dd><code>sql</code> - The SQL statement(s) to execute</dd></dl>
+</li>
+</ul>
+<a name="executeSQLScript(android.content.Context, android.database.sqlite.SQLiteDatabase, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>executeSQLScript</h4>
+<pre>protected&nbsp;boolean&nbsp;executeSQLScript(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                       <a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
+                       <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                       <a href="http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html?is-external=true" title="class or interface in android.database.sqlite">SQLiteDatabase</a>&nbsp;db,
+                       <a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+                       <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;scriptName)</pre>
+<div class="block">Executes SQL from the Android's asset.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - The context</dd><dd><code>db</code> - The database</dd><dd><code>scriptName</code> - The name of the asset</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if script was executed successfully, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="onCreate(android.database.sqlite.SQLiteDatabase)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onCreate</h4>
+<pre>protected&nbsp;void&nbsp;onCreate(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+            <a href="http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html?is-external=true" title="class or interface in android.database.sqlite">SQLiteDatabase</a>&nbsp;db)</pre>
+<div class="block">Called when database created.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>db</code> - The database</dd></dl>
+</li>
+</ul>
+<a name="onUpgrade(android.database.sqlite.SQLiteDatabase, int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onUpgrade</h4>
+<pre>protected&nbsp;void&nbsp;onUpgrade(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+             <a href="http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html?is-external=true" title="class or interface in android.database.sqlite">SQLiteDatabase</a>&nbsp;db,
+             int&nbsp;oldVersion,
+             int&nbsp;newVersion)</pre>
+<div class="block">Called when database upgraded.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>db</code> - The database</dd><dd><code>oldVersion</code> - The current version of the DB</dd><dd><code>newVersion</code> - The version of the DB after upgrade</dd></dl>
+</li>
+</ul>
+<a name="copyDb(android.content.Context)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copyDb</h4>
+<pre>public static&nbsp;void&nbsp;copyDb(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+          <a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</pre>
+<div class="block">Copies the current database to the default backup directory (in debug builds only, see <a href="../../akha/yakhont/Core.Utils.html#isDebugMode(java.lang.String)"><code>Utils.isDebugMode()</code></a>).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - The context</dd></dl>
+</li>
+</ul>
+<a name="copyDb(android.content.Context, java.io.File, java.io.File)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>copyDb</h4>
+<pre>public static&nbsp;void&nbsp;copyDb(<a href="http://developer.android.com/reference/android/support/annotation/NonNull.html?is-external=true" title="class or interface in android.support.annotation">@NonNull</a>
+          <a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
+          <a href="http://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;srcDb,
+          <a href="http://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dstDb)</pre>
+<div class="block">Copies the database to the file specified (in debug builds only, see <a href="../../akha/yakhont/Core.Utils.html#isDebugMode(java.lang.String)"><code>Utils.isDebugMode()</code></a>).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - The context</dd><dd><code>srcDb</code> - The database to copy, or null (means default one: <code>cache.db</code>)</dd><dd><code>dstDb</code> - The file to copy database to, or null (means default backup directory and file name)</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li><a href="../../akha/yakhont/BaseCacheProvider.CreateTableScriptBuilder.html" title="class in akha.yakhont"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?akha/yakhont/BaseCacheProvider.html" target="_top">Frames</a></li>
+<li><a href="BaseCacheProvider.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><font size="-1">&nbsp;<br>Copyright &copy; 2015-2017 akha, a.k.a. Alexander Kharitonov<br><br>Licensed under the Apache License, Version 2.0 (the "License");<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br><br>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an "AS IS" BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</font></small></p>
+</body>
+</html>
