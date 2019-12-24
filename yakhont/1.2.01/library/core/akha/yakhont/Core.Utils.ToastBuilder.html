@@ -1,0 +1,458 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Core.Utils.ToastBuilder (Yakhont 1.2.01 API)</title>
+<link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Core.Utils.ToastBuilder (Yakhont 1.2.01 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../akha/yakhont/CoreLogger.html" title="class in akha.yakhont"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?akha/yakhont/Core.Utils.ToastBuilder.html" target="_top">Frames</a></li>
+<li><a href="Core.Utils.ToastBuilder.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">akha.yakhont</div>
+<h2 title="Class Core.Utils.ToastBuilder" class="title">Class Core.Utils.ToastBuilder</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>akha.yakhont.Core.Utils.ToastBuilder</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>Enclosing class:</dt>
+<dd><a href="../../akha/yakhont/Core.Utils.html" title="class in akha.yakhont">Core.Utils</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public static class <span class="strong">Core.Utils.ToastBuilder</span>
+extends <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">Builds and shows <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a> with custom duration (please refer to <a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#setDuration(java.lang.Integer)"><code>setDuration(java.lang.Integer)</code></a>).
+
+ <p>Can call <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true#onActivityResult(int,%20int,%20android.content.Intent)" title="class or interface in android.app"><code>Activity.onActivityResult(int, int, android.content.Intent)</code></a> (see <a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#setRequestCode(java.lang.Integer)"><code>setRequestCode(java.lang.Integer)</code></a>).</div>
+<dl><DT>&nbsp;</DT><DD><map name="umlmap86"><area shape="rect" coords="6,393,116,412" href="http://www.yworks.com/" alt=""><area shape="rect" coords="210,138,395,165" href="#" alt=""><area shape="rect" coords="170,166,326,183" href="#Core.Utils.ToastBuilder(android.content.Context)" alt=""><area shape="rect" coords="170,184,272,201" href="#create()" alt=""><area shape="rect" coords="170,201,378,217" href="#setData(android.content.Intent)" alt=""><area shape="rect" coords="170,217,399,234" href="#setDuration(java.lang.Integer)" alt=""><area shape="rect" coords="170,234,388,251" href="#setGravity(java.lang.Integer, int, int)" alt=""><area shape="rect" coords="170,251,389,267" href="#setMargin(java.lang.Float, float)" alt=""><area shape="rect" coords="170,267,429,284" href="#setRequestCode(java.lang.Integer)" alt=""><area shape="rect" coords="170,284,374,301" href="#setText(java.lang.String)" alt=""><area shape="rect" coords="170,301,384,317" href="#setTextId(int)" alt=""><area shape="rect" coords="170,317,378,334" href="#setView(android.view.View)" alt=""><area shape="rect" coords="170,334,388,351" href="#setViewId(int)" alt=""><area shape="rect" coords="170,351,268,368" href="#show()" alt=""><area shape="rect" coords="162,111,246,129" href="package-summary.html" alt=""><area shape="rect" coords="278,29,327,53" href="http://developer.android.com/reference/java/lang/Object.html" alt=""><area shape="rect" coords="270,2,331,20" href="http://developer.android.com/reference/java/lang/package-summary.html" alt=""><area shape="rect" coords="10,138,54,161" href="http://developer.android.com/reference/android/content/Intent.html" alt=""><area shape="rect" coords="2,111,99,129" href="http://developer.android.com/reference/android/content/package-summary.html" alt=""><area shape="rect" coords="503,138,560,161" href="http://developer.android.com/reference/android/content/Context.html" alt=""><area shape="rect" coords="494,111,591,129" href="http://developer.android.com/reference/android/content/package-summary.html" alt=""><area shape="rect" coords="503,226,543,250" href="http://developer.android.com/reference/android/view/View.html" alt=""><area shape="rect" coords="494,199,575,218" href="http://developer.android.com/reference/android/view/package-summary.html" alt=""><area shape="rect" coords="503,315,545,339" href="http://developer.android.com/reference/android/widget/Toast.html" alt=""><area shape="rect" coords="494,288,587,307" href="http://developer.android.com/reference/android/widget/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="Core.Utils.ToastBuilder.png" WIDTH="610" HEIGHT="420" USEMAP="#umlmap86" BORDER="0"></CENTER></DD>
+<!-- yWorks UML Doclet   http://www.yworks.com/   b0ac8294d3f86ae0003f3a3a002ea3cf577df824efc6f2... --></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#Core.Utils.ToastBuilder(android.content.Context)">Core.Utils.ToastBuilder</a></strong>(<a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</code>
+<div class="block">Initialises a newly created <code>ToastBuilder</code> object.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget">Toast</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#create()">create</a></strong>()</code>
+<div class="block">Just creates the <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a> (without showing).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#setData(android.content.Intent)">setData</a></strong>(<a href="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</a>&nbsp;data)</code>
+<div class="block">Sets the data for <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true#onActivityResult(int,%20int,%20android.content.Intent)" title="class or interface in android.app"><code>Activity.onActivityResult(int, int, android.content.Intent)</code></a> (please refer to <a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#setRequestCode(java.lang.Integer)"><code>setRequestCode(java.lang.Integer)</code></a>).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#setDuration(java.lang.Integer)">setDuration</a></strong>(<a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;duration)</code>
+<div class="block">Sets the Toast's duration.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#setGravity(java.lang.Integer,%20int,%20int)">setGravity</a></strong>(<a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;gravity,
+          int&nbsp;xOffset,
+          int&nbsp;yOffset)</code>
+<div class="block">Please refer to <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true#setGravity(int,%20int,%20int)" title="class or interface in android.widget"><code>Toast.setGravity(int, int, int)</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#setMargin(java.lang.Float,%20float)">setMargin</a></strong>(<a href="http://developer.android.com/reference/java/lang/Float.html?is-external=true" title="class or interface in java.lang">Float</a>&nbsp;horizontalMargin,
+         float&nbsp;verticalMargin)</code>
+<div class="block">Please refer to <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true#setMargin(float,%20float)" title="class or interface in android.widget"><code>Toast.setMargin(float, float)</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#setRequestCode(java.lang.Integer)">setRequestCode</a></strong>(<a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;requestCode)</code>
+<div class="block">Sets the Toast's request code.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#setText(java.lang.String)">setText</a></strong>(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text)</code>
+<div class="block">Sets the Toast's text.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#setTextId(int)">setTextId</a></strong>(int&nbsp;textId)</code>
+<div class="block">Sets the Toast's text.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#setView(android.view.View)">setView</a></strong>(<a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view">View</a>&nbsp;view)</code>
+<div class="block">Sets the Toast's <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#setViewId(int)">setViewId</a></strong>(int&nbsp;viewId)</code>
+<div class="block">Sets the Toast's <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget">Toast</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#show()">show</a></strong>()</code>
+<div class="block">Creates and shows the <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a>.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="Core.Utils.ToastBuilder(android.content.Context)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Core.Utils.ToastBuilder</h4>
+<pre>public&nbsp;Core.Utils.ToastBuilder(<a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</pre>
+<div class="block">Initialises a newly created <code>ToastBuilder</code> object.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - The Context (or null for the default one)</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="setViewId(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setViewId</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a>&nbsp;setViewId(@LayoutRes
+                                int&nbsp;viewId)</pre>
+<div class="block">Sets the Toast's <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>viewId</code> - The View ID</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>ToastBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setView(android.view.View)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setView</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a>&nbsp;setView(<a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view">View</a>&nbsp;view)</pre>
+<div class="block">Sets the Toast's <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>view</code> - The View</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>ToastBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setTextId(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTextId</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a>&nbsp;setTextId(@StringRes
+                                int&nbsp;textId)</pre>
+<div class="block">Sets the Toast's text.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>textId</code> - The <code>String</code> ID in resources</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>ToastBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setText(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setText</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a>&nbsp;setText(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text)</pre>
+<div class="block">Sets the Toast's text.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>text</code> - The <code>String</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>ToastBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setDuration(java.lang.Integer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDuration</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a>&nbsp;setDuration(<a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;duration)</pre>
+<div class="block">Sets the Toast's duration.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>duration</code> - duration in seconds (<= 5 min), milliseconds (> 5 min), <code>Toast.LENGTH_LONG</code> or
+        <code>Toast.LENGTH_SHORT</code>, null for default value</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>ToastBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setRequestCode(java.lang.Integer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setRequestCode</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a>&nbsp;setRequestCode(<a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;requestCode)</pre>
+<div class="block">Sets the Toast's request code. If not null, on dismissing <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a> will call
+ <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true#onActivityResult(int,%20int,%20android.content.Intent)" title="class or interface in android.app"><code>Activity.onActivityResult(int, int, android.content.Intent)</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>requestCode</code> - The request code</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>ToastBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setData(android.content.Intent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setData</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a>&nbsp;setData(<a href="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</a>&nbsp;data)</pre>
+<div class="block">Sets the data for <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true#onActivityResult(int,%20int,%20android.content.Intent)" title="class or interface in android.app"><code>Activity.onActivityResult(int, int, android.content.Intent)</code></a> (please refer to <a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#setRequestCode(java.lang.Integer)"><code>setRequestCode(java.lang.Integer)</code></a>).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>data</code> - The Intent</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>ToastBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setGravity(java.lang.Integer, int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setGravity</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a>&nbsp;setGravity(<a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;gravity,
+                                 int&nbsp;xOffset,
+                                 int&nbsp;yOffset)</pre>
+<div class="block">Please refer to <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true#setGravity(int,%20int,%20int)" title="class or interface in android.widget"><code>Toast.setGravity(int, int, int)</code></a>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>This <code>ToastBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setMargin(java.lang.Float, float)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMargin</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a>&nbsp;setMargin(<a href="http://developer.android.com/reference/java/lang/Float.html?is-external=true" title="class or interface in java.lang">Float</a>&nbsp;horizontalMargin,
+                                float&nbsp;verticalMargin)</pre>
+<div class="block">Please refer to <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true#setMargin(float,%20float)" title="class or interface in android.widget"><code>Toast.setMargin(float, float)</code></a>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>This <code>ToastBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="create()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>create</h4>
+<pre>public&nbsp;<a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget">Toast</a>&nbsp;create()</pre>
+<div class="block">Just creates the <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a> (without showing).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The created (but not shown) <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a> (or null)</dd></dl>
+</li>
+</ul>
+<a name="show()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>show</h4>
+<pre>public&nbsp;<a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget">Toast</a>&nbsp;show()</pre>
+<div class="block">Creates and shows the <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The created and shown <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a> (or null)</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../akha/yakhont/CoreLogger.html" title="class in akha.yakhont"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?akha/yakhont/Core.Utils.ToastBuilder.html" target="_top">Frames</a></li>
+<li><a href="Core.Utils.ToastBuilder.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><font size="-1">&nbsp;<br>Copyright &copy; 2015-2020 akha, a.k.a. Alexander Kharitonov<br><br>Licensed under the Apache License, Version 2.0 (the "License");<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br><br>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an "AS IS" BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</font></small></p>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>BaseResponseLoaderWrapper.LoaderCallbacks (Yakhont-full 1.2.01 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="BaseResponseLoaderWrapper.LoaderCallbacks (Yakhont-full 1.2.01 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallback.html" title="interface in akha.yakhont.loader.wrapper"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.Requester.html" title="interface in akha.yakhont.loader.wrapper"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallbacks.html" target="_top">Frames</a></li>
+<li><a href="BaseResponseLoaderWrapper.LoaderCallbacks.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">akha.yakhont.loader.wrapper</div>
+<h2 title="Class BaseResponseLoaderWrapper.LoaderCallbacks" class="title">Class BaseResponseLoaderWrapper.LoaderCallbacks&lt;E,D&gt;</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>akha.yakhont.loader.wrapper.BaseResponseLoaderWrapper.LoaderCallbacks&lt;E,D&gt;</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>E</code> - The type of error (if any)</dd><dd><code>D</code> - The type of data to load</dd></dl>
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallback.html" title="interface in akha.yakhont.loader.wrapper">BaseResponseLoaderWrapper.LoaderCallback</a>&lt;D&gt;</dd>
+</dl>
+<dl>
+<dt>Enclosing class:</dt>
+<dd><a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.html" title="class in akha.yakhont.loader.wrapper">BaseResponseLoaderWrapper</a>&lt;<a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.html" title="type parameter in BaseResponseLoaderWrapper">C</a>,<a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.html" title="type parameter in BaseResponseLoaderWrapper">R</a>,<a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.html" title="type parameter in BaseResponseLoaderWrapper">E</a>,<a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.html" title="type parameter in BaseResponseLoaderWrapper">D</a>&gt;</dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract static class <span class="strong">BaseResponseLoaderWrapper.LoaderCallbacks&lt;E,D&gt;</span>
+extends <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallback.html" title="interface in akha.yakhont.loader.wrapper">BaseResponseLoaderWrapper.LoaderCallback</a>&lt;D&gt;</pre>
+<div class="block">The API for data loading process customization.</div>
+<dl><DT>&nbsp;</DT><DD><map name="umlmap29"><area shape="rect" coords="6,265,116,284" href="http://www.yworks.com/" alt=""><area shape="rect" coords="16,148,442,170" href="#" alt=""><area shape="rect" coords="10,207,138,223" href="#onLoadError(E, akha.yakhont.loader.BaseResponse.Source)" alt=""><area shape="rect" coords="10,223,159,240" href="#onLoadFinished(D, akha.yakhont.loader.BaseResponse.Source)" alt=""><area shape="rect" coords="2,121,172,139" href="package-summary.html" alt=""><area shape="rect" coords="204,39,253,63" href="http://developer.android.com/reference/java/lang/Object.html" alt=""><area shape="rect" coords="196,12,257,30" href="http://developer.android.com/reference/java/lang/package-summary.html" alt=""><area shape="rect" coords="373,34,691,58" href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallback.html" alt=""><area shape="rect" coords="292,2,462,20" href="../../../../akha/yakhont/loader/wrapper/package-summary.html" alt=""><area shape="rect" coords="517,148,666,171" href="../../../../akha/yakhont/loader/BaseResponse.Source.html" alt=""><area shape="rect" coords="506,121,628,139" href="../../../../akha/yakhont/loader/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="BaseResponseLoaderWrapper.LoaderCallbacks.png" WIDTH="780" HEIGHT="292" USEMAP="#umlmap29" BORDER="0"></CENTER></DD>
+<!-- yWorks UML Doclet   http://www.yworks.com/   b0ac8294d3f86ae0003f3a3a002ea3cf577df824efc6f2... --></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallbacks.html#BaseResponseLoaderWrapper.LoaderCallbacks()">BaseResponseLoaderWrapper.LoaderCallbacks</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallbacks.html#onLoadError(E,%20akha.yakhont.loader.BaseResponse.Source)">onLoadError</a></strong>(<a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallbacks.html" title="type parameter in BaseResponseLoaderWrapper.LoaderCallbacks">E</a>&nbsp;error,
+           <a href="../../../../akha/yakhont/loader/BaseResponse.Source.html" title="enum in akha.yakhont.loader">BaseResponse.Source</a>&nbsp;source)</code>
+<div class="block">Called when data loading process aborted with error.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallbacks.html#onLoadFinished(D,%20akha.yakhont.loader.BaseResponse.Source)">onLoadFinished</a></strong>(<a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallbacks.html" title="type parameter in BaseResponseLoaderWrapper.LoaderCallbacks">D</a>&nbsp;data,
+              <a href="../../../../akha/yakhont/loader/BaseResponse.Source.html" title="enum in akha.yakhont.loader">BaseResponse.Source</a>&nbsp;source)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="BaseResponseLoaderWrapper.LoaderCallbacks()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>BaseResponseLoaderWrapper.LoaderCallbacks</h4>
+<pre>public&nbsp;BaseResponseLoaderWrapper.LoaderCallbacks()</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="onLoadFinished(java.lang.Object,akha.yakhont.loader.BaseResponse.Source)">
+<!--   -->
+</a><a name="onLoadFinished(D, akha.yakhont.loader.BaseResponse.Source)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onLoadFinished</h4>
+<pre>public&nbsp;void&nbsp;onLoadFinished(<a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallbacks.html" title="type parameter in BaseResponseLoaderWrapper.LoaderCallbacks">D</a>&nbsp;data,
+                  <a href="../../../../akha/yakhont/loader/BaseResponse.Source.html" title="enum in akha.yakhont.loader">BaseResponse.Source</a>&nbsp;source)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallback.html#onLoadFinished(D,%20akha.yakhont.loader.BaseResponse.Source)">onLoadFinished</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallback.html" title="interface in akha.yakhont.loader.wrapper">BaseResponseLoaderWrapper.LoaderCallback</a>&lt;<a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallbacks.html" title="type parameter in BaseResponseLoaderWrapper.LoaderCallbacks">D</a>&gt;</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>data</code> - The data loaded</dd><dd><code>source</code> - The data loaded source</dd></dl>
+</li>
+</ul>
+<a name="onLoadError(java.lang.Object,akha.yakhont.loader.BaseResponse.Source)">
+<!--   -->
+</a><a name="onLoadError(E, akha.yakhont.loader.BaseResponse.Source)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>onLoadError</h4>
+<pre>public&nbsp;void&nbsp;onLoadError(<a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallbacks.html" title="type parameter in BaseResponseLoaderWrapper.LoaderCallbacks">E</a>&nbsp;error,
+               <a href="../../../../akha/yakhont/loader/BaseResponse.Source.html" title="enum in akha.yakhont.loader">BaseResponse.Source</a>&nbsp;source)</pre>
+<div class="block">Called when data loading process aborted with error.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>error</code> - The data loading error</dd><dd><code>source</code> - The data loading source</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallback.html" title="interface in akha.yakhont.loader.wrapper"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.Requester.html" title="interface in akha.yakhont.loader.wrapper"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?akha/yakhont/loader/wrapper/BaseResponseLoaderWrapper.LoaderCallbacks.html" target="_top">Frames</a></li>
+<li><a href="BaseResponseLoaderWrapper.LoaderCallbacks.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><font size="-1">&nbsp;<br>Copyright &copy; 2015-2020 akha, a.k.a. Alexander Kharitonov<br><br>Licensed under the Apache License, Version 2.0 (the "License");<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br><br>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an "AS IS" BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</font></small></p>
+</body>
+</html>

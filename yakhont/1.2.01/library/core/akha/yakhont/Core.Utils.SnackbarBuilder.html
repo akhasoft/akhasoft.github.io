@@ -1,0 +1,583 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Core.Utils.SnackbarBuilder (Yakhont 1.2.01 API)</title>
+<link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Core.Utils.SnackbarBuilder (Yakhont 1.2.01 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../akha/yakhont/Core.Utils.RetainDialogFragment.html" title="class in akha.yakhont"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?akha/yakhont/Core.Utils.SnackbarBuilder.html" target="_top">Frames</a></li>
+<li><a href="Core.Utils.SnackbarBuilder.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">akha.yakhont</div>
+<h2 title="Class Core.Utils.SnackbarBuilder" class="title">Class Core.Utils.SnackbarBuilder</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>akha.yakhont.Core.Utils.SnackbarBuilder</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>Enclosing class:</dt>
+<dd><a href="../../akha/yakhont/Core.Utils.html" title="class in akha.yakhont">Core.Utils</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public static class <span class="strong">Core.Utils.SnackbarBuilder</span>
+extends <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">Builds and shows <code>Snackbar</code> with Views customization possibilities (please refer to
+ <a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setViewHandler(akha.yakhont.technology.Dagger2.UiModule.ViewModifier)"><code>setViewHandler(akha.yakhont.technology.Dagger2.UiModule.ViewModifier)</code></a>).
+
+ <p>Sequential Snackbar's calls are queued.
+
+ <p>By default calls <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true#onActivityResult(int,%20int,%20android.content.Intent)" title="class or interface in android.app"><code>Activity.onActivityResult(int, int, android.content.Intent)</code></a> (see <a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setRequestCode(java.lang.Integer)"><code>setRequestCode(java.lang.Integer)</code></a>).</div>
+<dl><DT>&nbsp;</DT><DD><map name="umlmap85"><area shape="rect" coords="6,493,116,512" href="http://www.yworks.com/" alt=""><area shape="rect" coords="392,138,607,165" href="#" alt=""><area shape="rect" coords="356,166,533,183" href="#Core.Utils.SnackbarBuilder(android.app.Activity)" alt=""><area shape="rect" coords="356,184,479,201" href="#create()" alt=""><area shape="rect" coords="356,201,592,217" href="#setAction(android.view.View.OnClickListener)" alt=""><area shape="rect" coords="356,217,622,234" href="#setActionColor(int)" alt=""><area shape="rect" coords="356,234,632,251" href="#setActionColorId(int)" alt=""><area shape="rect" coords="356,251,629,267" href="#setActionColors(android.content.res.ColorStateList)" alt=""><area shape="rect" coords="356,267,614,284" href="#setActionText(java.lang.String)" alt=""><area shape="rect" coords="356,284,624,301" href="#setActionTextId(int)" alt=""><area shape="rect" coords="356,301,585,317" href="#setData(android.content.Intent)" alt=""><area shape="rect" coords="356,317,606,334" href="#setDuration(java.lang.Integer)" alt=""><area shape="rect" coords="356,334,611,351" href="#setMaxLines(java.lang.Integer)" alt=""><area shape="rect" coords="356,351,636,368" href="#setRequestCode(java.lang.Integer)" alt=""><area shape="rect" coords="356,368,581,384" href="#setText(java.lang.String)" alt=""><area shape="rect" coords="356,384,591,401" href="#setTextId(int)" alt=""><area shape="rect" coords="356,401,585,418" href="#setView(android.view.View)" alt=""><area shape="rect" coords="356,418,629,434" href="#setViewHandler(akha.yakhont.technology.Dagger2.UiModule.ViewModifier)" alt=""><area shape="rect" coords="356,434,595,451" href="#setViewId(int)" alt=""><area shape="rect" coords="356,451,475,468" href="#show()" alt=""><area shape="rect" coords="348,111,432,129" href="package-summary.html" alt=""><area shape="rect" coords="475,29,524,53" href="http://developer.android.com/reference/java/lang/Object.html" alt=""><area shape="rect" coords="466,2,527,20" href="http://developer.android.com/reference/java/lang/package-summary.html" alt=""><area shape="rect" coords="14,138,285,161" href="../../akha/yakhont/technology/Dagger2.UiModule.ViewHandlerSnackbar.html" alt=""><area shape="rect" coords="2,111,148,129" href="../../akha/yakhont/technology/package-summary.html" alt=""><area shape="rect" coords="196,226,240,250" href="http://developer.android.com/reference/android/content/Intent.html" alt=""><area shape="rect" coords="188,199,285,218" href="http://developer.android.com/reference/android/content/package-summary.html" alt=""><area shape="rect" coords="175,315,272,339" href="http://developer.android.com/reference/android/content/res/ColorStateList.html" alt=""><area shape="rect" coords="166,288,284,307" href="http://developer.android.com/reference/android/content/res/package-summary.html" alt=""><area shape="rect" coords="116,409,257,433" href="http://developer.android.com/reference/android/view/View.OnClickListener.html" alt=""><area shape="rect" coords="76,377,157,396" href="http://developer.android.com/reference/android/view/package-summary.html" alt=""><area shape="rect" coords="758,142,967,166" href="../../akha/yakhont/technology/Dagger2.UiModule.ViewModifier.html" alt=""><area shape="rect" coords="702,111,848,129" href="../../akha/yakhont/technology/package-summary.html" alt=""><area shape="rect" coords="711,236,765,260" href="http://developer.android.com/reference/android/app/Activity.html" alt=""><area shape="rect" coords="702,209,780,228" href="http://developer.android.com/reference/android/app/package-summary.html" alt=""><area shape="rect" coords="711,325,751,349" href="http://developer.android.com/reference/android/view/View.html" alt=""><area shape="rect" coords="702,298,783,317" href="http://developer.android.com/reference/android/view/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="Core.Utils.SnackbarBuilder.png" WIDTH="1031" HEIGHT="520" USEMAP="#umlmap85" BORDER="0"></CENTER></DD>
+<!-- yWorks UML Doclet   http://www.yworks.com/   b0ac8294d3f86ae0003f3a3a002ea3cf577df824efc6f2... --></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#Core.Utils.SnackbarBuilder(android.app.Activity)">Core.Utils.SnackbarBuilder</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</code>
+<div class="block">Initialises a newly created <code>SnackbarBuilder</code> object.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>com.google.android.material.snackbar.Snackbar</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#create()">create</a></strong>()</code>
+<div class="block">Just creates the <code>Snackbar</code> (without showing).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setAction(android.view.View.OnClickListener)">setAction</a></strong>(<a href="http://developer.android.com/reference/android/view/View.OnClickListener.html?is-external=true" title="class or interface in android.view">View.OnClickListener</a>&nbsp;action)</code>
+<div class="block">Sets the Snackbar's action.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setActionColor(int)">setActionColor</a></strong>(int&nbsp;actionColor)</code>
+<div class="block">Sets the color for the Snackbar's action text (please refer to
+ <code>Snackbar.setActionTextColor(int)</code> setActionTextColor} for more info).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setActionColorId(int)">setActionColorId</a></strong>(int&nbsp;actionColorId)</code>
+<div class="block">Sets the color for the Snackbar's action text (please refer to
+ <code>Snackbar.setActionTextColor(int)</code> setActionTextColor} for more info).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setActionColors(android.content.res.ColorStateList)">setActionColors</a></strong>(<a href="http://developer.android.com/reference/android/content/res/ColorStateList.html?is-external=true" title="class or interface in android.content.res">ColorStateList</a>&nbsp;actionColors)</code>
+<div class="block">Sets the colors for the Snackbar's action text (please refer to
+ <code>setActionTextColor</code> for more info).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setActionText(java.lang.String)">setActionText</a></strong>(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;actionText)</code>
+<div class="block">Sets the Snackbar's action text.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setActionTextId(int)">setActionTextId</a></strong>(int&nbsp;actionTextId)</code>
+<div class="block">Sets the Snackbar's action text.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setData(android.content.Intent)">setData</a></strong>(<a href="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</a>&nbsp;data)</code>
+<div class="block">Sets the data for <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true#onActivityResult(int,%20int,%20android.content.Intent)" title="class or interface in android.app"><code>Activity.onActivityResult(int, int, android.content.Intent)</code></a> (please refer to <a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setAction(android.view.View.OnClickListener)"><code>setAction(android.view.View.OnClickListener)</code></a>).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setDuration(java.lang.Integer)">setDuration</a></strong>(<a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;duration)</code>
+<div class="block">Sets the Snackbar's duration.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setMaxLines(java.lang.Integer)">setMaxLines</a></strong>(<a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;maxLines)</code>
+<div class="block">Sets the 'max lines' value for Snackbar's text
+ (please refer to <a href="http://developer.android.com/reference/android/widget/TextView.html?is-external=true#setMaxLines(int)" title="class or interface in android.widget"><code>TextView.setMaxLines(int)</code></a> for more info).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setRequestCode(java.lang.Integer)">setRequestCode</a></strong>(<a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;requestCode)</code>
+<div class="block">Sets the Snackbar's request code.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setText(java.lang.String)">setText</a></strong>(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text)</code>
+<div class="block">Sets the Snackbar's text.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setTextId(int)">setTextId</a></strong>(int&nbsp;textId)</code>
+<div class="block">Sets the Snackbar's text.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setView(android.view.View)">setView</a></strong>(<a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view">View</a>&nbsp;view)</code>
+<div class="block">Sets the <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a> for <code>Snackbar.make(android.view.View, java.lang.CharSequence, int)</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setViewHandler(akha.yakhont.technology.Dagger2.UiModule.ViewModifier)">setViewHandler</a></strong>(<a href="../../akha/yakhont/technology/Dagger2.UiModule.ViewModifier.html" title="interface in akha.yakhont.technology">Dagger2.UiModule.ViewModifier</a>&nbsp;viewModifier)</code>
+<div class="block">Sets the View handler for the Snackbar's view.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setViewId(int)">setViewId</a></strong>(int&nbsp;viewId)</code>
+<div class="block">Sets the <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a> for <code>Snackbar.make(android.view.View, java.lang.CharSequence, int)</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>com.google.android.material.snackbar.Snackbar</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#show()">show</a></strong>()</code>
+<div class="block">Creates and shows the <code>Snackbar</code>.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="Core.Utils.SnackbarBuilder(android.app.Activity)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Core.Utils.SnackbarBuilder</h4>
+<pre>public&nbsp;Core.Utils.SnackbarBuilder(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</pre>
+<div class="block">Initialises a newly created <code>SnackbarBuilder</code> object.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>activity</code> - The Activity (or null for the current one)</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="setViewId(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setViewId</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a>&nbsp;setViewId(@IdRes
+                                   int&nbsp;viewId)</pre>
+<div class="block">Sets the <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a> for <code>Snackbar.make(android.view.View, java.lang.CharSequence, int)</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>viewId</code> - The View ID</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>SnackbarBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setView(android.view.View)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setView</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a>&nbsp;setView(<a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view">View</a>&nbsp;view)</pre>
+<div class="block">Sets the <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a> for <code>Snackbar.make(android.view.View, java.lang.CharSequence, int)</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>view</code> - The View</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>SnackbarBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setTextId(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTextId</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a>&nbsp;setTextId(@StringRes
+                                   int&nbsp;textId)</pre>
+<div class="block">Sets the Snackbar's text.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>textId</code> - The <code>String</code> ID in resources</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>SnackbarBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setText(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setText</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a>&nbsp;setText(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text)</pre>
+<div class="block">Sets the Snackbar's text.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>text</code> - The <code>String</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>SnackbarBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setDuration(java.lang.Integer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDuration</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a>&nbsp;setDuration(<a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;duration)</pre>
+<div class="block">Sets the Snackbar's duration.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>duration</code> - duration in seconds (<= 5 min), milliseconds (> 5 min), <code>Snackbar.LENGTH_INDEFINITE</code>,
+        <code>Snackbar.LENGTH_LONG</code> or <code>Snackbar.LENGTH_SHORT</code>, null for default value</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>SnackbarBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setRequestCode(java.lang.Integer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setRequestCode</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a>&nbsp;setRequestCode(<a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;requestCode)</pre>
+<div class="block">Sets the Snackbar's request code. If not null, on dismissing <code>Snackbar</code> will call
+ action listener (see <a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setAction(android.view.View.OnClickListener)"><code>setAction(android.view.View.OnClickListener)</code></a>).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>requestCode</code> - The request code</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>SnackbarBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setData(android.content.Intent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setData</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a>&nbsp;setData(<a href="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</a>&nbsp;data)</pre>
+<div class="block">Sets the data for <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true#onActivityResult(int,%20int,%20android.content.Intent)" title="class or interface in android.app"><code>Activity.onActivityResult(int, int, android.content.Intent)</code></a> (please refer to <a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setAction(android.view.View.OnClickListener)"><code>setAction(android.view.View.OnClickListener)</code></a>).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>data</code> - The Intent</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>SnackbarBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setAction(android.view.View.OnClickListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setAction</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a>&nbsp;setAction(<a href="http://developer.android.com/reference/android/view/View.OnClickListener.html?is-external=true" title="class or interface in android.view">View.OnClickListener</a>&nbsp;action)</pre>
+<div class="block">Sets the Snackbar's action. If not null (or <a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setRequestCode(java.lang.Integer)"><code>setRequestCode(java.lang.Integer)</code></a> set non-null value),
+ on dismissing <code>Snackbar</code> will call it, (default action is <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true#onActivityResult(int,%20int,%20android.content.Intent)" title="class or interface in android.app"><code>Activity.onActivityResult(int, int, android.content.Intent)</code></a>).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>action</code> - The Snackbar's action</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>SnackbarBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setActionTextId(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setActionTextId</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a>&nbsp;setActionTextId(@StringRes
+                                         int&nbsp;actionTextId)</pre>
+<div class="block">Sets the Snackbar's action text.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>actionTextId</code> - The <code>String</code> ID in resources</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>SnackbarBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setActionText(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setActionText</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a>&nbsp;setActionText(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;actionText)</pre>
+<div class="block">Sets the Snackbar's action text.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>actionText</code> - The <code>String</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>SnackbarBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setMaxLines(java.lang.Integer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMaxLines</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a>&nbsp;setMaxLines(<a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;maxLines)</pre>
+<div class="block">Sets the 'max lines' value for Snackbar's text
+ (please refer to <a href="http://developer.android.com/reference/android/widget/TextView.html?is-external=true#setMaxLines(int)" title="class or interface in android.widget"><code>TextView.setMaxLines(int)</code></a> for more info).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>maxLines</code> - The 'max lines' value</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>SnackbarBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setActionColors(android.content.res.ColorStateList)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setActionColors</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a>&nbsp;setActionColors(<a href="http://developer.android.com/reference/android/content/res/ColorStateList.html?is-external=true" title="class or interface in android.content.res">ColorStateList</a>&nbsp;actionColors)</pre>
+<div class="block">Sets the colors for the Snackbar's action text (please refer to
+ <code>setActionTextColor</code> for more info).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>actionColors</code> - The colors</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>SnackbarBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setActionColorId(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setActionColorId</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a>&nbsp;setActionColorId(@ColorRes
+                                          int&nbsp;actionColorId)</pre>
+<div class="block">Sets the color for the Snackbar's action text (please refer to
+ <code>Snackbar.setActionTextColor(int)</code> setActionTextColor} for more info).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>actionColorId</code> - The color ID in resources</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>SnackbarBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setActionColor(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setActionColor</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a>&nbsp;setActionColor(int&nbsp;actionColor)</pre>
+<div class="block">Sets the color for the Snackbar's action text (please refer to
+ <code>Snackbar.setActionTextColor(int)</code> setActionTextColor} for more info).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>actionColor</code> - The color</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>SnackbarBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="setViewHandler(akha.yakhont.technology.Dagger2.UiModule.ViewModifier)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setViewHandler</h4>
+<pre>public&nbsp;<a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a>&nbsp;setViewHandler(<a href="../../akha/yakhont/technology/Dagger2.UiModule.ViewModifier.html" title="interface in akha.yakhont.technology">Dagger2.UiModule.ViewModifier</a>&nbsp;viewModifier)</pre>
+<div class="block">Sets the View handler for the Snackbar's view. Usage example:
+
+ <p><pre style="background-color: silver; border: thin solid black;">
+ setToastViewHandler((view, vh) -&gt; {
+     view.setBackgroundColor(Color.BLUE);
+     vh.getTextView().setTextColor(Color.GREEN);
+ });
+ </pre></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>viewModifier</code> - The Snackbar's view modifier</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>SnackbarBuilder</code> object to allow for chaining of calls to set methods</dd></dl>
+</li>
+</ul>
+<a name="create()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>create</h4>
+<pre>public&nbsp;com.google.android.material.snackbar.Snackbar&nbsp;create()</pre>
+<div class="block">Just creates the <code>Snackbar</code> (without showing).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The created (but not shown) <code>Snackbar</code> (or null)</dd></dl>
+</li>
+</ul>
+<a name="show()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>show</h4>
+<pre>public&nbsp;com.google.android.material.snackbar.Snackbar&nbsp;show()</pre>
+<div class="block">Creates and shows the <code>Snackbar</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The created and shown <code>Snackbar</code> (or null)</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../akha/yakhont/Core.Utils.RetainDialogFragment.html" title="class in akha.yakhont"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?akha/yakhont/Core.Utils.SnackbarBuilder.html" target="_top">Frames</a></li>
+<li><a href="Core.Utils.SnackbarBuilder.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><font size="-1">&nbsp;<br>Copyright &copy; 2015-2020 akha, a.k.a. Alexander Kharitonov<br><br>Licensed under the Apache License, Version 2.0 (the "License");<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br><br>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an "AS IS" BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</font></small></p>
+</body>
+</html>

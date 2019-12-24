@@ -1,0 +1,886 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CoreReflection (Yakhont 1.2.01 API)</title>
+<link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="CoreReflection (Yakhont 1.2.01 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../akha/yakhont/CorePermissions.RequestBuilder.html" title="class in akha.yakhont"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../akha/yakhont/LogDebug.html" title="annotation in akha.yakhont"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?akha/yakhont/CoreReflection.html" target="_top">Frames</a></li>
+<li><a href="CoreReflection.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">akha.yakhont</div>
+<h2 title="Class CoreReflection" class="title">Class CoreReflection</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>akha.yakhont.CoreReflection</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">CoreReflection</span>
+extends <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">The helper class for work with Java Reflection API.
+
+ <p>Some of available features are:
+ <ul>
+   <li>Working with arrays, collections, SparseArrays, etc.
+     <ul>
+       <li>Checks if parameter is array, collections, etc. <a href="../../akha/yakhont/CoreReflection.html#isNotSingle(java.lang.Object)"><code>isNotSingle(Object)</code></a></li>
+       <li>Gets the size of parameter (if it's an array, collections, etc.) <a href="../../akha/yakhont/CoreReflection.html#getSize(java.lang.Object)"><code>getSize(Object)</code></a></li>
+       <li>Returns contained objects if parameter is array, collections, etc. <a href="../../akha/yakhont/CoreReflection.html#getObjects(java.lang.Object,%20boolean)"><code>getObjects(Object, boolean)</code></a></li>
+       <li>Merges data (each parameter can be array, collections, etc.) <a href="../../akha/yakhont/CoreReflection.html#mergeObjects(java.lang.Object,%20java.lang.Object)"><code>mergeObjects(Object, Object)</code></a></li>
+     </ul>
+   <li>Finds list of the overridden methods <a href="../../akha/yakhont/CoreReflection.html#findOverriddenMethods(java.lang.Class,%20java.lang.Class)"><code>findOverriddenMethods(Class, Class)</code></a></li>
+   <li>Compares methods <a href="../../akha/yakhont/CoreReflection.html#equalsMethods(java.lang.reflect.Method,%20java.lang.reflect.Method)"><code>equalsMethods(Method, Method)</code></a></li>
+   <li>Finds list of methods, based on selection flags <a href="../../akha/yakhont/CoreReflection.html#findMethods(java.lang.Class,%20java.lang.Class,%20boolean,%20boolean,%20boolean,%20boolean,%20java.lang.Boolean,%20java.lang.Boolean)"><code>findMethods</code></a></li>
+   <li>Returns object's fields <a href="../../akha/yakhont/CoreReflection.html#getFields(java.lang.Object,%20java.lang.Class,%20boolean,%20boolean,%20boolean,%20boolean,%20boolean,%20boolean,%20java.lang.Boolean,%20java.lang.Boolean)"><code>getFields</code></a></li>
+ </ul></div>
+<dl><DT>&nbsp;</DT><DD><map name="umlmap96"><area shape="rect" coords="6,643,116,662" href="http://www.yworks.com/" alt=""><area shape="rect" coords="71,138,193,165" href="#" alt=""><area shape="rect" coords="10,167,137,184" href="#createSafe(java.lang.Class)" alt=""><area shape="rect" coords="10,184,178,201" href="#equalsMethods(java.lang.reflect.Method, java.lang.reflect.Method)" alt=""><area shape="rect" coords="10,201,121,217" href="#findField(java.lang.Object, java.lang.String)" alt=""><area shape="rect" coords="10,217,147,234" href="#findMethod(java.lang.Object, java.lang.String, java.lang.Class...)" alt=""><area shape="rect" coords="10,234,188,251" href="#findMethods(java.lang.Class, java.lang.Class, boolean, boolean, boolean, boolean, java.lang.Boolean, java.lang.Boolean)" alt=""><area shape="rect" coords="10,251,248,267" href="#findOverriddenMethods(java.lang.Class, java.lang.Class)" alt=""><area shape="rect" coords="10,267,180,284" href="#getAnnotation(java.lang.Object, java.lang.Class)" alt=""><area shape="rect" coords="10,284,122,301" href="#getField(java.lang.Object, java.lang.String)" alt=""><area shape="rect" coords="10,301,122,317" href="#getField(java.lang.Object, java.lang.reflect.Field)" alt=""><area shape="rect" coords="10,317,208,334" href="#getFields(java.lang.Object, java.lang.Class, boolean, boolean, boolean, boolean, boolean, boolean, java.lang.Boolean, java.lang.Boolean)" alt=""><area shape="rect" coords="10,334,194,351" href="#getFields(java.lang.Object, java.lang.Class, boolean, boolean, boolean, boolean, boolean, java.lang.Boolean, java.lang.Boolean)" alt=""><area shape="rect" coords="10,351,134,368" href="#getObject(java.lang.Object, int)" alt=""><area shape="rect" coords="10,368,175,384" href="#getObjects(java.lang.Object, boolean)" alt=""><area shape="rect" coords="10,384,100,401" href="#getSize(java.lang.Object)" alt=""><area shape="rect" coords="10,401,113,418" href="#invoke(java.lang.Object, java.lang.String, java.lang.Object...)" alt=""><area shape="rect" coords="10,418,113,434" href="#invoke(java.lang.Object, java.lang.reflect.Method, java.lang.Object...)" alt=""><area shape="rect" coords="10,434,138,451" href="#invokeSafe(java.lang.Object, java.lang.String, java.lang.Object...)" alt=""><area shape="rect" coords="10,451,138,468" href="#invokeSafe(java.lang.Object, java.lang.reflect.Method, java.lang.Object...)" alt=""><area shape="rect" coords="10,468,157,484" href="#isAnnotated(java.lang.Object, java.lang.Class)" alt=""><area shape="rect" coords="10,484,184,501" href="#isAnnotatedField(java.lang.Object, java.lang.Class, java.lang.String)" alt=""><area shape="rect" coords="10,501,197,518" href="#isAnnotatedMethod(java.lang.Object, java.lang.Class, java.lang.String, java.lang.Class...)" alt=""><area shape="rect" coords="10,518,156,535" href="#isNotSingle(java.lang.Object)" alt=""><area shape="rect" coords="10,535,187,551" href="#isPackagePrivate(java.lang.reflect.Method)" alt=""><area shape="rect" coords="10,551,187,568" href="#isPackagePrivate(int)" alt=""><area shape="rect" coords="10,568,160,585" href="#mergeObjects(java.lang.Object, java.lang.Object)" alt=""><area shape="rect" coords="10,585,122,601" href="#setField(java.lang.Object, java.lang.String, T)" alt=""><area shape="rect" coords="10,601,122,618" href="#setField(java.lang.Object, java.lang.reflect.Field, T)" alt=""><area shape="rect" coords="2,111,86,129" href="package-summary.html" alt=""><area shape="rect" coords="108,29,157,53" href="http://developer.android.com/reference/java/lang/Object.html" alt=""><area shape="rect" coords="99,2,160,20" href="http://developer.android.com/reference/java/lang/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="CoreReflection.png" WIDTH="272" HEIGHT="670" USEMAP="#umlmap96" BORDER="0"></CENTER></DD>
+<!-- yWorks UML Doclet   http://www.yworks.com/   b0ac8294d3f86ae0003f3a3a002ea3cf577df824efc6f2... --></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#createSafe(java.lang.Class)">createSafe</a></strong>(<a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&nbsp;cls)</code>
+<div class="block">Same as <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true#newInstance()" title="class or interface in java.lang"><code>Class.newInstance()</code></a> but never throws exceptions.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#equalsMethods(java.lang.reflect.Method,%20java.lang.reflect.Method)">equalsMethods</a></strong>(<a href="http://developer.android.com/reference/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&nbsp;method1,
+             <a href="http://developer.android.com/reference/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&nbsp;method2)</code>
+<div class="block">Compares methods by name, parameters and return type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/java/lang/reflect/Field.html?is-external=true" title="class or interface in java.lang.reflect">Field</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#findField(java.lang.Object,%20java.lang.String)">findField</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+         <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fieldName)</code>
+<div class="block">Finds field.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#findMethod(java.lang.Object,%20java.lang.String,%20java.lang.Class...)">findMethod</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+          <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;methodName,
+          <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>...&nbsp;args)</code>
+<div class="block">Finds method to invoke (unboxing supported).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://developer.android.com/reference/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#findMethods(java.lang.Class,%20java.lang.Class,%20boolean,%20boolean,%20boolean,%20boolean,%20java.lang.Boolean,%20java.lang.Boolean)">findMethods</a></strong>(<a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;methodsClass,
+           <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;stopClass,
+           boolean&nbsp;includePublic,
+           boolean&nbsp;includeProtected,
+           boolean&nbsp;includePrivate,
+           boolean&nbsp;includePackage,
+           <a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;includeSynthetic,
+           <a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;includeBridge)</code>
+<div class="block">Finds list of methods in the class, based on selection flags (see below).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://developer.android.com/reference/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#findOverriddenMethods(java.lang.Class,%20java.lang.Class)">findOverriddenMethods</a></strong>(<a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;derivedClass,
+                     <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;baseClass)</code>
+<div class="block">Finds list of the overridden methods.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#getAnnotation(java.lang.Object,%20java.lang.Class)">getAnnotation</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+             <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="http://developer.android.com/reference/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&nbsp;annotation)</code>
+<div class="block">Gets the object's annotation.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#getField(java.lang.Object,%20java.lang.reflect.Field)">getField</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+        <a href="http://developer.android.com/reference/java/lang/reflect/Field.html?is-external=true" title="class or interface in java.lang.reflect">Field</a>&nbsp;field)</code>
+<div class="block">Gets the value of the field.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#getField(java.lang.Object,%20java.lang.String)">getField</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+        <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fieldName)</code>
+<div class="block">Gets the value of the field.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="http://developer.android.com/reference/java/lang/reflect/Field.html?is-external=true" title="class or interface in java.lang.reflect">Field</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#getFields(java.lang.Object,%20java.lang.Class,%20boolean,%20boolean,%20boolean,%20boolean,%20boolean,%20java.lang.Boolean,%20java.lang.Boolean)">getFields</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+         <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;stopClass,
+         boolean&nbsp;includeHidden,
+         boolean&nbsp;includePublic,
+         boolean&nbsp;includeProtected,
+         boolean&nbsp;includePrivate,
+         boolean&nbsp;includePackage,
+         <a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;includeStatic,
+         <a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;includeSynthetic)</code>
+<div class="block">Returns object's fields as a collection.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#getFields(java.lang.Object,%20java.lang.Class,%20boolean,%20boolean,%20boolean,%20boolean,%20boolean,%20boolean,%20java.lang.Boolean,%20java.lang.Boolean)">getFields</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+         <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;stopClass,
+         boolean&nbsp;prefixWithClass,
+         boolean&nbsp;includeHidden,
+         boolean&nbsp;includePublic,
+         boolean&nbsp;includeProtected,
+         boolean&nbsp;includePrivate,
+         boolean&nbsp;includePackage,
+         <a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;includeStatic,
+         <a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;includeSynthetic)</code>
+<div class="block">Returns object's fields as a map (name / value).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#getObject(java.lang.Object,%20int)">getObject</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+         int&nbsp;position)</code>
+<div class="block">Returns contained object at given position if parameter is array, <code>ArrayMap</code>, <code>List</code>,
+ <code>SparseArray</code>, <code>Sparse*Array</code> or <code>ArraySet</code> (null otherwise).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#getObjects(java.lang.Object,%20boolean)">getObjects</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+          boolean&nbsp;handleSingles)</code>
+<div class="block">Returns contained objects if parameter is array, <code>ArrayMap</code>, <code>Collection</code>,
+ <code>SparseArray</code>, <code>Sparse*Array</code>, or null (please refer to the 'handleSingles' parameter).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#getSize(java.lang.Object)">getSize</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object)</code>
+<div class="block">Returns the size of parameter (if it's an array, <code>ArrayMap</code>, <code>Collection</code>,
+ <code>SparseArray</code> or <code>Sparse*Array</code>).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#invoke(java.lang.Object,%20java.lang.reflect.Method,%20java.lang.Object...)">invoke</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+      <a href="http://developer.android.com/reference/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&nbsp;method,
+      <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</code>
+<div class="block">Invokes method and returns the result.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#invoke(java.lang.Object,%20java.lang.String,%20java.lang.Object...)">invoke</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+      <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;methodName,
+      <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</code>
+<div class="block">Invokes method and returns the result.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#invokeSafe(java.lang.Object,%20java.lang.reflect.Method,%20java.lang.Object...)">invokeSafe</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+          <a href="http://developer.android.com/reference/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&nbsp;method,
+          <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</code>
+<div class="block">Same as <a href="../../akha/yakhont/CoreReflection.html#invoke(java.lang.Object,%20java.lang.reflect.Method,%20java.lang.Object...)"><code>invoke(Object, Method, Object...)</code></a> but never throws exceptions.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#invokeSafe(java.lang.Object,%20java.lang.String,%20java.lang.Object...)">invokeSafe</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+          <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;methodName,
+          <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</code>
+<div class="block">Same as <a href="../../akha/yakhont/CoreReflection.html#invoke(java.lang.Object,%20java.lang.String,%20java.lang.Object...)"><code>invoke(Object, String, Object...)</code></a> but never throws exceptions.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#isAnnotated(java.lang.Object,%20java.lang.Class)">isAnnotated</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+           <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="http://developer.android.com/reference/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&nbsp;annotation)</code>
+<div class="block">Checks whether the object was annotated.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#isAnnotatedField(java.lang.Object,%20java.lang.Class,%20java.lang.String)">isAnnotatedField</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+                <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="http://developer.android.com/reference/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&nbsp;annotation,
+                <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fieldName)</code>
+<div class="block">Checks whether the field was annotated.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#isAnnotatedMethod(java.lang.Object,%20java.lang.Class,%20java.lang.String,%20java.lang.Class...)">isAnnotatedMethod</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+                 <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="http://developer.android.com/reference/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&nbsp;annotation,
+                 <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;methodName,
+                 <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>...&nbsp;args)</code>
+<div class="block">Checks whether the method was annotated.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#isNotSingle(java.lang.Object)">isNotSingle</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object)</code>
+<div class="block">Checks if parameter is array, <code>ArrayMap</code>, <code>Collection</code>, <code>SparseArray</code>
+ or <code>Sparse*Array</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#isPackagePrivate(int)">isPackagePrivate</a></strong>(int&nbsp;modifiers)</code>
+<div class="block">Checks the scope of the modifiers (field / method / etc).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#isPackagePrivate(java.lang.reflect.Method)">isPackagePrivate</a></strong>(<a href="http://developer.android.com/reference/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&nbsp;method)</code>
+<div class="block">Checks the scope of the method.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#mergeObjects(java.lang.Object,%20java.lang.Object)">mergeObjects</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object1,
+            <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object2)</code>
+<div class="block">Merges data (each parameter can be array, <code>ArrayMap</code>, <code>Collection</code>,
+ <code>SparseArray</code> or <code>Sparse*Array</code>).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#setField(java.lang.Object,%20java.lang.reflect.Field,%20T)">setField</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+        <a href="http://developer.android.com/reference/java/lang/reflect/Field.html?is-external=true" title="class or interface in java.lang.reflect">Field</a>&nbsp;field,
+        T&nbsp;newValue)</code>
+<div class="block">Sets the value of the field.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/CoreReflection.html#setField(java.lang.Object,%20java.lang.String,%20T)">setField</a></strong>(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+        <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fieldName,
+        T&nbsp;newValue)</code>
+<div class="block">Sets the value of the field.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="createSafe(java.lang.Class)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createSafe</h4>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;createSafe(@NonNull
+               <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&nbsp;cls)</pre>
+<div class="block">Same as <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true#newInstance()" title="class or interface in java.lang"><code>Class.newInstance()</code></a> but never throws exceptions.</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - The type of data to return</dd></dl>
+</li>
+</ul>
+<a name="invokeSafe(java.lang.Object, java.lang.String, java.lang.Object...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>invokeSafe</h4>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;invokeSafe(@NonNull
+               <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+               @NonNull
+               <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;methodName,
+               <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</pre>
+<div class="block">Same as <a href="../../akha/yakhont/CoreReflection.html#invoke(java.lang.Object,%20java.lang.String,%20java.lang.Object...)"><code>invoke(Object, String, Object...)</code></a> but never throws exceptions.</div>
+</li>
+</ul>
+<a name="invoke(java.lang.Object, java.lang.String, java.lang.Object...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>invoke</h4>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;invoke(@NonNull
+           <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+           @NonNull
+           <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;methodName,
+           <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)
+                throws <a href="http://developer.android.com/reference/java/lang/IllegalAccessException.html?is-external=true" title="class or interface in java.lang">IllegalAccessException</a>,
+                       <a href="http://developer.android.com/reference/java/lang/reflect/InvocationTargetException.html?is-external=true" title="class or interface in java.lang.reflect">InvocationTargetException</a>,
+                       <a href="http://developer.android.com/reference/java/lang/ExceptionInInitializerError.html?is-external=true" title="class or interface in java.lang">ExceptionInInitializerError</a></pre>
+<div class="block">Invokes method and returns the result.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://developer.android.com/reference/java/lang/IllegalAccessException.html?is-external=true" title="class or interface in java.lang">IllegalAccessException</a></code> - please refer to the exception description</dd>
+<dd><code><a href="http://developer.android.com/reference/java/lang/reflect/InvocationTargetException.html?is-external=true" title="class or interface in java.lang.reflect">InvocationTargetException</a></code> - please refer to the exception description</dd>
+<dd><code><a href="http://developer.android.com/reference/java/lang/ExceptionInInitializerError.html?is-external=true" title="class or interface in java.lang">ExceptionInInitializerError</a></code> - please refer to the error description</dd><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - The type of data to return</dd><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object on which to call this method</dd><dd><code>methodName</code> - The method name</dd><dd><code>args</code> - The method arguments</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The result of method invoking</dd></dl>
+</li>
+</ul>
+<a name="invoke(java.lang.Object, java.lang.reflect.Method, java.lang.Object...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>invoke</h4>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;invoke(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+           <a href="http://developer.android.com/reference/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&nbsp;method,
+           <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)
+                throws <a href="http://developer.android.com/reference/java/lang/IllegalAccessException.html?is-external=true" title="class or interface in java.lang">IllegalAccessException</a>,
+                       <a href="http://developer.android.com/reference/java/lang/reflect/InvocationTargetException.html?is-external=true" title="class or interface in java.lang.reflect">InvocationTargetException</a>,
+                       <a href="http://developer.android.com/reference/java/lang/ExceptionInInitializerError.html?is-external=true" title="class or interface in java.lang">ExceptionInInitializerError</a></pre>
+<div class="block">Invokes method and returns the result.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://developer.android.com/reference/java/lang/IllegalAccessException.html?is-external=true" title="class or interface in java.lang">IllegalAccessException</a></code> - please refer to the exception description</dd>
+<dd><code><a href="http://developer.android.com/reference/java/lang/reflect/InvocationTargetException.html?is-external=true" title="class or interface in java.lang.reflect">InvocationTargetException</a></code> - please refer to the exception description</dd>
+<dd><code><a href="http://developer.android.com/reference/java/lang/ExceptionInInitializerError.html?is-external=true" title="class or interface in java.lang">ExceptionInInitializerError</a></code> - please refer to the error description</dd><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - The type of data to return</dd><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object on which to call this method</dd><dd><code>method</code> - The method</dd><dd><code>args</code> - The method arguments</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The result of method invoking</dd></dl>
+</li>
+</ul>
+<a name="invokeSafe(java.lang.Object, java.lang.reflect.Method, java.lang.Object...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>invokeSafe</h4>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;invokeSafe(@NonNull
+               <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+               @NonNull
+               <a href="http://developer.android.com/reference/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&nbsp;method,
+               <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</pre>
+<div class="block">Same as <a href="../../akha/yakhont/CoreReflection.html#invoke(java.lang.Object,%20java.lang.reflect.Method,%20java.lang.Object...)"><code>invoke(Object, Method, Object...)</code></a> but never throws exceptions.</div>
+</li>
+</ul>
+<a name="findMethod(java.lang.Object, java.lang.String, java.lang.Class...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>findMethod</h4>
+<pre>public static&nbsp;<a href="http://developer.android.com/reference/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&nbsp;findMethod(@NonNull
+                <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+                @NonNull
+                <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;methodName,
+                @NonNull
+                <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>...&nbsp;args)</pre>
+<div class="block">Finds method to invoke (unboxing supported).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object (or object's class) on which to find method</dd><dd><code>methodName</code> - The method name</dd><dd><code>args</code> - The method arguments</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The method object or null (if not found)</dd></dl>
+</li>
+</ul>
+<a name="isNotSingle(java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isNotSingle</h4>
+<pre>public static&nbsp;boolean&nbsp;isNotSingle(@NonNull
+                  <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object)</pre>
+<div class="block">Checks if parameter is array, <code>ArrayMap</code>, <code>Collection</code>, <code>SparseArray</code>
+ or <code>Sparse*Array</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object (or object's class) on which to check</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if parameter is a container for other objects, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="getSize(java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSize</h4>
+<pre>public static&nbsp;int&nbsp;getSize(@NonNull
+          <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object)</pre>
+<div class="block">Returns the size of parameter (if it's an array, <code>ArrayMap</code>, <code>Collection</code>,
+ <code>SparseArray</code> or <code>Sparse*Array</code>).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the object's size</dd></dl>
+</li>
+</ul>
+<a name="getObjects(java.lang.Object, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getObjects</h4>
+<pre>public static&nbsp;<a href="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;getObjects(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+                      boolean&nbsp;handleSingles)</pre>
+<div class="block">Returns contained objects if parameter is array, <code>ArrayMap</code>, <code>Collection</code>,
+ <code>SparseArray</code>, <code>Sparse*Array</code>, or null (please refer to the 'handleSingles' parameter).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object</dd><dd><code>handleSingles</code> - If <code>true</code> returns at least single-element-Collection (never null)</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The list of objects (or null)</dd></dl>
+</li>
+</ul>
+<a name="getObject(java.lang.Object, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getObject</h4>
+<pre>public static&nbsp;<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;getObject(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+               int&nbsp;position)</pre>
+<div class="block">Returns contained object at given position if parameter is array, <code>ArrayMap</code>, <code>List</code>,
+ <code>SparseArray</code>, <code>Sparse*Array</code> or <code>ArraySet</code> (null otherwise).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object</dd><dd><code>position</code> - The position</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The object at given position (or null)</dd></dl>
+</li>
+</ul>
+<a name="mergeObjects(java.lang.Object, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mergeObjects</h4>
+<pre>public static&nbsp;<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;mergeObjects(<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object1,
+                  <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object2)</pre>
+<div class="block">Merges data (each parameter can be array, <code>ArrayMap</code>, <code>Collection</code>,
+ <code>SparseArray</code> or <code>Sparse*Array</code>).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>object1</code> - The 1st object to merge (or null)</dd><dd><code>object2</code> - The 2nd object to merge (or null)</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The merged data (or null)</dd></dl>
+</li>
+</ul>
+<a name="findOverriddenMethods(java.lang.Class, java.lang.Class)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>findOverriddenMethods</h4>
+<pre>@NonNull
+public static&nbsp;<a href="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://developer.android.com/reference/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&gt;&nbsp;findOverriddenMethods(<a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;derivedClass,
+                                         <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;baseClass)</pre>
+<div class="block">Finds list of the overridden methods.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>derivedClass</code> - The class which may override methods of the 'baseClass'</dd><dd><code>baseClass</code> - The class which methods could be overridden by the 'derivedClass'</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The list of the overridden methods</dd></dl>
+</li>
+</ul>
+<a name="equalsMethods(java.lang.reflect.Method, java.lang.reflect.Method)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equalsMethods</h4>
+<pre>public static&nbsp;<a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;equalsMethods(<a href="http://developer.android.com/reference/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&nbsp;method1,
+                    <a href="http://developer.android.com/reference/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&nbsp;method2)</pre>
+<div class="block">Compares methods by name, parameters and return type.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>method1</code> - The 1st method to compare</dd><dd><code>method2</code> - The 2nd method to compare</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if name, parameters and return type are the same,
+          <code>false</code> if name or parameters are not the same,
+          <code>null</code> if name and parameters are the same, but return types are not
+          (it's not possible in source code - but possible on the JVM level)</dd></dl>
+</li>
+</ul>
+<a name="isPackagePrivate(java.lang.reflect.Method)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isPackagePrivate</h4>
+<pre>public static&nbsp;boolean&nbsp;isPackagePrivate(<a href="http://developer.android.com/reference/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&nbsp;method)</pre>
+<div class="block">Checks the scope of the method.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>method</code> - The method to check</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the method has "package-private" (default) scope, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="isPackagePrivate(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isPackagePrivate</h4>
+<pre>public static&nbsp;boolean&nbsp;isPackagePrivate(int&nbsp;modifiers)</pre>
+<div class="block">Checks the scope of the modifiers (field / method / etc).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>modifiers</code> - The modifiers to check</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the modifiers has "package-private" (default) scope, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="findMethods(java.lang.Class, java.lang.Class, boolean, boolean, boolean, boolean, java.lang.Boolean, java.lang.Boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>findMethods</h4>
+<pre>@NonNull
+public static&nbsp;<a href="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://developer.android.com/reference/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&gt;&nbsp;findMethods(<a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;methodsClass,
+                               <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;stopClass,
+                               boolean&nbsp;includePublic,
+                               boolean&nbsp;includeProtected,
+                               boolean&nbsp;includePrivate,
+                               boolean&nbsp;includePackage,
+                               <a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;includeSynthetic,
+                               <a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;includeBridge)</pre>
+<div class="block">Finds list of methods in the class, based on selection flags (see below).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>methodsClass</code> - The class which methods should be retrieved</dd><dd><code>stopClass</code> - The super class(es) methods are retrieved too; specifies at which (if any) of super class
+        algorithm should stop retrieving methods</dd><dd><code>includePublic</code> - <code>true</code> to include public methods, <code>false</code> otherwise</dd><dd><code>includeProtected</code> - <code>true</code> to include protected methods, <code>false</code> otherwise</dd><dd><code>includePrivate</code> - <code>true</code> to include private methods, <code>false</code> otherwise</dd><dd><code>includePackage</code> - <code>true</code> to include package-private methods, <code>false</code> otherwise</dd><dd><code>includeSynthetic</code> - <code>true</code> to include synthetic methods only, <code>false</code> to exclude them,
+        <code>null</code> to include all (no check for 'synthetic' flag)</dd><dd><code>includeBridge</code> - <code>true</code> to include bridge methods only, <code>false</code> to exclude them,
+        <code>null</code> to include all (no check for 'bridge' flag);
+        if set, 'includeBridge' has higher priority than 'includeSynthetic'</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The list of selected methods of the class</dd></dl>
+</li>
+</ul>
+<a name="findField(java.lang.Object, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>findField</h4>
+<pre>public static&nbsp;<a href="http://developer.android.com/reference/java/lang/reflect/Field.html?is-external=true" title="class or interface in java.lang.reflect">Field</a>&nbsp;findField(@NonNull
+              <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+              @NonNull
+              <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fieldName)</pre>
+<div class="block">Finds field.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object (or object's class) on which to find this field</dd><dd><code>fieldName</code> - The field name</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The field object or null (if not found)</dd></dl>
+</li>
+</ul>
+<a name="getField(java.lang.Object, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getField</h4>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;getField(@NonNull
+             <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+             @NonNull
+             <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fieldName)</pre>
+<div class="block">Gets the value of the field.</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - The type of data to return</dd><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object on which to get this field</dd><dd><code>fieldName</code> - The field name</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The field value</dd></dl>
+</li>
+</ul>
+<a name="getField(java.lang.Object, java.lang.reflect.Field)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getField</h4>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;getField(@NonNull
+             <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+             <a href="http://developer.android.com/reference/java/lang/reflect/Field.html?is-external=true" title="class or interface in java.lang.reflect">Field</a>&nbsp;field)</pre>
+<div class="block">Gets the value of the field.</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - The type of data to return</dd><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object on which to get this field</dd><dd><code>field</code> - The field</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The field value</dd></dl>
+</li>
+</ul>
+<a name="setField(java.lang.Object,java.lang.String,java.lang.Object)">
+<!--   -->
+</a><a name="setField(java.lang.Object, java.lang.String, T)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setField</h4>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;setField(@NonNull
+             <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+             @NonNull
+             <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fieldName,
+             T&nbsp;newValue)</pre>
+<div class="block">Sets the value of the field.</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - The type of data to return</dd><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object on which to set this field</dd><dd><code>fieldName</code> - The field name</dd><dd><code>newValue</code> - The field's new value</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The field's previous value</dd></dl>
+</li>
+</ul>
+<a name="setField(java.lang.Object,java.lang.reflect.Field,java.lang.Object)">
+<!--   -->
+</a><a name="setField(java.lang.Object, java.lang.reflect.Field, T)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setField</h4>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;setField(@NonNull
+             <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+             <a href="http://developer.android.com/reference/java/lang/reflect/Field.html?is-external=true" title="class or interface in java.lang.reflect">Field</a>&nbsp;field,
+             T&nbsp;newValue)</pre>
+<div class="block">Sets the value of the field.</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - The type of data to return</dd><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object on which to set this field</dd><dd><code>field</code> - The field</dd><dd><code>newValue</code> - The field's new value</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The field's previous value</dd></dl>
+</li>
+</ul>
+<a name="getFields(java.lang.Object, java.lang.Class, boolean, boolean, boolean, boolean, boolean, boolean, java.lang.Boolean, java.lang.Boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFields</h4>
+<pre>public static&nbsp;<a href="http://developer.android.com/reference/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;getFields(@NonNull
+                           <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+                           <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;stopClass,
+                           boolean&nbsp;prefixWithClass,
+                           boolean&nbsp;includeHidden,
+                           boolean&nbsp;includePublic,
+                           boolean&nbsp;includeProtected,
+                           boolean&nbsp;includePrivate,
+                           boolean&nbsp;includePackage,
+                           <a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;includeStatic,
+                           <a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;includeSynthetic)</pre>
+<div class="block">Returns object's fields as a map (name / value). Hidden fields are prefixed with the class name.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object on which to get fields</dd><dd><code>stopClass</code> - The super class(es) fields are retrieved too; specifies at which (if any) of super class
+        algorithm should stop retrieving fields</dd><dd><code>prefixWithClass</code> - <code>true</code> to prefix field with the class name, <code>false</code> otherwise</dd><dd><code>includeHidden</code> - <code>true</code> to include hidden fields, <code>false</code> otherwise</dd><dd><code>includePublic</code> - <code>true</code> to include public fields, <code>false</code> otherwise</dd><dd><code>includeProtected</code> - <code>true</code> to include protected fields, <code>false</code> otherwise</dd><dd><code>includePrivate</code> - <code>true</code> to include private fields, <code>false</code> otherwise</dd><dd><code>includePackage</code> - <code>true</code> to include package-private fields, <code>false</code> otherwise</dd><dd><code>includeStatic</code> - <code>true</code> to include static fields only, <code>false</code> to exclude them,
+        <code>null</code> to include all (no check for 'static' flag)</dd><dd><code>includeSynthetic</code> - <code>true</code> to include synthetic fields only, <code>false</code> to exclude them,
+        <code>null</code> to include all (no check for 'synthetic' flag)</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The object's fields as a map</dd></dl>
+</li>
+</ul>
+<a name="getFields(java.lang.Object, java.lang.Class, boolean, boolean, boolean, boolean, boolean, java.lang.Boolean, java.lang.Boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFields</h4>
+<pre>public static&nbsp;<a href="http://developer.android.com/reference/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="http://developer.android.com/reference/java/lang/reflect/Field.html?is-external=true" title="class or interface in java.lang.reflect">Field</a>&gt;&nbsp;getFields(@NonNull
+                          <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+                          <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;stopClass,
+                          boolean&nbsp;includeHidden,
+                          boolean&nbsp;includePublic,
+                          boolean&nbsp;includeProtected,
+                          boolean&nbsp;includePrivate,
+                          boolean&nbsp;includePackage,
+                          <a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;includeStatic,
+                          <a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;includeSynthetic)</pre>
+<div class="block">Returns object's fields as a collection.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object on which to get fields</dd><dd><code>stopClass</code> - The super class(es) fields are retrieved too; specifies at which (if any) of super class
+        algorithm should stop retrieving fields</dd><dd><code>includeHidden</code> - <code>true</code> to include hidden fields, <code>false</code> otherwise</dd><dd><code>includePublic</code> - <code>true</code> to include public fields, <code>false</code> otherwise</dd><dd><code>includeProtected</code> - <code>true</code> to include protected fields, <code>false</code> otherwise</dd><dd><code>includePrivate</code> - <code>true</code> to include private fields, <code>false</code> otherwise</dd><dd><code>includePackage</code> - <code>true</code> to include package-private fields, <code>false</code> otherwise</dd><dd><code>includeStatic</code> - <code>true</code> to include static fields only, <code>false</code> to exclude them,
+        <code>null</code> to include all (no check for 'static' flag)</dd><dd><code>includeSynthetic</code> - <code>true</code> to include synthetic fields only, <code>false</code> to exclude them,
+        <code>null</code> to include all (no check for 'synthetic' flag)</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The object's fields as a collection</dd></dl>
+</li>
+</ul>
+<a name="getAnnotation(java.lang.Object, java.lang.Class)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAnnotation</h4>
+<pre>public static&nbsp;<a href="http://developer.android.com/reference/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&nbsp;getAnnotation(@NonNull
+                       <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+                       @NonNull
+                       <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="http://developer.android.com/reference/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&nbsp;annotation)</pre>
+<div class="block">Gets the object's annotation.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object (or object's class) on which to get this annotation</dd><dd><code>annotation</code> - The annotation class</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The annotation object or null (if not found)</dd></dl>
+</li>
+</ul>
+<a name="isAnnotated(java.lang.Object, java.lang.Class)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isAnnotated</h4>
+<pre>public static&nbsp;boolean&nbsp;isAnnotated(@NonNull
+                  <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+                  @NonNull
+                  <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="http://developer.android.com/reference/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&nbsp;annotation)</pre>
+<div class="block">Checks whether the object was annotated.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object (or object's class) to check</dd><dd><code>annotation</code> - The annotation class</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the object was annotated, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="isAnnotatedMethod(java.lang.Object, java.lang.Class, java.lang.String, java.lang.Class...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isAnnotatedMethod</h4>
+<pre>public static&nbsp;boolean&nbsp;isAnnotatedMethod(@NonNull
+                        <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+                        @NonNull
+                        <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="http://developer.android.com/reference/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&nbsp;annotation,
+                        @NonNull
+                        <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;methodName,
+                        @NonNull
+                        <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>...&nbsp;args)</pre>
+<div class="block">Checks whether the method was annotated.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object (or object's class) to check</dd><dd><code>annotation</code> - The annotation class</dd><dd><code>methodName</code> - The method name</dd><dd><code>args</code> - The method arguments</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the method was annotated, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="isAnnotatedField(java.lang.Object, java.lang.Class, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isAnnotatedField</h4>
+<pre>public static&nbsp;boolean&nbsp;isAnnotatedField(@NonNull
+                       <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object,
+                       @NonNull
+                       <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="http://developer.android.com/reference/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&nbsp;annotation,
+                       @NonNull
+                       <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fieldName)</pre>
+<div class="block">Checks whether the field was annotated.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object (or object's class) to check</dd><dd><code>annotation</code> - The annotation class</dd><dd><code>fieldName</code> - The field name</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the field was annotated, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../akha/yakhont/CorePermissions.RequestBuilder.html" title="class in akha.yakhont"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../akha/yakhont/LogDebug.html" title="annotation in akha.yakhont"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?akha/yakhont/CoreReflection.html" target="_top">Frames</a></li>
+<li><a href="CoreReflection.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><font size="-1">&nbsp;<br>Copyright &copy; 2015-2020 akha, a.k.a. Alexander Kharitonov<br><br>Licensed under the Apache License, Version 2.0 (the "License");<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br><br>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an "AS IS" BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</font></small></p>
+</body>
+</html>

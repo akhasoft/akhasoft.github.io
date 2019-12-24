@@ -1,0 +1,508 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>BaseRetrofit (Yakhont 1.2.01 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="BaseRetrofit (Yakhont 1.2.01 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../akha/yakhont/technology/retrofit/BaseLocalOkHttpClient2.html" title="class in akha.yakhont.technology.retrofit"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html" title="class in akha.yakhont.technology.retrofit"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?akha/yakhont/technology/retrofit/BaseRetrofit.html" target="_top">Frames</a></li>
+<li><a href="BaseRetrofit.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">akha.yakhont.technology.retrofit</div>
+<h2 title="Class BaseRetrofit" class="title">Class BaseRetrofit&lt;T,B,C,D&gt;</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>akha.yakhont.technology.retrofit.BaseRetrofit&lt;T,B,C,D&gt;</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - The Retrofit API type</dd><dd><code>B</code> - The Retrofit builder type</dd><dd><code>C</code> - The Retrofit callback type</dd><dd><code>D</code> - The type of the Retrofit callback data</dd></dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html" title="class in akha.yakhont.technology.retrofit">Retrofit2</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract class <span class="strong">BaseRetrofit&lt;T,B,C,D&gt;</span>
+extends <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">The base component to work with <a href="http://square.github.io/retrofit/">Retrofit</a>.
+ <p>
+ Supports both <a href="http://square.github.io/retrofit/1.x/retrofit/">Retrofit</a>
+ and <a href="http://square.github.io/retrofit/2.x/retrofit/">Retrofit 2</a>.
+
+ <p>Every loader should have unique Retrofit2 (or Retrofit) object; don't share it with other loaders.
+
+ <p>For example:
+
+ <p><pre style="background-color: silver; border: thin solid black;">
+ import com.yourpackage.model.YourData;
+ import com.yourpackage.retrofit.YourRetrofit;
+
+ import akha.yakhont.technology.retrofit.Retrofit2;
+
+ public static Retrofit2&lt;YourRetrofit, YourData[]&gt; getRetrofit() {
+     // something like this
+     return new Retrofit2&lt;YourRetrofit, YourData[]&gt;().init(
+         YourRetrofit.class, "http://...");
+ }
+ </pre>
+
+ Here the <code>YourRetrofit</code> may looks as follows:
+
+ <p><pre style="background-color: silver; border: thin solid black;">
+ package com.yourpackage.retrofit;
+
+ import com.yourpackage.model.YourData;
+
+ import retrofit2.Call;
+ import retrofit2.http.GET;
+
+ public interface YourRetrofit {
+
+     &#064;GET("/data")
+     Call&lt;YourData[]&gt; getData();
+ }
+ </pre>
+
+ And the model class:
+
+ <p><pre style="background-color: silver; border: thin solid black;">
+ package com.yourpackage.model;
+
+ import com.google.gson.annotations.SerializedName;
+
+ public class YourData {
+
+     &#064;SerializedName("name")
+     private String mName;
+
+     &#064;SerializedName("age")
+     private int mAge;
+
+     ...
+ }
+ </pre>
+
+ To prevent model from obfuscation please add the following line to the proguard configuration file:
+
+ <p><pre style="background-color: silver; border: thin solid black;">
+ -keep class com.yourpackage.model.** { *; }
+ </pre></div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html" title="class in akha.yakhont.technology.retrofit"><code>Retrofit2</code></a></dd><DT>&nbsp;</DT><DD><map name="umlmap105"><area shape="rect" coords="6,355,116,374" href="http://www.yworks.com/" alt=""><area shape="rect" coords="12,138,203,160" href="#" alt=""><area shape="rect" coords="10,197,88,213" href="#getApi(C)" alt=""><area shape="rect" coords="10,213,185,230" href="#getConnectionTimeout()" alt=""><area shape="rect" coords="10,230,150,247" href="#getDefaultBuilder(java.lang.String)" alt=""><area shape="rect" coords="10,247,196,263" href="#init(java.lang.Class, java.lang.String)" alt=""><area shape="rect" coords="10,263,196,280" href="#init(java.lang.Class, B)" alt=""><area shape="rect" coords="10,280,196,297" href="#init(java.lang.Class, java.lang.String, int, int, java.util.Map)" alt=""><area shape="rect" coords="10,297,196,313" href="#init(java.lang.Class, B, int, int)" alt=""><area shape="rect" coords="10,313,196,330" href="#init(java.lang.Class, B, int, int, boolean)" alt=""><area shape="rect" coords="2,111,185,129" href="package-summary.html" alt=""><area shape="rect" coords="83,29,132,53" href="http://developer.android.com/reference/java/lang/Object.html" alt=""><area shape="rect" coords="75,2,136,20" href="http://developer.android.com/reference/java/lang/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="BaseRetrofit.png" WIDTH="223" HEIGHT="382" USEMAP="#umlmap105" BORDER="0"></CENTER></DD>
+<!-- yWorks UML Doclet   http://www.yworks.com/   b0ac8294d3f86ae0003f3a3a002ea3cf577df824efc6f2... --></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected </code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html#BaseRetrofit()">BaseRetrofit</a></strong>()</code>
+<div class="block">Initialises a newly created <code>BaseRetrofit</code> object.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html#getApi(C)">getApi</a></strong>(<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">C</a>&nbsp;callback)</code>
+<div class="block">Returns the Retrofit API defined by the service interface.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html#getConnectionTimeout()">getConnectionTimeout</a></strong>()</code>
+<div class="block">Returns the connection timeout (in seconds).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract <a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html#getDefaultBuilder(java.lang.String)">getDefaultBuilder</a></strong>(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;retrofitBase)</code>
+<div class="block">Returns the default Retrofit builder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="class in akha.yakhont.technology.retrofit">BaseRetrofit</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">C</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html#init(java.lang.Class,%20B)">init</a></strong>(<a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>&gt;&nbsp;service,
+    <a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>&nbsp;builder)</code>
+<div class="block">Initialises Retrofit client.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="class in akha.yakhont.technology.retrofit">BaseRetrofit</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">C</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html#init(java.lang.Class,%20B,%20int,%20int)">init</a></strong>(<a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>&gt;&nbsp;service,
+    <a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>&nbsp;builder,
+    int&nbsp;connectTimeout,
+    int&nbsp;readTimeout)</code>
+<div class="block">Initialises Retrofit client.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="class in akha.yakhont.technology.retrofit">BaseRetrofit</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">C</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html#init(java.lang.Class,%20B,%20int,%20int,%20boolean)">init</a></strong>(<a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>&gt;&nbsp;service,
+    <a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>&nbsp;builder,
+    int&nbsp;connectTimeout,
+    int&nbsp;readTimeout,
+    boolean&nbsp;makeOkHttpClient)</code>
+<div class="block">Initialises Retrofit client.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="class in akha.yakhont.technology.retrofit">BaseRetrofit</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">C</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html#init(java.lang.Class,%20java.lang.String)">init</a></strong>(<a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>&gt;&nbsp;service,
+    <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;retrofitBase)</code>
+<div class="block">Initialises Retrofit client.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected abstract <a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="class in akha.yakhont.technology.retrofit">BaseRetrofit</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">C</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">D</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html#init(java.lang.Class,%20java.lang.String,%20int,%20int,%20java.util.Map)">init</a></strong>(<a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>&gt;&nbsp;service,
+    <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;retrofitBase,
+    int&nbsp;connectTimeout,
+    int&nbsp;readTimeout,
+    <a href="http://developer.android.com/reference/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;headers)</code>
+<div class="block">Initialises Retrofit client.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="BaseRetrofit()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>BaseRetrofit</h4>
+<pre>protected&nbsp;BaseRetrofit()</pre>
+<div class="block">Initialises a newly created <code>BaseRetrofit</code> object.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getApi(java.lang.Object)">
+<!--   -->
+</a><a name="getApi(C)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getApi</h4>
+<pre>public&nbsp;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>&nbsp;getApi(<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">C</a>&nbsp;callback)</pre>
+<div class="block">Returns the Retrofit API defined by the service interface.
+
+ <p>Note: 'raw calls' means - without default Yakhont pre- and postprocessing.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>callback</code> - The loader's callback (or null for raw Retrofit calls)</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The Retrofit API</dd></dl>
+</li>
+</ul>
+<a name="getConnectionTimeout()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getConnectionTimeout</h4>
+<pre>public&nbsp;int&nbsp;getConnectionTimeout()</pre>
+<div class="block">Returns the connection timeout (in seconds).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The connection timeout</dd></dl>
+</li>
+</ul>
+<a name="getDefaultBuilder(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDefaultBuilder</h4>
+<pre>public abstract&nbsp;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>&nbsp;getDefaultBuilder(@NonNull
+                  <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;retrofitBase)</pre>
+<div class="block">Returns the default Retrofit builder.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>retrofitBase</code> - The service API endpoint URL</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The Retrofit builder</dd></dl>
+</li>
+</ul>
+<a name="init(java.lang.Class, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre>public&nbsp;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="class in akha.yakhont.technology.retrofit">BaseRetrofit</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">C</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">D</a>&gt;&nbsp;init(@NonNull
+                         <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>&gt;&nbsp;service,
+                         @NonNull
+                         <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;retrofitBase)</pre>
+<div class="block">Initialises Retrofit client.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>service</code> - The service interface</dd><dd><code>retrofitBase</code> - The Retrofit API endpoint URL</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseRetrofit</code> object to allow for chaining of calls</dd></dl>
+</li>
+</ul>
+<a name="init(java.lang.Class,java.lang.Object)">
+<!--   -->
+</a><a name="init(java.lang.Class, B)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre>public&nbsp;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="class in akha.yakhont.technology.retrofit">BaseRetrofit</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">C</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">D</a>&gt;&nbsp;init(@NonNull
+                         <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>&gt;&nbsp;service,
+                         @NonNull
+                         <a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>&nbsp;builder)</pre>
+<div class="block">Initialises Retrofit client.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>service</code> - The service interface</dd><dd><code>builder</code> - The RetrofitBuilder</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseRetrofit</code> object to allow for chaining of calls</dd></dl>
+</li>
+</ul>
+<a name="init(java.lang.Class, java.lang.String, int, int, java.util.Map)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre>protected abstract&nbsp;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="class in akha.yakhont.technology.retrofit">BaseRetrofit</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">C</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">D</a>&gt;&nbsp;init(@NonNull
+                         <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>&gt;&nbsp;service,
+                         @NonNull
+                         <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;retrofitBase,
+                         int&nbsp;connectTimeout,
+                         int&nbsp;readTimeout,
+                         @Nullable
+                         <a href="http://developer.android.com/reference/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;headers)</pre>
+<div class="block">Initialises Retrofit client.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>service</code> - The service interface</dd><dd><code>retrofitBase</code> - The Retrofit API endpoint URL</dd><dd><code>connectTimeout</code> - The connection timeout (in seconds)</dd><dd><code>readTimeout</code> - The read timeout (in seconds)</dd><dd><code>headers</code> - The optional HTTP headers (or null)</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseRetrofit</code> object to allow for chaining of calls</dd></dl>
+</li>
+</ul>
+<a name="init(java.lang.Class,java.lang.Object,int,int)">
+<!--   -->
+</a><a name="init(java.lang.Class, B, int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre>public&nbsp;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="class in akha.yakhont.technology.retrofit">BaseRetrofit</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">C</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">D</a>&gt;&nbsp;init(@NonNull
+                         <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>&gt;&nbsp;service,
+                         @NonNull
+                         <a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>&nbsp;builder,
+                         int&nbsp;connectTimeout,
+                         int&nbsp;readTimeout)</pre>
+<div class="block">Initialises Retrofit client.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>service</code> - The service interface</dd><dd><code>builder</code> - The RetrofitBuilder</dd><dd><code>connectTimeout</code> - The connection timeout (in seconds)</dd><dd><code>readTimeout</code> - The read timeout (in seconds)</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseRetrofit</code> object to allow for chaining of calls</dd></dl>
+</li>
+</ul>
+<a name="init(java.lang.Class,java.lang.Object,int,int,boolean)">
+<!--   -->
+</a><a name="init(java.lang.Class, B, int, int, boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>init</h4>
+<pre>@CallSuper
+protected&nbsp;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="class in akha.yakhont.technology.retrofit">BaseRetrofit</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">C</a>,<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">D</a>&gt;&nbsp;init(@NonNull
+                                   <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;<a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">T</a>&gt;&nbsp;service,
+                                   @NonNull
+                                   <a href="../../../../akha/yakhont/technology/retrofit/BaseRetrofit.html" title="type parameter in BaseRetrofit">B</a>&nbsp;builder,
+                                   int&nbsp;connectTimeout,
+                                   int&nbsp;readTimeout,
+                                   boolean&nbsp;makeOkHttpClient)</pre>
+<div class="block">Initialises Retrofit client.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>service</code> - The service interface</dd><dd><code>builder</code> - The RetrofitBuilder</dd><dd><code>connectTimeout</code> - The connection timeout (in seconds)</dd><dd><code>readTimeout</code> - The read timeout (in seconds)</dd><dd><code>makeOkHttpClient</code> - <code>true</code> to create default OkHttpClient, <code>false</code> otherwise</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseRetrofit</code> object to allow for chaining of calls</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../akha/yakhont/technology/retrofit/BaseLocalOkHttpClient2.html" title="class in akha.yakhont.technology.retrofit"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../akha/yakhont/technology/retrofit/Retrofit2.html" title="class in akha.yakhont.technology.retrofit"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?akha/yakhont/technology/retrofit/BaseRetrofit.html" target="_top">Frames</a></li>
+<li><a href="BaseRetrofit.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><font size="-1">&nbsp;<br>Copyright &copy; 2015-2020 akha, a.k.a. Alexander Kharitonov<br><br>Licensed under the Apache License, Version 2.0 (the "License");<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br><br>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an "AS IS" BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</font></small></p>
+</body>
+</html>

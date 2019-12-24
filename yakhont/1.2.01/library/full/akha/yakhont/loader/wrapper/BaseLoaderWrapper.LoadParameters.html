@@ -1,0 +1,714 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>BaseLoaderWrapper.LoadParameters (Yakhont-full 1.2.01 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="BaseLoaderWrapper.LoadParameters (Yakhont-full 1.2.01 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.ConverterHelper.html" title="interface in akha.yakhont.loader.wrapper"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.Builder.html" title="class in akha.yakhont.loader.wrapper"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html" target="_top">Frames</a></li>
+<li><a href="BaseLoaderWrapper.LoadParameters.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">akha.yakhont.loader.wrapper</div>
+<h2 title="Class BaseLoaderWrapper.LoadParameters" class="title">Class BaseLoaderWrapper.LoadParameters</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>akha.yakhont.loader.wrapper.BaseLoaderWrapper.LoadParameters</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="http://developer.android.com/reference/android/os/Parcelable.html?is-external=true" title="class or interface in android.os">Parcelable</a></dd>
+</dl>
+<dl>
+<dt>Enclosing class:</dt>
+<dd><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.html" title="class in akha.yakhont.loader.wrapper">BaseLoaderWrapper</a>&lt;<a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.html" title="type parameter in BaseLoaderWrapper">D</a>&gt;</dd>
+</dl>
+<hr>
+<br>
+<pre>public static class <span class="strong">BaseLoaderWrapper.LoadParameters</span>
+extends <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="http://developer.android.com/reference/android/os/Parcelable.html?is-external=true" title="class or interface in android.os">Parcelable</a></pre>
+<div class="block">The class representing data loading parameters.</div>
+<dl><DT>&nbsp;</DT><DD><map name="umlmap15"><area shape="rect" coords="6,587,116,606" href="http://www.yworks.com/" alt=""><area shape="rect" coords="31,148,327,175" href="#" alt=""><area shape="rect" coords="10,176,307,193" href="#NO_LOAD" alt=""><area shape="rect" coords="10,194,249,211" href="#BaseLoaderWrapper.LoadParameters()" alt=""><area shape="rect" coords="10,211,249,227" href="#BaseLoaderWrapper.LoadParameters(java.lang.Long)" alt=""><area shape="rect" coords="10,228,164,245" href="#setSafeMode(boolean)" alt=""><area shape="rect" coords="10,245,184,262" href="#checkArguments()" alt=""><area shape="rect" coords="10,262,158,278" href="#describeContents()" alt=""><area shape="rect" coords="10,278,176,295" href="#getForceCache()" alt=""><area shape="rect" coords="10,295,194,312" href="#getHandleTimeout()" alt=""><area shape="rect" coords="10,312,145,328" href="#getLoaderId()" alt=""><area shape="rect" coords="10,328,143,345" href="#getMerge()" alt=""><area shape="rect" coords="10,345,159,362" href="#getNoErrors()" alt=""><area shape="rect" coords="10,362,153,379" href="#getNoLoad()" alt=""><area shape="rect" coords="10,379,176,395" href="#getNoProgress()" alt=""><area shape="rect" coords="10,395,127,412" href="#getPageId()" alt=""><area shape="rect" coords="10,412,188,429" href="#getPullToRefresh()" alt=""><area shape="rect" coords="10,429,135,445" href="#getSync()" alt=""><area shape="rect" coords="10,445,161,462" href="#getTableName()" alt=""><area shape="rect" coords="10,462,122,479" href="#getTimeout()" alt=""><area shape="rect" coords="10,479,148,495" href="#getUserData(java.lang.String)" alt=""><area shape="rect" coords="10,495,340,512" href="#setTableName(java.lang.String)" alt=""><area shape="rect" coords="10,512,148,529" href="#setUserData(java.lang.String, V)" alt=""><area shape="rect" coords="10,529,121,546" href="#toString()" alt=""><area shape="rect" coords="10,546,144,562" href="#writeToParcel(android.os.Parcel, int)" alt=""><area shape="rect" coords="2,121,172,139" href="package-summary.html" alt=""><area shape="rect" coords="155,39,204,63" href="http://developer.android.com/reference/java/lang/Object.html" alt=""><area shape="rect" coords="146,12,207,30" href="http://developer.android.com/reference/java/lang/package-summary.html" alt=""><area shape="rect" coords="267,34,339,58" href="http://developer.android.com/reference/android/os/Parcelable.html" alt=""><area shape="rect" coords="243,2,314,20" href="http://developer.android.com/reference/android/os/package-summary.html" alt=""><area shape="rect" coords="416,148,465,171" href="http://developer.android.com/reference/android/os/Parcel.html" alt=""><area shape="rect" coords="407,121,478,139" href="http://developer.android.com/reference/android/os/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="BaseLoaderWrapper.LoadParameters.png" WIDTH="497" HEIGHT="614" USEMAP="#umlmap15" BORDER="0"></CENTER></DD>
+<!-- yWorks UML Doclet   http://www.yworks.com/   b0ac8294d3f86ae0003f3a3a002ea3cf577df824efc6f2... --></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.Builder.html" title="class in akha.yakhont.loader.wrapper">BaseLoaderWrapper.LoadParameters.Builder</a></strong></code>
+<div class="block">Builder class for <a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html" title="class in akha.yakhont.loader.wrapper"><code>BaseLoaderWrapper.LoadParameters</code></a> instances.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.LoadParametersException.html" title="class in akha.yakhont.loader.wrapper">BaseLoaderWrapper.LoadParameters.LoadParametersException</a></strong></code>
+<div class="block">The exception which indicates not consistent loading parameters.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_android.os.Parcelable">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from interface&nbsp;android.os.<a href="http://developer.android.com/reference/android/os/Parcelable.html?is-external=true" title="class or interface in android.os">Parcelable</a></h3>
+<code><a href="http://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html?is-external=true" title="class or interface in android.os">Parcelable.ClassLoaderCreator</a>&lt;<a href="http://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html?is-external=true" title="class or interface in android.os">T</a>&gt;, <a href="http://developer.android.com/reference/android/os/Parcelable.Creator.html?is-external=true" title="class or interface in android.os">Parcelable.Creator</a>&lt;<a href="http://developer.android.com/reference/android/os/Parcelable.Creator.html?is-external=true" title="class or interface in android.os">T</a>&gt;</code></li>
+</ul>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html" title="class in akha.yakhont.loader.wrapper">BaseLoaderWrapper.LoadParameters</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#NO_LOAD">NO_LOAD</a></strong></code>
+<div class="block">Just to init (e.g.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_android.os.Parcelable">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;android.os.<a href="http://developer.android.com/reference/android/os/Parcelable.html?is-external=true" title="class or interface in android.os">Parcelable</a></h3>
+<code><a href="http://developer.android.com/reference/android/os/Parcelable.html?is-external=true#CONTENTS_FILE_DESCRIPTOR" title="class or interface in android.os">CONTENTS_FILE_DESCRIPTOR</a>, <a href="http://developer.android.com/reference/android/os/Parcelable.html?is-external=true#PARCELABLE_WRITE_RETURN_VALUE" title="class or interface in android.os">PARCELABLE_WRITE_RETURN_VALUE</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#BaseLoaderWrapper.LoadParameters()">BaseLoaderWrapper.LoadParameters</a></strong>()</code>
+<div class="block">Initialises a newly created <code>LoadParameters</code> object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#BaseLoaderWrapper.LoadParameters(java.lang.Long)">BaseLoaderWrapper.LoadParameters</a></strong>(<a href="http://developer.android.com/reference/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;pageId)</code>
+<div class="block">Initialises a newly created <code>LoadParameters</code> object.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#checkArguments()">checkArguments</a></strong>()</code>
+<div class="block">Validates the data loading parameters provided.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#describeContents()">describeContents</a></strong>()</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#getForceCache()">getForceCache</a></strong>()</code>
+<div class="block">Gets the "force cache" flag.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#getHandleTimeout()">getHandleTimeout</a></strong>()</code>
+<div class="block">Gets the "handle timeout" flag.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#getLoaderId()">getLoaderId</a></strong>()</code>
+<div class="block">Gets the loader ID.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#getMerge()">getMerge</a></strong>()</code>
+<div class="block">Gets the "merge" flag.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#getNoErrors()">getNoErrors</a></strong>()</code>
+<div class="block">Gets the "no errors" flag.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#getNoLoad()">getNoLoad</a></strong>()</code>
+<div class="block">Gets the "no load" flag.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#getNoProgress()">getNoProgress</a></strong>()</code>
+<div class="block">Gets the "no progress" flag.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#getPageId()">getPageId</a></strong>()</code>
+<div class="block">Gets the page ID (if paging adapter used).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#getPullToRefresh()">getPullToRefresh</a></strong>()</code>
+<div class="block">Gets the "pull-to-refresh" flag.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#getSync()">getSync</a></strong>()</code>
+<div class="block">Gets the "sync" flag.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#getTableName()">getTableName</a></strong>()</code>
+<div class="block">Gets the cache table name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#getTimeout()">getTimeout</a></strong>()</code>
+<div class="block">Gets the data loading timeout.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>&lt;V&gt;&nbsp;V</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#getUserData(java.lang.String)">getUserData</a></strong>(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</code>
+<div class="block">Returns the data (associated with the given key) kept in this <a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html" title="class in akha.yakhont.loader.wrapper"><code>BaseLoaderWrapper.LoadParameters</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#setSafeMode(boolean)">setSafeMode</a></strong>(boolean&nbsp;value)</code>
+<div class="block">Sets safe mode: if <code>false</code>, the <a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.LoadParametersException.html" title="class in akha.yakhont.loader.wrapper"><code>BaseLoaderWrapper.LoadParameters.LoadParametersException</code></a> will be thrown
+ in case of not consistent parameters.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html" title="class in akha.yakhont.loader.wrapper">BaseLoaderWrapper.LoadParameters</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#setTableName(java.lang.String)">setTableName</a></strong>(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName)</code>
+<div class="block">Sets the cache table name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>&lt;V&gt;&nbsp;V</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#setUserData(java.lang.String,%20V)">setUserData</a></strong>(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
+           V&nbsp;value)</code>
+<div class="block">Sets some data to keep in this <a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html" title="class in akha.yakhont.loader.wrapper"><code>BaseLoaderWrapper.LoadParameters</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#toString()">toString</a></strong>()</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#writeToParcel(android.os.Parcel,%20int)">writeToParcel</a></strong>(<a href="http://developer.android.com/reference/android/os/Parcel.html?is-external=true" title="class or interface in android.os">Parcel</a>&nbsp;out,
+             int&nbsp;flags)</code>
+<div class="block">Please refer to the base method description.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="NO_LOAD">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>NO_LOAD</h4>
+<pre>public static final&nbsp;<a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html" title="class in akha.yakhont.loader.wrapper">BaseLoaderWrapper.LoadParameters</a> NO_LOAD</pre>
+<div class="block">Just to init (e.g. paging ViewModel), without real data loading.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="BaseLoaderWrapper.LoadParameters()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>BaseLoaderWrapper.LoadParameters</h4>
+<pre>public&nbsp;BaseLoaderWrapper.LoadParameters()</pre>
+<div class="block">Initialises a newly created <code>LoadParameters</code> object.</div>
+</li>
+</ul>
+<a name="BaseLoaderWrapper.LoadParameters(java.lang.Long)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>BaseLoaderWrapper.LoadParameters</h4>
+<pre>public&nbsp;BaseLoaderWrapper.LoadParameters(<a href="http://developer.android.com/reference/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;pageId)</pre>
+<div class="block">Initialises a newly created <code>LoadParameters</code> object.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pageId</code> - The page ID (if paging adapter used) or null</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="writeToParcel(android.os.Parcel, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeToParcel</h4>
+<pre>public&nbsp;void&nbsp;writeToParcel(<a href="http://developer.android.com/reference/android/os/Parcel.html?is-external=true" title="class or interface in android.os">Parcel</a>&nbsp;out,
+                 int&nbsp;flags)</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="http://developer.android.com/reference/android/os/Parcelable.html?is-external=true#writeToParcel(android.os.Parcel,%20int)" title="class or interface in android.os">writeToParcel</a></code>&nbsp;in interface&nbsp;<code><a href="http://developer.android.com/reference/android/os/Parcelable.html?is-external=true" title="class or interface in android.os">Parcelable</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setUserData(java.lang.String,java.lang.Object)">
+<!--   -->
+</a><a name="setUserData(java.lang.String, V)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setUserData</h4>
+<pre>public&nbsp;&lt;V&gt;&nbsp;V&nbsp;setUserData(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
+                V&nbsp;value)</pre>
+<div class="block">Sets some data to keep in this <a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html" title="class in akha.yakhont.loader.wrapper"><code>BaseLoaderWrapper.LoadParameters</code></a>.</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>V</code> - The type of data</dd><dt><span class="strong">Parameters:</span></dt><dd><code>key</code> - The key</dd><dd><code>value</code> - The data</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The previous data for the given key (or null)</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#getUserData(java.lang.String)"><code>getUserData(java.lang.String)</code></a></dd></dl>
+</li>
+</ul>
+<a name="getUserData(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUserData</h4>
+<pre>public&nbsp;&lt;V&gt;&nbsp;V&nbsp;getUserData(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</pre>
+<div class="block">Returns the data (associated with the given key) kept in this <a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html" title="class in akha.yakhont.loader.wrapper"><code>BaseLoaderWrapper.LoadParameters</code></a>.</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>V</code> - The type of data</dd><dt><span class="strong">Parameters:</span></dt><dd><code>key</code> - The key</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The data for the given key (or null)</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html#setUserData(java.lang.String,%20V)"><code>setUserData(java.lang.String, V)</code></a></dd></dl>
+</li>
+</ul>
+<a name="describeContents()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>describeContents</h4>
+<pre>public&nbsp;int&nbsp;describeContents()</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="http://developer.android.com/reference/android/os/Parcelable.html?is-external=true#describeContents()" title="class or interface in android.os">describeContents</a></code>&nbsp;in interface&nbsp;<code><a href="http://developer.android.com/reference/android/os/Parcelable.html?is-external=true" title="class or interface in android.os">Parcelable</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="checkArguments()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkArguments</h4>
+<pre>public&nbsp;boolean&nbsp;checkArguments()</pre>
+<div class="block">Validates the data loading parameters provided.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the parameters are consistent, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="getPageId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPageId</h4>
+<pre>public&nbsp;long&nbsp;getPageId()</pre>
+<div class="block">Gets the page ID (if paging adapter used).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The page ID</dd></dl>
+</li>
+</ul>
+<a name="getLoaderId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLoaderId</h4>
+<pre>public&nbsp;<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getLoaderId()</pre>
+<div class="block">Gets the loader ID.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The loader ID</dd></dl>
+</li>
+</ul>
+<a name="getTableName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTableName</h4>
+<pre>public&nbsp;<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getTableName()</pre>
+<div class="block">Gets the cache table name.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The loader ID</dd></dl>
+</li>
+</ul>
+<a name="getTimeout()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTimeout</h4>
+<pre>public&nbsp;int&nbsp;getTimeout()</pre>
+<div class="block">Gets the data loading timeout.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The timeout (ms)</dd></dl>
+</li>
+</ul>
+<a name="getForceCache()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getForceCache</h4>
+<pre>public&nbsp;boolean&nbsp;getForceCache()</pre>
+<div class="block">Gets the "force cache" flag.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> to force loading data from cache, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="getNoProgress()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNoProgress</h4>
+<pre>public&nbsp;boolean&nbsp;getNoProgress()</pre>
+<div class="block">Gets the "no progress" flag.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> to not display data loading progress, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="getMerge()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMerge</h4>
+<pre>public&nbsp;boolean&nbsp;getMerge()</pre>
+<div class="block">Gets the "merge" flag.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> to merge the newly loaded data with already existing, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="getNoErrors()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNoErrors</h4>
+<pre>public&nbsp;boolean&nbsp;getNoErrors()</pre>
+<div class="block">Gets the "no errors" flag.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> to not display data loading errors, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="getSync()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSync</h4>
+<pre>public&nbsp;boolean&nbsp;getSync()</pre>
+<div class="block">Gets the "sync" flag.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> to load data synchronously, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="getHandleTimeout()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHandleTimeout</h4>
+<pre>public&nbsp;boolean&nbsp;getHandleTimeout()</pre>
+<div class="block">Gets the "handle timeout" flag.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> to handle data loading timeout, <code>false</code> to delegate it to loader</dd></dl>
+</li>
+</ul>
+<a name="getPullToRefresh()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPullToRefresh</h4>
+<pre>public&nbsp;boolean&nbsp;getPullToRefresh()</pre>
+<div class="block">Gets the "pull-to-refresh" flag.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the data loading was triggered by "pull-to-refresh", <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="getNoLoad()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNoLoad</h4>
+<pre>public&nbsp;boolean&nbsp;getNoLoad()</pre>
+<div class="block">Gets the "no load" flag.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> to just init loader without data loading, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="setTableName(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTableName</h4>
+<pre>public&nbsp;<a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html" title="class in akha.yakhont.loader.wrapper">BaseLoaderWrapper.LoadParameters</a>&nbsp;setTableName(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName)</pre>
+<div class="block">Sets the cache table name.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>tableName</code> - The cache table name</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>LoadParameters</code> object</dd></dl>
+</li>
+</ul>
+<a name="setSafeMode(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSafeMode</h4>
+<pre>public static&nbsp;boolean&nbsp;setSafeMode(boolean&nbsp;value)</pre>
+<div class="block">Sets safe mode: if <code>false</code>, the <a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.LoadParametersException.html" title="class in akha.yakhont.loader.wrapper"><code>BaseLoaderWrapper.LoadParameters.LoadParametersException</code></a> will be thrown
+ in case of not consistent parameters. The default value is <code>true</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>value</code> - The value to set</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The previous value</dd></dl>
+</li>
+</ul>
+<a name="toString()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre>@NonNull
+public&nbsp;<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toString()</pre>
+<div class="block">Please refer to the base method description.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.ConverterHelper.html" title="interface in akha.yakhont.loader.wrapper"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.Builder.html" title="class in akha.yakhont.loader.wrapper"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?akha/yakhont/loader/wrapper/BaseLoaderWrapper.LoadParameters.html" target="_top">Frames</a></li>
+<li><a href="BaseLoaderWrapper.LoadParameters.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><font size="-1">&nbsp;<br>Copyright &copy; 2015-2020 akha, a.k.a. Alexander Kharitonov<br><br>Licensed under the Apache License, Version 2.0 (the "License");<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br><br>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an "AS IS" BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</font></small></p>
+</body>
+</html>

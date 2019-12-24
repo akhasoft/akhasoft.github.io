@@ -1,0 +1,585 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>BaseCallbacks (Yakhont 1.2.01 API)</title>
+<link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="BaseCallbacks (Yakhont 1.2.01 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li><a href="../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html" title="class in akha.yakhont.callback"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?akha/yakhont/callback/BaseCallbacks.html" target="_top">Frames</a></li>
+<li><a href="BaseCallbacks.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">akha.yakhont.callback</div>
+<h2 title="Class BaseCallbacks" class="title">Class BaseCallbacks&lt;T&gt;</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>akha.yakhont.callback.BaseCallbacks&lt;T&gt;</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - The type of objects for which callbacks should be proceeded</dd></dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks.BaseCacheCallbacks</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract class <span class="strong">BaseCallbacks&lt;T&gt;</span>
+extends <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">The <code>BaseCallbacks</code> is the one of the base classes for working with callbacks. Most
+ implementations should not derive directly from it, but instead inherit from
+ <a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle"><code>BaseActivityLifecycleProceed.BaseActivityCallbacks</code></a> or <a href="../../../akha/yakhont/callback/lifecycle/BaseFragmentLifecycleProceed.BaseFragmentCallbacks.html" title="class in akha.yakhont.callback.lifecycle"><code>BaseFragmentLifecycleProceed.BaseFragmentCallbacks</code></a>.
+
+ <p>Since the <code>BaseCallbacks</code> is a base class for callbacks handlers, the instances of
+ it should be registered (it's close to the process of registering <a href="http://developer.android.com/reference/android/app/Application.ActivityLifecycleCallbacks.html?is-external=true" title="class or interface in android.app"><code>Application.ActivityLifecycleCallbacks</code></a>).
+ <br>The low-level registration goes via call to <a href="../../../akha/yakhont/callback/BaseCallbacks.BaseProceed.html#register(java.util.Map,%20C,%20D)"><code>BaseProceed.register</code></a>,
+ but most implementations should do it using <a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.html#register(akha.yakhont.callback.lifecycle.BaseActivityLifecycleProceed.BaseActivityCallbacks)"><code>BaseActivityLifecycleProceed.register(akha.yakhont.callback.lifecycle.BaseActivityLifecycleProceed.BaseActivityCallbacks)</code></a> or
+ <a href="../../../akha/yakhont/callback/lifecycle/BaseFragmentLifecycleProceed.html#register(akha.yakhont.callback.lifecycle.BaseFragmentLifecycleProceed.BaseFragmentCallbacks)"><code>BaseFragmentLifecycleProceed.register(BaseFragmentCallbacks)</code></a>.
+
+ <p>After registering, the implemented callbacks are ready to be called for every object of type T.
+ To proceed callbacks the object should be annotated with <a href="../../../akha/yakhont/callback/annotation/Callbacks.html" title="annotation in akha.yakhont.callback.annotation"><code>Callbacks</code></a> or <a href="../../../akha/yakhont/callback/annotation/CallbacksInherited.html" title="annotation in akha.yakhont.callback.annotation"><code>CallbacksInherited</code></a>.
+ Another possibility (to proceed all objects) is to set the "force proceed" flag
+ (see <a href="../../../akha/yakhont/callback/BaseCallbacks.html#setForceProceed(boolean)"><code>setForceProceed(boolean)</code></a>) to <code>true</code>.
+
+ <p>Usage example (creating callback handler for <code>Activity.onActionModeStarted</code>;
+ for more examples please refer to <a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle"><code>Activity</code></a>,
+ <a href="../../../akha/yakhont/callback/lifecycle/BaseFragmentLifecycleProceed.BaseFragmentCallbacks.html" title="class in akha.yakhont.callback.lifecycle"><code>Fragment</code></a> and
+ <a href="../../../akha/yakhont/callback/BaseCallbacks.html#proceed(T,%20java.lang.Class,%20akha.yakhont.callback.BaseCallbacks)"><code>simple Activity</code></a> ones):
+
+ <p><pre style="background-color: silver; border: thin solid black;">
+ package com.yourpackage;
+
+ import akha.yakhont.callback.lifecycle.BaseActivityLifecycleProceed;
+
+ public class YourCallbacks extends BaseCallbacks.BaseActivityCallbacks {
+
+     private static final YourCallbacks sInstance = new YourCallbacks();
+
+     private YourCallbacks() {
+         BaseActivityLifecycleProceed.register(this);
+     }
+
+     public static void yourHandler(Activity activity, ActionMode mode) {
+    
+         // proceed annotated Activities only
+         if (!BaseCallbacks.BaseProceed.proceed(sInstance, activity)) return;
+
+         // your code here (NOTE: you don't have to call activity.onActionModeStarted() -
+         //   it's already done by the Weaver)
+     }
+ }
+ </pre>
+
+ Annotate necessary Activities:
+
+ <p><pre style="background-color: silver; border: thin solid black;">
+ import akha.yakhont.callback.annotation.CallbacksInherited;
+
+ &#064;CallbacksInherited(com.yourpackage.YourCallbacks.class)
+ public class YourActivity extends Activity {
+     ...
+ }
+ </pre>
+
+ And add the following line to the <code>weaver.config</code> (which says to the Yakhont Weaver to insert the call to
+ <code>YourCallbacks.yourHandler()</code> in the compiled <code>Activity.onActionModeStarted()</code>
+ method body - at the beginning or at the end, depending on the 2nd parameter - see below):
+
+ <p><pre style="background-color: silver; border: thin solid black;">
+ android.app.Activity.onActionModeStarted before 'com.yourpackage.YourCallbacks.yourHandler($0, $$);'
+ </pre>
+
+ Here $0 means 'this', $$ - the list of method arguments
+ (for more info please visit <a href="http://jboss-javassist.github.io/javassist/">the Javassist site</a>, in particular,
+ <a href="http://jboss-javassist.github.io/javassist/tutorial/tutorial2.html#before">Inserting source text at the beginning/end of a method body</a>).
+
+ <p>The line in <code>weaver.config</code> should contain 3 tokens delimited by whitespaces:
+
+ <p><code>&lt;fully qualified class name&gt;.method[(signature)] &lt;action&gt; 'code'
+ </code>
+
+ <p>The possible actions are:
+ <p><dl>
+  <dt>before</dt>
+  <dd>- insert 'code' at the beginning of the method body</dd>
+  <dt>after</dt>
+  <dd>- insert 'code' at the end of the method body</dd>
+  <dt>finally</dt>
+  <dd>- insert 'code' in the 'finally' clause</dd>
+  <dt>&lt;fully qualified exception name&gt;</dt>
+  <dd>- insert 'code' in the 'catch' clause *</dd>
+ </dl>
+
+ * Note that the inserted code fragment must end with a 'throw' or 'return' statement.
+
+ <p>Some other base classes for working with callbacks are <a href="../../../akha/yakhont/callback/BaseCallbacks.BaseProceed.html" title="class in akha.yakhont.callback"><code>BaseCallbacks.BaseProceed</code></a>, <a href="../../../akha/yakhont/callback/BaseCallbacks.BaseLifecycleProceed.html" title="class in akha.yakhont.callback"><code>BaseCallbacks.BaseLifecycleProceed</code></a>,
+ <a href="../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html" title="class in akha.yakhont.callback"><code>BaseCallbacks.BaseCacheCallbacks</code></a> and annotations in the <code>akha.yakhont.callback.annotation</code> package.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../akha/yakhont/callback/BaseCallbacks.BaseProceed.html" title="class in akha.yakhont.callback"><code>BaseCallbacks.BaseProceed</code></a>, 
+<a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle"><code>BaseActivityLifecycleProceed.BaseActivityCallbacks</code></a>, 
+<a href="../../../akha/yakhont/callback/lifecycle/BaseFragmentLifecycleProceed.BaseFragmentCallbacks.html" title="class in akha.yakhont.callback.lifecycle"><code>BaseFragmentLifecycleProceed.BaseFragmentCallbacks</code></a></dd><DT>&nbsp;</DT><DD><map name="umlmap98"><area shape="rect" coords="6,338,116,357" href="http://www.yworks.com/" alt=""><area shape="rect" coords="340,138,490,160" href="#" alt=""><area shape="rect" coords="305,197,456,213" href="#proceed(T, akha.yakhont.callback.BaseCallbacks)" alt=""><area shape="rect" coords="305,213,456,230" href="#proceed(T, java.util.Map, akha.yakhont.callback.BaseCallbacks)" alt=""><area shape="rect" coords="305,230,520,247" href="#setForceProceed(boolean)" alt=""><area shape="rect" coords="305,247,425,263" href="#onRegister()" alt=""><area shape="rect" coords="305,263,436,280" href="#onUnregister()" alt=""><area shape="rect" coords="305,280,432,297" href="#proceed(T, java.lang.Class, akha.yakhont.callback.BaseCallbacks)" alt=""><area shape="rect" coords="305,297,432,313" href="#proceed(T, java.lang.Class, akha.yakhont.callback.BaseCallbacks, boolean, java.util.Map)" alt=""><area shape="rect" coords="297,111,429,129" href="package-summary.html" alt=""><area shape="rect" coords="391,29,440,53" href="http://developer.android.com/reference/java/lang/Object.html" alt=""><area shape="rect" coords="382,2,443,20" href="http://developer.android.com/reference/java/lang/package-summary.html" alt=""><area shape="rect" coords="46,142,203,166" href="../../../akha/yakhont/callback/BaseCallbacks.Validator.html" alt=""><area shape="rect" coords="2,111,134,129" href="../../../akha/yakhont/callback/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="BaseCallbacks.png" WIDTH="543" HEIGHT="365" USEMAP="#umlmap98" BORDER="0"></CENTER></DD>
+<!-- yWorks UML Doclet   http://www.yworks.com/   b0ac8294d3f86ae0003f3a3a002ea3cf577df824efc6f2... --></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks.BaseCacheCallbacks</a>&lt;<a href="../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html" title="type parameter in BaseCallbacks.BaseCacheCallbacks">T</a>&gt;</strong></code>
+<div class="block">Extends the <a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback"><code>BaseCallbacks</code></a> class to provide cache (of already checked objects) support.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/callback/BaseCallbacks.BaseLifecycleProceed.html" title="class in akha.yakhont.callback">BaseCallbacks.BaseLifecycleProceed</a></strong></code>
+<div class="block">Extends the <a href="../../../akha/yakhont/callback/BaseCallbacks.BaseProceed.html" title="class in akha.yakhont.callback"><code>BaseCallbacks.BaseProceed</code></a> class to provide the base object's lifecycle support.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/callback/BaseCallbacks.BaseProceed.html" title="class in akha.yakhont.callback">BaseCallbacks.BaseProceed</a></strong></code>
+<div class="block">The <code>BaseProceed</code> is intended for support of <a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback"><code>BaseCallbacks</code></a> instances registration.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/callback/BaseCallbacks.CallbacksCustomizer.html" title="interface in akha.yakhont.callback">BaseCallbacks.CallbacksCustomizer</a></strong></code>
+<div class="block">The API for sending parameters to callbacks.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/callback/BaseCallbacks.Validator.html" title="interface in akha.yakhont.callback">BaseCallbacks.Validator</a></strong></code>
+<div class="block">The callbacks annotations validation API.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../akha/yakhont/callback/BaseCallbacks.html#BaseCallbacks()">BaseCallbacks</a></strong>()</code>
+<div class="block">Initialises a newly created <code>BaseCallbacks</code> object.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/callback/BaseCallbacks.html#onRegister()">onRegister</a></strong>()</code>
+<div class="block">The callback which is called when the instance of this class registered.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/callback/BaseCallbacks.html#onUnregister()">onUnregister</a></strong>()</code>
+<div class="block">The callback which is called when the instance of this class unregistered.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/callback/BaseCallbacks.html#proceed(T,%20akha.yakhont.callback.BaseCallbacks)">proceed</a></strong>(<a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="type parameter in BaseCallbacks">T</a>&nbsp;object,
+       <a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks</a>&lt;<a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="type parameter in BaseCallbacks">T</a>&gt;&nbsp;callback)</code>
+<div class="block">Checks whether the callbacks for the given object should be proceeded or not.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/callback/BaseCallbacks.html#proceed(T,%20java.lang.Class,%20akha.yakhont.callback.BaseCallbacks)">proceed</a></strong>(T&nbsp;object,
+       <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&nbsp;callbackClass,
+       <a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks</a>&lt;T&gt;&nbsp;callback)</code>
+<div class="block">Checks whether the callbacks for the given object should be proceeded or not.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/callback/BaseCallbacks.html#proceed(T,%20java.lang.Class,%20akha.yakhont.callback.BaseCallbacks,%20boolean,%20java.util.Map)">proceed</a></strong>(T&nbsp;object,
+       <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&nbsp;callbackClass,
+       <a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks</a>&lt;T&gt;&nbsp;callback,
+       boolean&nbsp;forceProceed,
+       <a href="http://developer.android.com/reference/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;T,<a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;cache)</code>
+<div class="block">Checks whether the callbacks for the given object should be proceeded or not.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/callback/BaseCallbacks.html#proceed(T,%20java.util.Map,%20akha.yakhont.callback.BaseCallbacks)">proceed</a></strong>(<a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="type parameter in BaseCallbacks">T</a>&nbsp;object,
+       <a href="http://developer.android.com/reference/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="type parameter in BaseCallbacks">T</a>,<a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;cache,
+       <a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks</a>&lt;<a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="type parameter in BaseCallbacks">T</a>&gt;&nbsp;callback)</code>
+<div class="block">Checks whether the callbacks for the given object should be proceeded or not.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks</a></code></td>
+<td class="colLast"><code><strong><a href="../../../akha/yakhont/callback/BaseCallbacks.html#setForceProceed(boolean)">setForceProceed</a></strong>(boolean&nbsp;forceProceed)</code>
+<div class="block">Sets the "force proceed" flag.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="BaseCallbacks()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>BaseCallbacks</h4>
+<pre>public&nbsp;BaseCallbacks()</pre>
+<div class="block">Initialises a newly created <code>BaseCallbacks</code> object.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="setForceProceed(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setForceProceed</h4>
+<pre>public&nbsp;<a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks</a>&nbsp;setForceProceed(boolean&nbsp;forceProceed)</pre>
+<div class="block">Sets the "force proceed" flag. If set to <code>true</code> it forces to proceed callbacks for all
+ objects of type T.
+ <br>The default value is <code>false</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>forceProceed</code> - The value to set</dd>
+<dt><span class="strong">Returns:</span></dt><dd>This <code>BaseCallbacks</code> object</dd></dl>
+</li>
+</ul>
+<a name="proceed(java.lang.Object,akha.yakhont.callback.BaseCallbacks)">
+<!--   -->
+</a><a name="proceed(T, akha.yakhont.callback.BaseCallbacks)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>proceed</h4>
+<pre>protected&nbsp;boolean&nbsp;proceed(@NonNull
+              <a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="type parameter in BaseCallbacks">T</a>&nbsp;object,
+              @NonNull
+              <a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks</a>&lt;<a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="type parameter in BaseCallbacks">T</a>&gt;&nbsp;callback)</pre>
+<div class="block">Checks whether the callbacks for the given object should be proceeded or not.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object for which callbacks could be proceeded</dd><dd><code>callback</code> - The <code>BaseCallbacks</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if callbacks should be proceeded, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="proceed(java.lang.Object,java.util.Map,akha.yakhont.callback.BaseCallbacks)">
+<!--   -->
+</a><a name="proceed(T, java.util.Map, akha.yakhont.callback.BaseCallbacks)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>proceed</h4>
+<pre>protected&nbsp;boolean&nbsp;proceed(@NonNull
+              <a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="type parameter in BaseCallbacks">T</a>&nbsp;object,
+              <a href="http://developer.android.com/reference/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="type parameter in BaseCallbacks">T</a>,<a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;cache,
+              @NonNull
+              <a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks</a>&lt;<a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="type parameter in BaseCallbacks">T</a>&gt;&nbsp;callback)</pre>
+<div class="block">Checks whether the callbacks for the given object should be proceeded or not.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object for which callbacks could be proceeded</dd><dd><code>cache</code> - The cache of already checked objects</dd><dd><code>callback</code> - The <code>BaseCallbacks</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if callbacks should be proceeded, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="proceed(java.lang.Object,java.lang.Class,akha.yakhont.callback.BaseCallbacks)">
+<!--   -->
+</a><a name="proceed(T, java.lang.Class, akha.yakhont.callback.BaseCallbacks)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>proceed</h4>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;boolean&nbsp;proceed(@NonNull
+                  T&nbsp;object,
+                  @NonNull
+                  <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&nbsp;callbackClass,
+                  @NonNull
+                  <a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks</a>&lt;T&gt;&nbsp;callback)</pre>
+<div class="block">Checks whether the callbacks for the given object should be proceeded or not.
+
+ <p>Usage example (creating callback handler for <code>Service.onStartCommand</code>;
+ for more examples please refer to <a href="../../../akha/yakhont/callback/lifecycle/BaseActivityLifecycleProceed.BaseActivityCallbacks.html" title="class in akha.yakhont.callback.lifecycle"><code>Activity</code></a>,
+ <a href="../../../akha/yakhont/callback/lifecycle/BaseFragmentLifecycleProceed.BaseFragmentCallbacks.html" title="class in akha.yakhont.callback.lifecycle"><code>Fragment</code></a> and <a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback"><code>general Activity</code></a> ones):
+
+ <pre style="background-color: silver; border: thin solid black;">
+ package com.yourpackage;
+
+ public class YourCallbacks { // you can create new class or add handler(s) to the existing one
+
+     public static void yourHandler(Service service, Intent intent, int flags, int startId) {
+
+         // proceed annotated Services only
+         if (!BaseCallbacks.proceed(service, YourCallbacks.class)) return;
+
+         // your code here (NOTE: you don't have to call service.onStartCommand() -
+         //   it's already done by the Weaver)
+     }
+ }
+ </pre>
+
+ Annotate necessary Services:
+
+ <pre style="background-color: silver; border: thin solid black;">
+ import akha.yakhont.callback.annotation.CallbacksInherited;
+
+ &#064;CallbacksInherited(com.yourpackage.YourCallbacks.class)
+ public class YourService extends Service {
+     ...
+ }
+ </pre>
+
+ And add the following line to the <code>weaver.config</code>:
+
+ <pre style="background-color: silver; border: thin solid black;">
+ android.app.Service.onStartCommand  true  'com.yourpackage.YourCallbacks.yourHandler($0, $$);'
+ </pre>
+
+ Please refer to the <a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback"><code>BaseCallbacks</code></a> for more details.</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - The type of object for which callbacks should be proceeded</dd><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object for which callbacks could be proceeded</dd><dd><code>callbackClass</code> - The class of the callbacks handler</dd><dd><code>callback</code> - The <code>BaseCallbacks</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if callbacks should be proceeded, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="proceed(java.lang.Object,java.lang.Class,akha.yakhont.callback.BaseCallbacks,boolean,java.util.Map)">
+<!--   -->
+</a><a name="proceed(T, java.lang.Class, akha.yakhont.callback.BaseCallbacks, boolean, java.util.Map)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>proceed</h4>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;boolean&nbsp;proceed(@NonNull
+                  T&nbsp;object,
+                  @NonNull
+                  <a href="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&nbsp;callbackClass,
+                  @NonNull
+                  <a href="../../../akha/yakhont/callback/BaseCallbacks.html" title="class in akha.yakhont.callback">BaseCallbacks</a>&lt;T&gt;&nbsp;callback,
+                  boolean&nbsp;forceProceed,
+                  <a href="http://developer.android.com/reference/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;T,<a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;cache)</pre>
+<div class="block">Checks whether the callbacks for the given object should be proceeded or not.</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - The type of object for which callbacks should be proceeded</dd><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object for which callbacks could be proceeded</dd><dd><code>callbackClass</code> - The class of the callbacks handler</dd><dd><code>callback</code> - The <code>BaseCallbacks</code></dd><dd><code>forceProceed</code> - The "force proceed" flag</dd><dd><code>cache</code> - The cache of already checked objects</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if callbacks should be proceeded, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="onRegister()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onRegister</h4>
+<pre>protected&nbsp;void&nbsp;onRegister()</pre>
+<div class="block">The callback which is called when the instance of this class registered.</div>
+</li>
+</ul>
+<a name="onUnregister()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>onUnregister</h4>
+<pre>protected&nbsp;void&nbsp;onUnregister()</pre>
+<div class="block">The callback which is called when the instance of this class unregistered.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li><a href="../../../akha/yakhont/callback/BaseCallbacks.BaseCacheCallbacks.html" title="class in akha.yakhont.callback"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?akha/yakhont/callback/BaseCallbacks.html" target="_top">Frames</a></li>
+<li><a href="BaseCallbacks.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><font size="-1">&nbsp;<br>Copyright &copy; 2015-2020 akha, a.k.a. Alexander Kharitonov<br><br>Licensed under the Apache License, Version 2.0 (the "License");<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br><br>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an "AS IS" BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</font></small></p>
+</body>
+</html>

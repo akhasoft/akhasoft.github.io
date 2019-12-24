@@ -1,0 +1,1014 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Core.Utils (Yakhont 1.2.01 API)</title>
+<link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Core.Utils (Yakhont 1.2.01 API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../akha/yakhont/Core.UriResolver.html" title="interface in akha.yakhont"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../akha/yakhont/Core.Utils.BackKeyInActionModeHandler.html" title="class in akha.yakhont"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?akha/yakhont/Core.Utils.html" target="_top">Frames</a></li>
+<li><a href="Core.Utils.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">akha.yakhont</div>
+<h2 title="Class Core.Utils" class="title">Class Core.Utils</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>akha.yakhont.Core.Utils</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>Enclosing class:</dt>
+<dd><a href="../../akha/yakhont/Core.html" title="class in akha.yakhont">Core</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public static class <span class="strong">Core.Utils</span>
+extends <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">The Yakhont utilities class.</div>
+<dl><DT>&nbsp;</DT><DD><map name="umlmap79"><area shape="rect" coords="6,1047,116,1066" href="http://www.yworks.com/" alt=""><area shape="rect" coords="344,138,427,165" href="#" alt=""><area shape="rect" coords="240,167,453,184" href="#addToSnackbarsQueue(com.google.android.material.snackbar.Snackbar)" alt=""><area shape="rect" coords="240,184,453,201" href="#addToSnackbarsQueue(com.google.android.material.snackbar.Snackbar, java.lang.Integer, android.content.Intent, android.app.Activity, boolean, java.util.concurrent.CountDownLatch, java.lang.Long, java.lang.String)" alt=""><area shape="rect" coords="240,201,351,217" href="#await(java.util.concurrent.CountDownLatch)" alt=""><area shape="rect" coords="240,217,351,234" href="#await(java.util.concurrent.CountDownLatch, java.lang.Long)" alt=""><area shape="rect" coords="240,234,362,251" href="#clearCache(java.lang.String)" alt=""><area shape="rect" coords="240,251,362,267" href="#clearCache(android.net.Uri)" alt=""><area shape="rect" coords="240,267,352,284" href="#close(android.database.Cursor)" alt=""><area shape="rect" coords="240,284,394,301" href="#cursorHelper(android.database.Cursor, akha.yakhont.Core.Utils.CursorHandler, java.lang.Integer, boolean, java.lang.Boolean)" alt=""><area shape="rect" coords="240,301,414,317" href="#getApplication()" alt=""><area shape="rect" coords="240,317,405,334" href="#getCurrentActivity()" alt=""><area shape="rect" coords="240,334,385,351" href="#getDefaultView(android.app.Activity)" alt=""><area shape="rect" coords="240,351,447,368" href="#getHandlerMainThread()" alt=""><area shape="rect" coords="240,368,524,384" href="#getLoadingProgressDefault()" alt=""><area shape="rect" coords="240,384,326,401" href="#getUri(java.lang.String)" alt=""><area shape="rect" coords="240,401,454,418" href="#getUriResolver()" alt=""><area shape="rect" coords="240,418,392,434" href="#isConnected()" alt=""><area shape="rect" coords="240,434,438,451" href="#isCurrentThreadMain()" alt=""><area shape="rect" coords="240,451,399,468" href="#isDebugMode(java.lang.String)" alt=""><area shape="rect" coords="240,468,428,484" href="#onAdjustMeasuredView(akha.yakhont.Core.Utils.MeasuredViewAdjuster, android.view.View)" alt=""><area shape="rect" coords="240,484,414,501" href="#postToMainLoop(java.lang.Runnable)" alt=""><area shape="rect" coords="240,501,414,518" href="#postToMainLoop(long, java.lang.Runnable)" alt=""><area shape="rect" coords="240,518,427,535" href="#runInBackground(java.lang.Runnable)" alt=""><area shape="rect" coords="240,535,427,551" href="#runInBackground(long, java.lang.Runnable)" alt=""><area shape="rect" coords="240,551,369,568" href="#safeRun(java.lang.Runnable)" alt=""><area shape="rect" coords="240,568,355,585" href="#safeRun(java.util.concurrent.Callable)" alt=""><area shape="rect" coords="240,585,359,601" href="#sendEmail(android.app.Activity, java.lang.String, java.lang.String, java.io.File, java.lang.String...)" alt=""><area shape="rect" coords="240,601,429,618" href="#setAwaitDefaultTimeout(java.lang.Long)" alt=""><area shape="rect" coords="240,618,391,635" href="#setDefaultViewId(int)" alt=""><area shape="rect" coords="240,635,381,651" href="#setUriResolver(akha.yakhont.Core.UriResolver)" alt=""><area shape="rect" coords="240,651,381,668" href="#showSnackbar(java.lang.String, java.lang.Integer)" alt=""><area shape="rect" coords="240,668,381,685" href="#showSnackbar(int, java.lang.Integer)" alt=""><area shape="rect" coords="240,685,360,702" href="#showToast(java.lang.String, java.lang.Integer)" alt=""><area shape="rect" coords="240,702,360,718" href="#showToast(int, java.lang.Integer)" alt=""><area shape="rect" coords="240,718,376,735" href="#showToastExt(android.widget.Toast, java.lang.Integer)" alt=""><area shape="rect" coords="240,735,376,752" href="#showToastExt(int, java.lang.Integer)" alt=""><area shape="rect" coords="240,752,337,768" href="#zip(java.lang.String, java.lang.String...)" alt=""><area shape="rect" coords="232,111,316,129" href="package-summary.html" alt=""><area shape="rect" coords="361,29,410,53" href="http://developer.android.com/reference/java/lang/Object.html" alt=""><area shape="rect" coords="353,2,414,20" href="http://developer.android.com/reference/java/lang/package-summary.html" alt=""><area shape="rect" coords="36,142,148,166" href="../../akha/yakhont/Core.UriResolver.html" alt=""><area shape="rect" coords="2,111,86,129" href="../../akha/yakhont/package-summary.html" alt=""><area shape="rect" coords="647,230,861,254" href="../../akha/yakhont/Core.Utils.MeasuredViewAdjuster.html" alt=""><area shape="rect" coords="635,186,796,210" href="../../akha/yakhont/Core.Utils.CursorHandler.html" alt=""><area shape="rect" coords="623,142,733,166" href="../../akha/yakhont/Core.BaseDialog.html" alt=""><area shape="rect" coords="590,111,674,129" href="../../akha/yakhont/package-summary.html" alt=""><area shape="rect" coords="599,358,679,382" href="http://developer.android.com/reference/android/app/Application.html" alt=""><area shape="rect" coords="599,324,653,348" href="http://developer.android.com/reference/android/app/Activity.html" alt=""><area shape="rect" coords="590,297,668,316" href="http://developer.android.com/reference/android/app/package-summary.html" alt=""><area shape="rect" coords="599,447,643,471" href="http://developer.android.com/reference/android/content/Intent.html" alt=""><area shape="rect" coords="590,420,687,439" href="http://developer.android.com/reference/android/content/package-summary.html" alt=""><area shape="rect" coords="609,541,658,565" href="http://developer.android.com/reference/android/database/Cursor.html" alt=""><area shape="rect" coords="590,509,699,527" href="http://developer.android.com/reference/android/database/package-summary.html" alt=""><area shape="rect" coords="598,635,624,659" href="http://developer.android.com/reference/android/net/Uri.html" alt=""><area shape="rect" coords="590,608,664,626" href="http://developer.android.com/reference/android/net/package-summary.html" alt=""><area shape="rect" coords="599,724,657,747" href="http://developer.android.com/reference/android/os/Handler.html" alt=""><area shape="rect" coords="590,697,661,715" href="http://developer.android.com/reference/android/os/package-summary.html" alt=""><area shape="rect" coords="599,812,639,836" href="http://developer.android.com/reference/android/view/View.html" alt=""><area shape="rect" coords="590,785,671,804" href="http://developer.android.com/reference/android/view/package-summary.html" alt=""><area shape="rect" coords="599,901,641,925" href="http://developer.android.com/reference/android/widget/Toast.html" alt=""><area shape="rect" coords="590,874,683,893" href="http://developer.android.com/reference/android/widget/package-summary.html" alt=""></map><A NAME="UmlDiagram"></A><CENTER><IMG SRC="Core.Utils.png" WIDTH="927" HEIGHT="1074" USEMAP="#umlmap79" BORDER="0"></CENTER></DD>
+<!-- yWorks UML Doclet   http://www.yworks.com/   b0ac8294d3f86ae0003f3a3a002ea3cf577df824efc6f2... --></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.BackKeyInActionModeHandler.html" title="class in akha.yakhont">Core.Utils.BackKeyInActionModeHandler</a></strong></code>
+<div class="block">Helper class for handling the Back key in ActionMode
+ (in <code>BaseActivity</code> it's already done).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.CoreLoadHelper.html" title="class in akha.yakhont">Core.Utils.CoreLoadHelper</a></strong></code>
+<div class="block">Helper class for <code>CoreLoad</code> interface.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.CursorHandler.html" title="interface in akha.yakhont">Core.Utils.CursorHandler</a></strong></code>
+<div class="block">Intended to use with <a href="../../akha/yakhont/Core.Utils.html#cursorHelper(android.database.Cursor,%20akha.yakhont.Core.Utils.CursorHandler,%20java.lang.Integer,%20boolean,%20java.lang.Boolean)"><code>cursorHelper(android.database.Cursor, akha.yakhont.Core.Utils.CursorHandler, java.lang.Integer, boolean, java.lang.Boolean)</code></a> method.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.MeasuredViewAdjuster.html" title="interface in akha.yakhont">Core.Utils.MeasuredViewAdjuster</a></strong></code>
+<div class="block">The API for measured view layout adjusting.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.RetainDialogFragment.html" title="class in akha.yakhont">Core.Utils.RetainDialogFragment</a></strong></code>
+<div class="block">Implements the <code>DialogFragment</code> which is not destroyed after screen orientation
+ changing (actually it's a Google API bug workaround).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html" title="class in akha.yakhont">Core.Utils.SnackbarBuilder</a></strong></code>
+<div class="block">Builds and shows <code>Snackbar</code> with Views customization possibilities (please refer to
+ <a href="../../akha/yakhont/Core.Utils.SnackbarBuilder.html#setViewHandler(akha.yakhont.technology.Dagger2.UiModule.ViewModifier)"><code>Core.Utils.SnackbarBuilder.setViewHandler(akha.yakhont.technology.Dagger2.UiModule.ViewModifier)</code></a>).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.ToastBuilder.html" title="class in akha.yakhont">Core.Utils.ToastBuilder</a></strong></code>
+<div class="block">Builds and shows <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a> with custom duration (please refer to <a href="../../akha/yakhont/Core.Utils.ToastBuilder.html#setDuration(java.lang.Integer)"><code>Core.Utils.ToastBuilder.setDuration(java.lang.Integer)</code></a>).</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#addToSnackbarsQueue(com.google.android.material.snackbar.Snackbar)">addToSnackbarsQueue</a></strong>(com.google.android.material.snackbar.Snackbar&nbsp;snackbar)</code>
+<div class="block">Adds Snackbar to Snackbar's queue.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#addToSnackbarsQueue(com.google.android.material.snackbar.Snackbar,%20java.lang.Integer,%20android.content.Intent,%20android.app.Activity,%20boolean,%20java.util.concurrent.CountDownLatch,%20java.lang.Long,%20java.lang.String)">addToSnackbarsQueue</a></strong>(com.google.android.material.snackbar.Snackbar&nbsp;snackbar,
+                   <a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;requestCode,
+                   <a href="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</a>&nbsp;intent,
+                   <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+                   boolean&nbsp;actionNoDefaultHandler,
+                   <a href="http://developer.android.com/reference/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a>&nbsp;countDownLatch,
+                   <a href="http://developer.android.com/reference/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;countDownLatchTimeout,
+                   <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</code>
+<div class="block">Adds Snackbar to Snackbar's queue.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#await(java.util.concurrent.CountDownLatch)">await</a></strong>(<a href="http://developer.android.com/reference/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a>&nbsp;countDownLatch)</code>
+<div class="block">Wrapper for <a href="http://developer.android.com/reference/java/util/concurrent/CountDownLatch.html?is-external=true#await()" title="class or interface in java.util.concurrent"><code>CountDownLatch.await()</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#await(java.util.concurrent.CountDownLatch,%20java.lang.Long)">await</a></strong>(<a href="http://developer.android.com/reference/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a>&nbsp;countDownLatch,
+     <a href="http://developer.android.com/reference/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;timeout)</code>
+<div class="block">Wrapper for <a href="http://developer.android.com/reference/java/util/concurrent/CountDownLatch.html?is-external=true#await()" title="class or interface in java.util.concurrent"><code>CountDownLatch.await()</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#clearCache(java.lang.String)">clearCache</a></strong>(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName)</code>
+<div class="block">Clears cache table.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#clearCache(android.net.Uri)">clearCache</a></strong>(<a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri)</code>
+<div class="block">Clears cache table.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#close(android.database.Cursor)">close</a></strong>(<a href="http://developer.android.com/reference/android/database/Cursor.html?is-external=true" title="class or interface in android.database">Cursor</a>&nbsp;cursor)</code>
+<div class="block">Closes the given cursor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#cursorHelper(android.database.Cursor,%20akha.yakhont.Core.Utils.CursorHandler,%20java.lang.Integer,%20boolean,%20java.lang.Boolean)">cursorHelper</a></strong>(<a href="http://developer.android.com/reference/android/database/Cursor.html?is-external=true" title="class or interface in android.database">Cursor</a>&nbsp;cursor,
+            <a href="../../akha/yakhont/Core.Utils.CursorHandler.html" title="interface in akha.yakhont">Core.Utils.CursorHandler</a>&nbsp;cursorHandler,
+            <a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;position,
+            boolean&nbsp;onlyOne,
+            <a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;closeOrRestorePos)</code>
+<div class="block">Helper method to work with <code>Cursor</code> objects.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app">Application</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#getApplication()">getApplication</a></strong>()</code>
+<div class="block">Returns the current <a href="http://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app"><code>Application</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#getCurrentActivity()">getCurrentActivity</a></strong>()</code>
+<div class="block">Returns the current <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app"><code>Activity</code></a> (if any).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view">View</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#getDefaultView(android.app.Activity)">getDefaultView</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</code>
+<div class="block">Returns the default <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a> of the given <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app"><code>Activity</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#getHandlerMainThread()">getHandlerMainThread</a></strong>()</code>
+<div class="block">Returns handler for the application's main thread.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../akha/yakhont/Core.BaseDialog.html" title="interface in akha.yakhont">Core.BaseDialog</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#getLoadingProgressDefault()">getLoadingProgressDefault</a></strong>()</code>
+<div class="block">Returns the data loading progress indicator (default implementation).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#getUri(java.lang.String)">getUri</a></strong>(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName)</code>
+<div class="block">Finds URI for the given table.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../akha/yakhont/Core.UriResolver.html" title="interface in akha.yakhont">Core.UriResolver</a></code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#getUriResolver()">getUriResolver</a></strong>()</code>
+<div class="block">Returns the URI resolver component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#isConnected()">isConnected</a></strong>()</code>
+<div class="block">Returns <code>true</code> if network connected, <code>false</code> otherwise.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#isCurrentThreadMain()">isCurrentThreadMain</a></strong>()</code>
+<div class="block">Returns <code>true</code> if the current thread is the main thread of the application,
+ <code>false</code> otherwise.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#isDebugMode(java.lang.String)">isDebugMode</a></strong>(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;packageName)</code>
+<div class="block">Checks the debug mode.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#onAdjustMeasuredView(akha.yakhont.Core.Utils.MeasuredViewAdjuster,%20android.view.View)">onAdjustMeasuredView</a></strong>(<a href="../../akha/yakhont/Core.Utils.MeasuredViewAdjuster.html" title="interface in akha.yakhont">Core.Utils.MeasuredViewAdjuster</a>&nbsp;container,
+                    <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view">View</a>&nbsp;view)</code>
+<div class="block">The callback helper for calling
+ <a href="../../akha/yakhont/Core.Utils.MeasuredViewAdjuster.html#adjustMeasuredView(android.view.View)"><code>Core.Utils.MeasuredViewAdjuster.adjustMeasuredView(View)</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#postToMainLoop(long,%20java.lang.Runnable)">postToMainLoop</a></strong>(long&nbsp;delay,
+              <a href="http://developer.android.com/reference/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;runnable)</code>
+<div class="block">Causes the runnable to be added to the message queue.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#postToMainLoop(java.lang.Runnable)">postToMainLoop</a></strong>(<a href="http://developer.android.com/reference/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;runnable)</code>
+<div class="block">Causes the runnable to be added to the message queue.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/java/util/concurrent/Future.html?is-external=true" title="class or interface in java.util.concurrent">Future</a>&lt;?&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#runInBackground(long,%20java.lang.Runnable)">runInBackground</a></strong>(long&nbsp;delay,
+               <a href="http://developer.android.com/reference/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;runnable)</code>
+<div class="block">Causes the runnable to run in background.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://developer.android.com/reference/java/util/concurrent/Future.html?is-external=true" title="class or interface in java.util.concurrent">Future</a>&lt;?&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#runInBackground(java.lang.Runnable)">runInBackground</a></strong>(<a href="http://developer.android.com/reference/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;runnable)</code>
+<div class="block">Causes the runnable to run in background.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#safeRun(java.util.concurrent.Callable)">safeRun</a></strong>(<a href="http://developer.android.com/reference/java/util/concurrent/Callable.html?is-external=true" title="class or interface in java.util.concurrent">Callable</a>&lt;T&gt;&nbsp;callable)</code>
+<div class="block">Runs <a href="http://developer.android.com/reference/java/util/concurrent/Callable.html?is-external=true#call()" title="class or interface in java.util.concurrent"><code>Callable.call()</code></a> without throwing exceptions (if any).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#safeRun(java.lang.Runnable)">safeRun</a></strong>(<a href="http://developer.android.com/reference/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;runnable)</code>
+<div class="block">Runs <a href="http://developer.android.com/reference/java/lang/Runnable.html?is-external=true#run()" title="class or interface in java.lang"><code>Runnable.run()</code></a> without throwing exceptions (if any).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#sendEmail(android.app.Activity,%20java.lang.String,%20java.lang.String,%20java.io.File,%20java.lang.String...)">sendEmail</a></strong>(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+         <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;subject,
+         <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text,
+         <a href="http://developer.android.com/reference/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;attachment,
+         <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;addresses)</code>
+<div class="block">Sends email.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#setAwaitDefaultTimeout(java.lang.Long)">setAwaitDefaultTimeout</a></strong>(<a href="http://developer.android.com/reference/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;timeout)</code>
+<div class="block">Sets the default <a href="http://developer.android.com/reference/java/util/concurrent/CountDownLatch.html?is-external=true#await(long,%20java.util.concurrent.TimeUnit)" title="class or interface in java.util.concurrent"><code>CountDownLatch.await(long, TimeUnit)</code></a> timeout.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#setDefaultViewId(int)">setDefaultViewId</a></strong>(int&nbsp;resId)</code>
+<div class="block">Sets the default <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a> ID (e.g.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#setUriResolver(akha.yakhont.Core.UriResolver)">setUriResolver</a></strong>(<a href="../../akha/yakhont/Core.UriResolver.html" title="interface in akha.yakhont">Core.UriResolver</a>&nbsp;uriResolver)</code>
+<div class="block">Sets the URI resolver component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#showSnackbar(int,%20java.lang.Integer)">showSnackbar</a></strong>(int&nbsp;resId,
+            <a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;duration)</code>
+<div class="block">Shows <code>Snackbar</code> using default <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a> of the current <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app"><code>Activity</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#showSnackbar(java.lang.String,%20java.lang.Integer)">showSnackbar</a></strong>(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text,
+            <a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;duration)</code>
+<div class="block">Shows <code>Snackbar</code> using default <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a> of the current <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app"><code>Activity</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#showToast(int,%20java.lang.Integer)">showToast</a></strong>(int&nbsp;resId,
+         <a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;duration)</code>
+<div class="block">Shows <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#showToast(java.lang.String,%20java.lang.Integer)">showToast</a></strong>(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text,
+         <a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;duration)</code>
+<div class="block">Shows <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#showToastExt(int,%20java.lang.Integer)">showToastExt</a></strong>(int&nbsp;viewId,
+            <a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;duration)</code>
+<div class="block">Shows <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#showToastExt(android.widget.Toast,%20java.lang.Integer)">showToastExt</a></strong>(<a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget">Toast</a>&nbsp;toast,
+            <a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;duration)</code>
+<div class="block">Shows <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../akha/yakhont/Core.Utils.html#zip(java.lang.String,%20java.lang.String...)">zip</a></strong>(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;zipFile,
+   <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;srcFiles)</code>
+<div class="block">Creates ZIP file.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="safeRun(java.lang.Runnable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>safeRun</h4>
+<pre>public static&nbsp;boolean&nbsp;safeRun(<a href="http://developer.android.com/reference/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;runnable)</pre>
+<div class="block">Runs <a href="http://developer.android.com/reference/java/lang/Runnable.html?is-external=true#run()" title="class or interface in java.lang"><code>Runnable.run()</code></a> without throwing exceptions (if any).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>runnable</code> - The Runnable</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the Runnable was successfully ran, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="safeRun(java.util.concurrent.Callable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>safeRun</h4>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;safeRun(<a href="http://developer.android.com/reference/java/util/concurrent/Callable.html?is-external=true" title="class or interface in java.util.concurrent">Callable</a>&lt;T&gt;&nbsp;callable)</pre>
+<div class="block">Runs <a href="http://developer.android.com/reference/java/util/concurrent/Callable.html?is-external=true#call()" title="class or interface in java.util.concurrent"><code>Callable.call()</code></a> without throwing exceptions (if any).</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - The result type of method <a href="http://developer.android.com/reference/java/util/concurrent/Callable.html?is-external=true#call()" title="class or interface in java.util.concurrent"><code>Callable.call()</code></a></dd><dt><span class="strong">Parameters:</span></dt><dd><code>callable</code> - The Callable</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The result of calling method <a href="http://developer.android.com/reference/java/util/concurrent/Callable.html?is-external=true#call()" title="class or interface in java.util.concurrent"><code>Callable.call()</code></a> (or null)</dd></dl>
+</li>
+</ul>
+<a name="getApplication()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getApplication</h4>
+<pre>public static&nbsp;<a href="http://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app">Application</a>&nbsp;getApplication()</pre>
+<div class="block">Returns the current <a href="http://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app"><code>Application</code></a>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The current <a href="http://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app"><code>Application</code></a></dd></dl>
+</li>
+</ul>
+<a name="getCurrentActivity()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCurrentActivity</h4>
+<pre>public static&nbsp;<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;getCurrentActivity()</pre>
+<div class="block">Returns the current <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app"><code>Activity</code></a> (if any).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The current <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app"><code>Activity</code></a> (or null)</dd></dl>
+</li>
+</ul>
+<a name="getDefaultView(android.app.Activity)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDefaultView</h4>
+<pre>public static&nbsp;<a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view">View</a>&nbsp;getDefaultView(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</pre>
+<div class="block">Returns the default <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a> of the given <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app"><code>Activity</code></a>.
+ The default View Id is stored in the resources (<code>R.id.yakhont_default_view_id</code>)
+ and for the moment is <a href="http://developer.android.com/reference/android/R.id.html?is-external=true#content" title="class or interface in android"><code>android.R.id.content</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>activity</code> - The <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app"><code>Activity</code></a></dd>
+<dt><span class="strong">Returns:</span></dt><dd>The default <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a> (or null)</dd></dl>
+</li>
+</ul>
+<a name="getLoadingProgressDefault()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLoadingProgressDefault</h4>
+<pre>public static&nbsp;<a href="../../akha/yakhont/Core.BaseDialog.html" title="interface in akha.yakhont">Core.BaseDialog</a>&nbsp;getLoadingProgressDefault()</pre>
+<div class="block">Returns the data loading progress indicator (default implementation).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The data loading progress indicator</dd></dl>
+</li>
+</ul>
+<a name="setDefaultViewId(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDefaultViewId</h4>
+<pre>public static&nbsp;void&nbsp;setDefaultViewId(@IdRes
+                    int&nbsp;resId)</pre>
+<div class="block">Sets the default <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a> ID (e.g. to show <code>Snackbar</code>).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>resId</code> - The resource ID of the <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a> (should be common for all used Activities)</dd></dl>
+</li>
+</ul>
+<a name="getHandlerMainThread()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHandlerMainThread</h4>
+<pre>@NonNull
+public static&nbsp;<a href="http://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;getHandlerMainThread()</pre>
+<div class="block">Returns handler for the application's main thread.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The Handler</dd></dl>
+</li>
+</ul>
+<a name="postToMainLoop(java.lang.Runnable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postToMainLoop</h4>
+<pre>public static&nbsp;boolean&nbsp;postToMainLoop(@NonNull
+                     <a href="http://developer.android.com/reference/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;runnable)</pre>
+<div class="block">Causes the runnable to be added to the message queue.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>runnable</code> - The Runnable that will be executed</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Returns <code>true</code> if the Runnable was successfully placed in to the
+          message queue, <code>false</code> otherwise.</dd></dl>
+</li>
+</ul>
+<a name="postToMainLoop(long, java.lang.Runnable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postToMainLoop</h4>
+<pre>public static&nbsp;boolean&nbsp;postToMainLoop(long&nbsp;delay,
+                     @NonNull
+                     <a href="http://developer.android.com/reference/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;runnable)</pre>
+<div class="block">Causes the runnable to be added to the message queue.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>delay</code> - The delay (in milliseconds) until the Runnable will be executed</dd><dd><code>runnable</code> - The Runnable that will be executed</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Returns <code>true</code> if the Runnable was successfully placed in to the
+          message queue, <code>false</code> otherwise.</dd></dl>
+</li>
+</ul>
+<a name="isCurrentThreadMain()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isCurrentThreadMain</h4>
+<pre>public static&nbsp;boolean&nbsp;isCurrentThreadMain()</pre>
+<div class="block">Returns <code>true</code> if the current thread is the main thread of the application,
+ <code>false</code> otherwise.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The main thread indication</dd></dl>
+</li>
+</ul>
+<a name="runInBackground(java.lang.Runnable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>runInBackground</h4>
+<pre>public static&nbsp;<a href="http://developer.android.com/reference/java/util/concurrent/Future.html?is-external=true" title="class or interface in java.util.concurrent">Future</a>&lt;?&gt;&nbsp;runInBackground(@NonNull
+                        <a href="http://developer.android.com/reference/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;runnable)</pre>
+<div class="block">Causes the runnable to run in background.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>runnable</code> - The Runnable that will be executed</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The <a href="http://developer.android.com/reference/java/util/concurrent/Future.html?is-external=true" title="class or interface in java.util.concurrent"><code>Future</code></a></dd></dl>
+</li>
+</ul>
+<a name="runInBackground(long, java.lang.Runnable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>runInBackground</h4>
+<pre>public static&nbsp;<a href="http://developer.android.com/reference/java/util/concurrent/Future.html?is-external=true" title="class or interface in java.util.concurrent">Future</a>&lt;?&gt;&nbsp;runInBackground(long&nbsp;delay,
+                        @NonNull
+                        <a href="http://developer.android.com/reference/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;runnable)</pre>
+<div class="block">Causes the runnable to run in background.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>delay</code> - The delay (in milliseconds) until the Runnable will be executed</dd><dd><code>runnable</code> - The Runnable that will be executed</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The <a href="http://developer.android.com/reference/java/util/concurrent/Future.html?is-external=true" title="class or interface in java.util.concurrent"><code>Future</code></a></dd></dl>
+</li>
+</ul>
+<a name="clearCache(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>clearCache</h4>
+<pre>public static&nbsp;void&nbsp;clearCache(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName)</pre>
+<div class="block">Clears cache table.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>tableName</code> - The table name</dd></dl>
+</li>
+</ul>
+<a name="clearCache(android.net.Uri)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>clearCache</h4>
+<pre>public static&nbsp;void&nbsp;clearCache(<a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri)</pre>
+<div class="block">Clears cache table.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>uri</code> - The URI</dd></dl>
+</li>
+</ul>
+<a name="getUri(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUri</h4>
+<pre>public static&nbsp;<a href="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;getUri(@NonNull
+         <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName)</pre>
+<div class="block">Finds URI for the given table.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>tableName</code> - The table name</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The URI</dd></dl>
+</li>
+</ul>
+<a name="getUriResolver()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUriResolver</h4>
+<pre>@NonNull
+public static&nbsp;<a href="../../akha/yakhont/Core.UriResolver.html" title="interface in akha.yakhont">Core.UriResolver</a>&nbsp;getUriResolver()</pre>
+<div class="block">Returns the URI resolver component.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The UriResolver</dd></dl>
+</li>
+</ul>
+<a name="setUriResolver(akha.yakhont.Core.UriResolver)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setUriResolver</h4>
+<pre>public static&nbsp;void&nbsp;setUriResolver(@NonNull
+                  <a href="../../akha/yakhont/Core.UriResolver.html" title="interface in akha.yakhont">Core.UriResolver</a>&nbsp;uriResolver)</pre>
+<div class="block">Sets the URI resolver component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>uriResolver</code> - The URI resolver component</dd></dl>
+</li>
+</ul>
+<a name="isConnected()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isConnected</h4>
+<pre>public static&nbsp;boolean&nbsp;isConnected()</pre>
+<div class="block">Returns <code>true</code> if network connected, <code>false</code> otherwise.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The network status flag</dd></dl>
+</li>
+</ul>
+<a name="zip(java.lang.String, java.lang.String...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>zip</h4>
+<pre>public static&nbsp;boolean&nbsp;zip(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;zipFile,
+          <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;srcFiles)</pre>
+<div class="block">Creates ZIP file.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>zipFile</code> - The destination ZIP file</dd><dd><code>srcFiles</code> - The source files</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if ZIP file was created successfully, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="sendEmail(android.app.Activity, java.lang.String, java.lang.String, java.io.File, java.lang.String...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendEmail</h4>
+<pre>public static&nbsp;void&nbsp;sendEmail(<a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+             <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;subject,
+             <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text,
+             <a href="http://developer.android.com/reference/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;attachment,
+             <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;addresses)</pre>
+<div class="block">Sends email.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>activity</code> - The Activity</dd><dd><code>subject</code> - The email's subject</dd><dd><code>text</code> - The email's text</dd><dd><code>attachment</code> - The email's attachment (or null)</dd><dd><code>addresses</code> - The email's addresses</dd></dl>
+</li>
+</ul>
+<a name="isDebugMode(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isDebugMode</h4>
+<pre>public static&nbsp;boolean&nbsp;isDebugMode(@NonNull
+                  <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;packageName)</pre>
+<div class="block">Checks the debug mode.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>packageName</code> - The name of this application's package</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the application is running in the debug mode, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="showToast(java.lang.String, java.lang.Integer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>showToast</h4>
+<pre>public static&nbsp;void&nbsp;showToast(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text,
+             <a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;duration)</pre>
+<div class="block">Shows <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>text</code> - The text to show in <code>Toast</code></dd><dd><code>duration</code> - duration in seconds (<= 5 min), milliseconds (> 5 min), <code>Toast.LENGTH_LONG</code> or
+        <code>Toast.LENGTH_SHORT</code>, null for default value</dd></dl>
+</li>
+</ul>
+<a name="showToast(int, java.lang.Integer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>showToast</h4>
+<pre>public static&nbsp;void&nbsp;showToast(@StringRes
+             int&nbsp;resId,
+             <a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;duration)</pre>
+<div class="block">Shows <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>resId</code> - The string ID to show in <code>Toast</code></dd><dd><code>duration</code> - duration in seconds (<= 5 min), milliseconds (> 5 min), <code>Toast.LENGTH_LONG</code> or
+        <code>Toast.LENGTH_SHORT</code>, null for default value</dd></dl>
+</li>
+</ul>
+<a name="showToastExt(android.widget.Toast, java.lang.Integer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>showToastExt</h4>
+<pre>public static&nbsp;void&nbsp;showToastExt(<a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget">Toast</a>&nbsp;toast,
+                <a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;duration)</pre>
+<div class="block">Shows <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>toast</code> - The <code>Toast</code> to show</dd><dd><code>duration</code> - duration in seconds (<= 5 min), milliseconds (> 5 min), <code>Toast.LENGTH_LONG</code> or
+        <code>Toast.LENGTH_SHORT</code>, null for default value</dd></dl>
+</li>
+</ul>
+<a name="showToastExt(int, java.lang.Integer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>showToastExt</h4>
+<pre>public static&nbsp;void&nbsp;showToastExt(@LayoutRes
+                int&nbsp;viewId,
+                <a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;duration)</pre>
+<div class="block">Shows <a href="http://developer.android.com/reference/android/widget/Toast.html?is-external=true" title="class or interface in android.widget"><code>Toast</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>viewId</code> - The layout ID to show in <code>Toast</code></dd><dd><code>duration</code> - duration in seconds (<= 5 min), milliseconds (> 5 min), <code>Toast.LENGTH_LONG</code> or
+        <code>Toast.LENGTH_SHORT</code>, null for default value</dd></dl>
+</li>
+</ul>
+<a name="showSnackbar(java.lang.String, java.lang.Integer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>showSnackbar</h4>
+<pre>public static&nbsp;void&nbsp;showSnackbar(<a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text,
+                <a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;duration)</pre>
+<div class="block">Shows <code>Snackbar</code> using default <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a> of the current <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app"><code>Activity</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>text</code> - The text to show in <code>Snackbar</code></dd><dd><code>duration</code> - duration in seconds (<= 5 min), milliseconds (> 5 min), <code>Snackbar.LENGTH_INDEFINITE</code>,
+        <code>Snackbar.LENGTH_LONG</code> or <code>Snackbar.LENGTH_SHORT</code>, null for default value</dd></dl>
+</li>
+</ul>
+<a name="showSnackbar(int, java.lang.Integer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>showSnackbar</h4>
+<pre>public static&nbsp;void&nbsp;showSnackbar(@StringRes
+                int&nbsp;resId,
+                <a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;duration)</pre>
+<div class="block">Shows <code>Snackbar</code> using default <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view"><code>View</code></a> of the current <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app"><code>Activity</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>resId</code> - The string ID to show in <code>Snackbar</code></dd><dd><code>duration</code> - duration in seconds (<= 5 min), milliseconds (> 5 min), <code>Snackbar.LENGTH_INDEFINITE</code>,
+        <code>Snackbar.LENGTH_LONG</code> or <code>Snackbar.LENGTH_SHORT</code>, null for default value</dd></dl>
+</li>
+</ul>
+<a name="addToSnackbarsQueue(com.google.android.material.snackbar.Snackbar)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addToSnackbarsQueue</h4>
+<pre>public static&nbsp;boolean&nbsp;addToSnackbarsQueue(com.google.android.material.snackbar.Snackbar&nbsp;snackbar)</pre>
+<div class="block">Adds Snackbar to Snackbar's queue.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>snackbar</code> - The Snackbar</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if added successfully, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="addToSnackbarsQueue(com.google.android.material.snackbar.Snackbar, java.lang.Integer, android.content.Intent, android.app.Activity, boolean, java.util.concurrent.CountDownLatch, java.lang.Long, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addToSnackbarsQueue</h4>
+<pre>public static&nbsp;boolean&nbsp;addToSnackbarsQueue(com.google.android.material.snackbar.Snackbar&nbsp;snackbar,
+                          <a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;requestCode,
+                          <a href="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</a>&nbsp;intent,
+                          <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity,
+                          boolean&nbsp;actionNoDefaultHandler,
+                          <a href="http://developer.android.com/reference/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a>&nbsp;countDownLatch,
+                          <a href="http://developer.android.com/reference/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;countDownLatchTimeout,
+                          <a href="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</pre>
+<div class="block">Adds Snackbar to Snackbar's queue.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>snackbar</code> - The Snackbar</dd><dd><code>requestCode</code> - The request code to call <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true#onActivityResult(int,%20int,%20android.content.Intent)" title="class or interface in android.app"><code>Activity.onActivityResult(int, int, android.content.Intent)</code></a> (or null for no call)</dd><dd><code>intent</code> - The intent to pass to <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true#onActivityResult(int,%20int,%20android.content.Intent)" title="class or interface in android.app"><code>Activity.onActivityResult(int, int, android.content.Intent)</code></a> (or null)</dd><dd><code>activity</code> - The Activity (or null for default one)</dd><dd><code>actionNoDefaultHandler</code> - <code>false</code> to call <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true#onActivityResult(int,%20int,%20android.content.Intent)" title="class or interface in android.app"><code>Activity.onActivityResult(int, int, android.content.Intent)</code></a> in case of
+        <code>Snackbar.Callback.DISMISS_EVENT_ACTION</code>, <code>true</code> otherwise</dd><dd><code>countDownLatch</code> - The <a href="http://developer.android.com/reference/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent"><code>CountDownLatch</code></a> (if any) to wait until run the next <code>Snackbar</code> from queue</dd><dd><code>countDownLatchTimeout</code> - The <a href="http://developer.android.com/reference/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent"><code>CountDownLatch</code></a> timeout (or null)</dd><dd><code>id</code> - The Snackbar's ID (or null)</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if added successfully, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="onAdjustMeasuredView(akha.yakhont.Core.Utils.MeasuredViewAdjuster, android.view.View)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onAdjustMeasuredView</h4>
+<pre>public static&nbsp;void&nbsp;onAdjustMeasuredView(@NonNull
+                        <a href="../../akha/yakhont/Core.Utils.MeasuredViewAdjuster.html" title="interface in akha.yakhont">Core.Utils.MeasuredViewAdjuster</a>&nbsp;container,
+                        @NonNull
+                        <a href="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view">View</a>&nbsp;view)</pre>
+<div class="block">The callback helper for calling
+ <a href="../../akha/yakhont/Core.Utils.MeasuredViewAdjuster.html#adjustMeasuredView(android.view.View)"><code>Core.Utils.MeasuredViewAdjuster.adjustMeasuredView(View)</code></a>. For example:
+
+ <pre style="background-color: silver; border: thin solid black;">
+ import akha.yakhont.Core.Utils;
+ import akha.yakhont.Core.Utils.MeasuredViewAdjuster;
+
+ public class YourFragment extends Fragment implements MeasuredViewAdjuster {
+
+     &#064;Override
+     public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                              Bundle savedInstanceState) {
+         super.onCreateView(inflater, container, savedInstanceState);
+
+         // your code here
+         View view = ...;
+
+         Utils.onAdjustMeasuredView(this, view);
+         return view;
+     }
+
+     &#064;Override
+     public void adjustMeasuredView(View view) {
+         int height = view.getMeasuredHeight();
+         int width  = view.getMeasuredWidth();
+
+         // your code here
+     }
+ }
+ </pre></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>container</code> - The view container (e.g. Fragment)</dd><dd><code>view</code> - The view to handle</dd></dl>
+</li>
+</ul>
+<a name="cursorHelper(android.database.Cursor, akha.yakhont.Core.Utils.CursorHandler, java.lang.Integer, boolean, java.lang.Boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cursorHelper</h4>
+<pre>public static&nbsp;boolean&nbsp;cursorHelper(<a href="http://developer.android.com/reference/android/database/Cursor.html?is-external=true" title="class or interface in android.database">Cursor</a>&nbsp;cursor,
+                   <a href="../../akha/yakhont/Core.Utils.CursorHandler.html" title="interface in akha.yakhont">Core.Utils.CursorHandler</a>&nbsp;cursorHandler,
+                   <a href="http://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;position,
+                   boolean&nbsp;onlyOne,
+                   <a href="http://developer.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;closeOrRestorePos)</pre>
+<div class="block">Helper method to work with <code>Cursor</code> objects. Iterates through all cursor rows (if any)
+ and applies to each one the handler provided.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cursor</code> - The <code>Cursor</code></dd><dd><code>cursorHandler</code> - The custom handler for each cursor row</dd><dd><code>position</code> - The cursor position to move (0 - for 1st) or null - to work from the current one</dd><dd><code>onlyOne</code> - <code>true</code> if only one row should be handled, <code>false</code> otherwise</dd><dd><code>closeOrRestorePos</code> - null - close cursor after handling, <code>true</code> - restore initial cursor position,
+        <code>false</code> - leave cursor as is</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> in case of no errors, <code>false</code> otherwise</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../akha/yakhont/Core.Utils.CursorHandler.html" title="interface in akha.yakhont"><code>Core.Utils.CursorHandler</code></a></dd></dl>
+</li>
+</ul>
+<a name="close(android.database.Cursor)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>close</h4>
+<pre>public static&nbsp;boolean&nbsp;close(<a href="http://developer.android.com/reference/android/database/Cursor.html?is-external=true" title="class or interface in android.database">Cursor</a>&nbsp;cursor)</pre>
+<div class="block">Closes the given cursor.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cursor</code> - The <code>Cursor</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if cursor was closed, <code>false</code> if cursor is null or already closed</dd></dl>
+</li>
+</ul>
+<a name="await(java.util.concurrent.CountDownLatch)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>await</h4>
+<pre>public static&nbsp;boolean&nbsp;await(<a href="http://developer.android.com/reference/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a>&nbsp;countDownLatch)</pre>
+<div class="block">Wrapper for <a href="http://developer.android.com/reference/java/util/concurrent/CountDownLatch.html?is-external=true#await()" title="class or interface in java.util.concurrent"><code>CountDownLatch.await()</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>countDownLatch</code> - The <code>CountDownLatch</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if no errors, <code>false</code> otherwise</dd></dl>
+</li>
+</ul>
+<a name="await(java.util.concurrent.CountDownLatch, java.lang.Long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>await</h4>
+<pre>public static&nbsp;boolean&nbsp;await(<a href="http://developer.android.com/reference/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a>&nbsp;countDownLatch,
+            <a href="http://developer.android.com/reference/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;timeout)</pre>
+<div class="block">Wrapper for <a href="http://developer.android.com/reference/java/util/concurrent/CountDownLatch.html?is-external=true#await()" title="class or interface in java.util.concurrent"><code>CountDownLatch.await()</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>countDownLatch</code> - The <code>CountDownLatch</code></dd><dd><code>timeout</code> - The timeout (0 for endless awaiting, null for the default value)</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if no errors, <code>false</code> otherwise</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../akha/yakhont/Core.Utils.html#setAwaitDefaultTimeout(java.lang.Long)"><code>setAwaitDefaultTimeout(java.lang.Long)</code></a></dd></dl>
+</li>
+</ul>
+<a name="setAwaitDefaultTimeout(java.lang.Long)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setAwaitDefaultTimeout</h4>
+<pre>public static&nbsp;void&nbsp;setAwaitDefaultTimeout(<a href="http://developer.android.com/reference/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;timeout)</pre>
+<div class="block">Sets the default <a href="http://developer.android.com/reference/java/util/concurrent/CountDownLatch.html?is-external=true#await(long,%20java.util.concurrent.TimeUnit)" title="class or interface in java.util.concurrent"><code>CountDownLatch.await(long, TimeUnit)</code></a> timeout.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>timeout</code> - The timeout (0 for endless awaiting, null for the default value)</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../akha/yakhont/Core.UriResolver.html" title="interface in akha.yakhont"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../akha/yakhont/Core.Utils.BackKeyInActionModeHandler.html" title="class in akha.yakhont"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?akha/yakhont/Core.Utils.html" target="_top">Frames</a></li>
+<li><a href="Core.Utils.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><font size="-1">&nbsp;<br>Copyright &copy; 2015-2020 akha, a.k.a. Alexander Kharitonov<br><br>Licensed under the Apache License, Version 2.0 (the "License");<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br><br>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an "AS IS" BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</font></small></p>
+</body>
+</html>
